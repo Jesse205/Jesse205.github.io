@@ -1,0 +1,26 @@
+body {
+    font-family: system-ui;
+}
+
+/* 屏幕适应，按需显示 */
+.jesse205-adapt-screen {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .jesse205-adapt-pc {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .jesse205-adapt-phone {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+    .jesse205-adapt-pad {
+        display: block;
+    }
+}

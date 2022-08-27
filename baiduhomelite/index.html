@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" sizes="any" mask="" href="favicon.ico">
+	<title>百度一下</title>
+</head>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		bottom: 0;
+		top: 10%;
+		left: 0;
+		right: 0;
+	}
+
+	body {
+		text-align: center;
+		position: absolute;
+	}
+
+
+	img.smaller {
+		width: 198px;
+		height: 65px;
+		max-width: 198px;
+	}
+
+	#search_input {
+		width: 100%;
+		height: 40px;
+		background-color: transparent;
+		border: none;
+		outline: 0;
+		font-size: 16px;
+		color: #000000;
+		border-radius: 8px
+	}
+
+	.search_part {
+		margin-bottom: 50px;
+		margin-top: 50px;
+	}
+
+	span {
+		display: block;
+		overflow: hidden;
+		padding: 0 8px;
+		vertical-align: middle;
+	}
+
+	.search_bar {
+		width: 80%;
+		height: 40px;
+		max-width: 400px;
+		margin: 20px auto;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+		background-color: #F4F4F4;
+		border-radius: 8px;
+		display: table;
+		vertical-align: middle;
+
+	}
+
+	#search_submit {
+		outline: 0;
+		height: 40px;
+		float: right;
+		color: #FFFFFF;
+		font-size: 16px;
+		font-weight: bold;
+		border: none;
+		border-radius: 8px;
+		background-color: #4477E0;
+		padding: 0 13px
+	}
+
+	#search_submit:hover {
+		background-color: #2C7BF2;
+	}
+</style>
+
+<body>
+	<div id="content">
+		<br />
+		<div class="search_part">
+			<img class="smaller" src="logo.png" />
+			<br />
+			<form onsubmit="search(); return false" class="search_bar">
+				<input type="submit" id="search_submit" value="百度一下">
+				<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
+			</form>
+		</div>
+		<br />
+
+	</div>
+
+	<script type="text/javascript">
+		function search() {
+			var value = document.getElementById("search_input").value
+			if (value != "") {
+				window.location.href = "http://www.baidu.com/s?ch=3&ie=utf-8&wd=" + value;
+				//document.getElementById("search_input").value = "";
+			}
+		}</script>
+
+</body>
+
+</html>
