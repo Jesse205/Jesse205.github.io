@@ -5,25 +5,28 @@
   <meta charset="utf-8" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width" />
+
   <title>Edde互联 不忘初心</title>
   <link rel="icon" sizes="any" mask="" href="favicon.png">
+  <script src="js/jquery-3.6.1.js"></script>
+
   <!-- MDUI -->
   <link rel="stylesheet" href="css/mdui.min.css" />
   <script src="js/mdui.min.js"></script>
 
   <!-- Jesse205Library -->
   <link rel="stylesheet" href="css/jesse205.css" />
-  <script src="css/jesse205.js"></script>
+  <script src="js/jesse205.js"></script>
 
   <!-- 当前页面 -->
   <link rel="stylesheet" href="css/index.css" />
   <script src="js/index.js"></script>
 </head>
 
-<body class="mdui-appbar-with-toolbar">
+<body class="mdui-appbar-with-toolbar" οndragstart="return false;">
   <!-- 标题栏 -->
-  <div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
-    <div class="mdui-toolbar ">
+  <div id="appbar" class="mdui-appbar jesse205-appbar mdui-appbar-fixed mdui-shadow-0">
+    <div class="mdui-toolbar jesse205-toolbar">
       <a class="mdui-typo-title">Edde 互联</a>
       <div class="mdui-toolbar-spacer"></div>
       <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon">
@@ -57,50 +60,9 @@
     </div>-->
 
     </div>
-    <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1">
-      <div class="mdui-col mdui-p-a-1">
-        <a href="https://gitee.com/Jesse205/AideLua" target="_blank">
-          <div class="mdui-card mdui-hoverable mdui-ripple">
-            <div class="mdui-card-media">
-              <img src="images/aidelua_card.png" />
-              <div class="mdui-card-media-covered">
-                <div class="mdui-card-primary">
-                  <div class="mdui-card-primary-title">Aide Lua</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="mdui-col mdui-p-a-1">
-        <a href="https://gitee.com/Jesse205/AideLua" target="_blank">
-          <div class="mdui-card mdui-hoverable mdui-ripple">
-            <div class="mdui-card-media">
-              <img src="images/aidelua_card.png" />
-              <div class="mdui-card-media-covered">
-                <div class="mdui-card-primary">
-                  <div class="mdui-card-primary-title">Edde Lua</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="mdui-col mdui-p-a-1">
-        <a href="./baiduhomelite" target="_blank">
-          <div class="mdui-card mdui-hoverable mdui-ripple">
-            <div class="mdui-card-media">
-              <img src="images/aidelua_card.png" />
-              <div class="mdui-card-media-covered">
-                <div class="mdui-card-primary">
-                  <div class="mdui-card-primary-title">百度一下Lite</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
+  </div>
+  <div id="applications"
+    class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1" />
 
 </body>
 

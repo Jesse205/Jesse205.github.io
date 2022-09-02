@@ -2,9 +2,29 @@ body {
     font-family: system-ui;
 }
 
+.jesse205-toolbar {
+    background-color: white;
+}
 
- /* 屏幕适应，按需显示 */
- /* .jesse205-adapt-screen {
+.jesse205-appbar {
+    transition: box-shadow .25s cubic-bezier(.4, 0, .2, 1), -webkit-box-shadow .25s cubic-bezier(.4, 0, .2, 1);
+}
+
+.jesse205-shadow-4{
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2),0 1px 10px 0 rgba(0,0,0,0.08)!important;
+}
+
+  
+
+.jesse205-card {
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 8px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* 屏幕适应，按需显示 */
+/* .jesse205-adapt-screen {
     display: none;
 }
 
