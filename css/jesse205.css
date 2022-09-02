@@ -2,8 +2,9 @@ body {
     font-family: system-ui;
 }
 
-/* 屏幕适应，按需显示 */
-.jesse205-adapt-screen {
+
+ /* 屏幕适应，按需显示 */
+ /* .jesse205-adapt-screen {
     display: none;
 }
 
@@ -23,4 +24,4 @@ body {
     .jesse205-adapt-pad {
         display: block;
     }
-}
+} */
