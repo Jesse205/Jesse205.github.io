@@ -1,0 +1,13 @@
+{
+    "name": "百度一下Lite",
+    "short_name": "百度Lite",
+    "start_url": "/baiduhomelite/",
+    "description": "特别简单的百度首页",
+    "author": "Jesse205",
+    "lang": "zh-CN",
+    "display": "minimal-ui",
+    "icons": [],
+    "relatedApp": [],
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff"
+}
