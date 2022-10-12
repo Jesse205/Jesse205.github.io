@@ -1,20 +1,27 @@
 body {
-    font-family: system-ui;
+    font-family: revert;
 }
 
 .jesse205-toolbar {
     background-color: white;
 }
 
-.jesse205-appbar {
-    transition: box-shadow .25s cubic-bezier(.4, 0, .2, 1), -webkit-box-shadow .25s cubic-bezier(.4, 0, .2, 1);
+
+
+
+.jesse205-appbar {}
+
+.jesse205-shadow-4 {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 10%), 0 1px 10px 0 rgba(0, 0, 0, 10%);
 }
 
-.jesse205-shadow-4{
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.1),0 1px 10px 0 rgba(0,0,0,0.08)!important;
+.jesse205-shadow-transition {
+    transition: box-shadow .25s cubic-bezier(.4, .2, 0, 1), -webkit-box-shadow .25s cubic-bezier(.4, .2, 0, 1) !important;
 }
 
-  
+.jesse205-hoverable:hover {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 10%), 0 1px 10px 0 rgba(0, 0, 0, 10%);
+}
 
 .jesse205-card {
     border: 1px solid rgba(0, 0, 0, .12);
@@ -23,25 +30,54 @@ body {
     box-shadow: none;
 }
 
-/* 屏幕适应，按需显示 */
-/* .jesse205-adapt-screen {
-    display: none;
+.jesse205-btn {
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+    width: min-content; */
+    margin: auto
 }
 
-@media screen and (min-width: 800px) {
-    .jesse205-adapt-pc {
-        display: block;
-    }
+.jesse205-btn-withicon {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: min-content;
 }
 
-@media screen and (max-width: 600px) {
-    .jesse205-adapt-phone {
-        display: block;
-    }
+.jesse205-btn-float {
+    border-radius: 4px;
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+    width: min-content; */
+    margin: auto
 }
 
-@media screen and (max-width: 800px) and (min-width: 600px) {
-    .jesse205-adapt-pad {
-        display: block;
+
+
+.jesse205-btn i {
+    margin-right: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .mdui-theme-layout-auto {
+        background-color: #212121 !important;
     }
-} */
+
+    .mdui-theme-layout-auto .jesse205-toolbar {
+        background-color: #212121 !important;
+    }
+
+    .mdui-theme-layout-auto .jesse205-card {
+        border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .mdui-theme-layout-auto .jesse205-btn {
+        border: 1px solid rgba(255, 255, 255, .12);
+    }
+}

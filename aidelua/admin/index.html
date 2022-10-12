@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" /> 
+  <meta itemprop="name" content="AIDE高级设置版" /> 
+  <meta name="shareimage" itemprop="image" content="http://app.0047ol.com/icon.png" /> 
+  <meta name="keywords" content="AIDE|高级|后端|教程" /> 
+  <meta name="description" itemprop="description" content="AIDE高级设置版管理后端" /> 
+  <meta name="author" content="@0047ol" /> 
+  <title>APP管理后端</title> 
+  <link rel="shortcut icon" href="//app.0047ol.com/icon.png" type="image/png" /> 
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"></script>
+ </head> 
+ <body class="mdui-theme-primary-blue mdui-theme-accent-blue mdui-appbar-with-toolbar"> 
+  <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-fixed mdui-color-white"> 
+   <div class="mdui-toolbar"> 
+    <a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">menu</i></a> 
+    <a class="mdui-typo-title">APP管理</a> 
+    <div class="mdui-toolbar-spacer"></div> 
+    <a class="mdui-btn mdui-btn-icon mdui-hidden" mdui-menu="{target:'#toolbar-menu'}"><i class="mdui-icon material-icons">more_vert</i></a> 
+    <ul class="mdui-menu" id="toolbar-menu"> 
+     <li class="mdui-menu-item"><a onclick="" class="mdui-ripple">退出</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="mdui-drawer" id="left-drawer"> 
+   <ul class="mdui-list"> 
+    <a href="javascript:;" onclick=""> <li class="mdui-list-item mdui-ripple"><i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme">notifications</i> 
+      <div class="mdui-list-item-content">
+       通知推送
+      </div> </li></a> 
+    <a href="javascript:;" onclick=""> <li class="mdui-list-item mdui-ripple"><i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme">cloud_uploadry</i> 
+      <div class="mdui-list-item-content">
+       版本更新
+      </div> </li></a>  
+    <a href="javascript:;" onclick=""> <li class="mdui-list-item mdui-ripple"><i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme">group</i> 
+      <div class="mdui-list-item-content">
+       用户管理
+      </div> </li></a> 
+    <a href="javascript:;" onclick=""> <li class="mdui-list-item mdui-ripple"><i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme">settings</i> 
+      <div class="mdui-list-item-content">
+       个人信息
+      </div> </li></a> 
+   </ul> 
+  </div> 
+  <div id="app_content" class="mdui-container mdui-p-a-2 mdui-hidden-lg-up" style="padding:0px;">
+    完善中，稍后再来...
+  </div> 
+ </body>
+ <script type="text/javascript" src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>  
+</html>

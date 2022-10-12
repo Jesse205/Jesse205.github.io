@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
   <meta charset="utf-8" />
@@ -7,62 +7,39 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>Edde互联</title>
+  <meta name="keywords" content="Edde互联,jesse205,aidelua,hellotool">
+  <meta itemprop="name" content="Edde网站">
+  <meta itemprop="description" name="description" content="Edde应用测试">
+  <meta name="author" content="Jesse205" />
+
   <link rel="icon" sizes="any" mask="" href="favicon.png">
-  <script src="js/jquery-3.6.1.js"></script>
+  <!-- jquery -->
+  <script src="/js/jquery-3.6.1.js"></script>
 
   <!-- MDUI -->
-  <link rel="stylesheet" href="css/mdui.min.css" />
-  <script src="js/mdui.min.js"></script>
+  <link rel="stylesheet" href="/css/mdui.min.css" />
+  <script src="/js/mdui.min.js"></script>
 
   <!-- Jesse205Library -->
-  <link rel="stylesheet" href="css/jesse205.css" />
-  <script src="js/jesse205.js"></script>
+  <link rel="stylesheet" href="/css/jesse205.css" />
+  <script src="/js/jesse205.js"></script>
 
   <!-- 当前页面 -->
   <link rel="stylesheet" href="css/index.css" />
   <script src="js/index.js"></script>
 </head>
 
-<body class="mdui-appbar-with-toolbar" οndragstart="return false;">
+<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto">
   <!-- 标题栏 -->
-  <div id="appbar" class="mdui-appbar jesse205-appbar mdui-appbar-fixed mdui-shadow-0">
+  <div id="appbar" class="mdui-appbar jesse205-appbar jesse205-shadow-transition mdui-appbar-fixed mdui-shadow-0">
     <div class="mdui-toolbar jesse205-toolbar">
       <a class="mdui-typo-title">Edde 互联</a>
       <div class="mdui-toolbar-spacer"></div>
-      <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-        <i class="mdui-icon material-icons">search</i>
-      </a>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-        <i class="mdui-icon material-icons">refresh</i>
-      </a> -->
-      <!--
-      <a class="mdui-btn mdui-btn-icon jesse205-adapt-screen jesse205-adapt-phone"
-        mdui-menu="{target: '#appbar-more-menu'}">
-        <i class="mdui-icon material-icons">more_vert</i>
-      </a>-->
-      <!-- 标题栏菜单 -->
-      <!--
-      <ul class="mdui-menu" id="appbar-more-menu">
-        <li class="mdui-menu-item">
-          <a href="javascript:;" class="mdui-ripple">Refresh</a>
-        </li>
-        <li class="mdui-menu-item" disabled>
-          <a href="javascript:;">Help & feedback</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="javascript:;" class="mdui-ripple">Settings</a>
-        </li>
-        <li class="mdui-divider"></li>
-        <li class="mdui-menu-item">
-          <a href="javascript:;" class="mdui-ripple">Sign out</a>
-        </li>
-      </ul>
-    </div>-->
-
     </div>
   </div>
   <div id="applications"
-    class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1" />
+    class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1">
+  </div>
 
 </body>
 
