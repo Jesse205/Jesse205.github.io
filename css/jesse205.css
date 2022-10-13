@@ -30,6 +30,34 @@ body {
     box-shadow: none;
 }
 
+
+
+.jesse205-card-media-covered-white {
+    color: black;
+}
+
+.jesse205-card-media-covered-black {
+    color: black;
+}
+
+.jesse205-card-primary {
+    padding: 16px;
+}
+
+.jesse205-card-primary-title,
+.jesse205-card-primary-subtitle {
+    line-height: normal !important;
+}
+
+.jesse205-card-primary-title {
+    font-size: 18px;
+}
+
+.jesse205-card-primary-subtitle {
+    font-size: 14px;
+}
+
+
 .jesse205-btn {
     border: 1px solid rgba(0, 0, 0, .12);
     border-radius: 4px;

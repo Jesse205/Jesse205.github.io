@@ -1,14 +1,4 @@
-/* header {
-	display: flex;
-	-webkit-box-align: center;
-	align-items: center
-} */
-
 header>div {
-	/* position: absolute;
-	left: 0;
-	right: 0;
-	top: 120px; */
 	text-align: center;
 	margin-top:-40px;
 	opacity: 0.9999999;
@@ -18,7 +8,6 @@ header>img {
 	height: 160px;
 	width: 100%;
 	object-fit: cover;
-	/* padding-bottom: 184px; */
 	opacity: .2
 }
 
@@ -31,21 +20,19 @@ header>img {
 .app-title,
 .app-summary {
 	display: block;
+	margin: 8px;
 	margin-right: auto !important;
 	margin-left: auto !important;
 	text-align: center;
-	font-weight: 400
+	font-weight: 400;
+	width: fit-content;
 }
 
 .app-title {
 	font-size: 22px;
-	margin: 8px;
-	text-align: center;
 }
 
 .app-summary {
-	color: #757575;
-	margin: 8px;
 	font-size: 18px;
 	max-width: 250px
 }
@@ -72,12 +59,6 @@ header>img {
 	padding-bottom: 8px !important;
 }
 
-
-/* .mdui-container.mdui-col {
-	text-align: center;
-	/* padding-bottom: 20px 
-} */
-
 .title,
 .subtitle {
 	display: block;
@@ -97,8 +78,6 @@ header>img {
 
 .subtitle {
 	margin: 0;
-	/* margin-bottom: 8px; */
-	/* color: #757575; */
 	font-size: 14px;
 	max-width: 250px
 }

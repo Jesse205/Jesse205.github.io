@@ -3,11 +3,11 @@
         "name": "Aide Lua",
         "summary": "为更方便的移动开发",
         "image": "images/aidelua_card.png",
-        "src": "//aidelua.jesse205.com"
+        "src": "/aidelua"
     },
     {
         "name": "Edde Lua",
-        "summary": "为更好开发看的物理环境",
+        "summary": "为更好看的用户界面",
         "image": "images/aidelua_card.png",
         "src": "https://gitee.com/Jesse205/AideLua/blob/master/README_eddelua.md"
     },
@@ -15,7 +15,7 @@
         "name": "哈兔Box",
         "summary": "简洁蓝白风工具箱",
         "image": "images/aidelua_card.png",
-        "src": "//hellotool.jesse205.com"
+        "src": "/helotool"
     },
     {
         "name": "畅玩6X工具箱",
