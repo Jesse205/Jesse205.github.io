@@ -12,7 +12,7 @@ function addConfig(config) {
   for (i = 0; i < developers.length; i++) {
     var content = developers[i]
     developersObj.append('<div>\
-        <img class="avatar mdui-shadow-3" src="' + content.avatar + '" alt />\
+        <img class="avatar jesse205-card-outlined" src="' + content.avatar + '" draggable="false" alt />\
         <h1 class="mdui-text-center title">' + content.name + '</h1>\
         <p class="mdui-text-center subtitle mdui-text-color-theme-secondary">' + content.summary + '</p>\
       </div>')
@@ -23,25 +23,27 @@ function addConfig(config) {
     screenshotsObj.append('<div class="screenshot-item mdui-container mdui-col">\
         <h1 class="title mdui-text-color-theme-accent">' + content.title + '</h1>\
         <p class="subtitle mdui-text-color-theme-secondary">' + content.summary + '</p>\
-        <img class="screenshot jesse205-card" src="' + content.src + '" alt />\
+        <img class="screenshot jesse205-card-outlined" src="' + content.src + '" alt />\
       </div>')
   }
   //联系我们
   for (i = 0; i < contact.length; i++) {
     var content = contact[i]
     contactObj.append('<div class="mdui-col">\
-        <a class="jesse205-btn jesse205-btn-withicon jesse205-hoverable mdui-btn mdui-ripple" href="' + content.href + '" target="_blank" mdui-tooltip=\'' + JSON.stringify(content.tooltip) + '\'>\
+        <a class="jesse205-btn-outlined jesse205-btn-withicon jesse205-hoverable mdui-btn mdui-ripple" href="' + content.href + '" target="_blank" mdui-tooltip=\'' + JSON.stringify(content.tooltip) + '\'>\
             <i class="mdui-icon material-icons">' + content.icon + '</i>' + content.title + '</a>\
       </div>')
   }
   //友情链接
   for (i = 0; i < links.length; i++) {
     var content = links[i]
-    linksObj.append('<a class="mdui-col" href="' + content.href + '" target="_blank">\
-        <div class="mdui-chip mdui-text-color-theme">\
-          <span class="mdui-chip-title">' + content.name + '</span>\
-        </div>\
-      </a>')
+    linksObj.append('<div class="mdui-col">\
+    <a href="' + content.href + '" target="_blank">\
+      <div class="mdui-chip mdui-text-color-theme">\
+        <span class="mdui-chip-title">' + content.name + '</span>\
+      </div>\
+    </a>\
+  </div>')
   }
 
 }

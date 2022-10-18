@@ -1,18 +1,14 @@
 body {
-    font-family: revert;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.jesse205-toolbar {
+.mdui-toolbar {
     background-color: white;
 }
 
-
-
-
-.jesse205-appbar {}
-
+/* IE浏览器不支持百分数 */
 .jesse205-shadow-4 {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 10%), 0 1px 10px 0 rgba(0, 0, 0, 10%);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .jesse205-shadow-transition {
@@ -23,20 +19,23 @@ body {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 10%), 0 1px 10px 0 rgba(0, 0, 0, 10%);
 }
 
-.jesse205-card {
+/* 卡片 */
+.jesse205-card-outlined {
     border: 1px solid rgba(0, 0, 0, .12);
     border-radius: 8px;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
+.jesse205-card-media-covered-dark {
+    color: white;
+}
 
-
-.jesse205-card-media-covered-white {
+.jesse205-card-media-covered-light {
     color: black;
 }
 
-.jesse205-card-media-covered-black {
+.jesse205-card-media-covered-auto {
     color: black;
 }
 
@@ -44,52 +43,45 @@ body {
     padding: 16px;
 }
 
-.jesse205-card-primary-title,
-.jesse205-card-primary-subtitle {
+.mdui-card-primary-title,
+.mdui-card-primary-subtitle {
     line-height: normal !important;
 }
 
-.jesse205-card-primary-title {
+.mdui-card-primary-title {
     font-size: 20px;
+    font-weight: bold;
 }
 
-.jesse205-card-primary-subtitle {
+.mdui-card-primary-subtitle {
     font-size: 16px;
 }
 
 
-.jesse205-btn {
+.jesse205-btn-outlined {
     border: 1px solid rgba(0, 0, 0, .12);
     border-radius: 4px;
     -webkit-box-shadow: none;
     box-shadow: none;
-    /* justify-content: center;
-    align-items: center;
-    display: flex;
-    width: min-content; */
     margin: auto
 }
+
 
 .jesse205-btn-withicon {
     justify-content: center;
     align-items: center;
     display: flex;
     width: min-content;
+    margin: auto;
 }
 
-.jesse205-btn-float {
-    border-radius: 4px;
-    /* justify-content: center;
-    align-items: center;
-    display: flex;
-    width: min-content; */
-    margin: auto
-}
-
-
-
-.jesse205-btn i {
+.jesse205-btn-withicon i {
     margin-right: 4px;
+}
+
+.mdui-btn {
+    border-radius: 4px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,7 +89,7 @@ body {
         background-color: #212121 !important;
     }
 
-    .mdui-theme-layout-auto .jesse205-toolbar {
+    .mdui-theme-layout-auto .mdui-toolbar {
         background-color: #212121 !important;
     }
 
@@ -105,7 +97,11 @@ body {
         border: 1px solid rgba(255, 255, 255, .12);
     }
 
-    .mdui-theme-layout-auto .jesse205-btn {
+    .mdui-theme-layout-auto .jesse205-card-media-covered-auto {
+        color: white;
+    }
+
+    .mdui-theme-layout-auto .jesse205-btn-outlined {
         border: 1px solid rgba(255, 255, 255, .12);
     }
 }

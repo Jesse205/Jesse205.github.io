@@ -1,6 +1,6 @@
 header>div {
 	text-align: center;
-	margin-top:-40px;
+	margin-top: -40px;
 	opacity: 0.9999999;
 }
 
@@ -30,6 +30,7 @@ header>img {
 
 .app-title {
 	font-size: 22px;
+	font-weight: bold;
 }
 
 .app-summary {
@@ -38,8 +39,8 @@ header>img {
 }
 
 .app-goup-btn {
-	font-size: 16px;
 	margin: 8px !important;
+	font-size: 0;
 }
 
 .app-goup-btn>a {
@@ -147,7 +148,7 @@ header>img {
 	padding: 8px;
 }
 
-.contact div {
+.bottom-links>div {
 	float: left;
 	justify-content: center;
 	display: flex;
@@ -160,9 +161,8 @@ header>img {
 }
 
 .links a {
-	justify-content: center;
-	display: flex;
-	padding: 8px;
+	width: 150px;
+	margin: auto;
 }
 
 .links a>div {
@@ -175,16 +175,12 @@ header>img {
 	padding: 0;
 }
 
-
-
 footer {
 	padding: 8px;
 	color: rgba(0, 0, 0, .54);
 	background-color: #F5F5F5;
 	text-align: center
 }
-
-
 
 @media (prefers-color-scheme: dark) {
 	.mdui-theme-layout-auto footer {
@@ -202,21 +198,11 @@ footer {
 	}
 }
 
-@media screen and (min-width:300px) {
-	.links {
-		padding-left: 16px;
-		padding-right: 16px;
-	}
-}
+@media screen and (min-width:300px) {}
 
-@media screen and (min-width:500px) {
+@media screen and (min-width:400px) {
 	.screenshots>div {
-		width: 500px;
-	}
-
-	.links {
-		padding-left: 24px;
-		padding-right: 24px;
+		width: 90%;
 	}
 }
 
@@ -228,20 +214,10 @@ footer {
 
 	header>img {
 		height: 200px;
-		/* padding-bottom: 200px; */
 	}
 
 	header>div {
 		margin-top: -56px;
-	}
-
-	.screenshots>div {
-		width: 600px;
-	}
-
-	.links {
-		padding-left: 8px;
-		padding-right: 8px;
 	}
 }
 
@@ -261,12 +237,20 @@ footer {
 	.screenshots>div {
 		width: 80%;
 	}
+
+	.links>div {
+		padding: 4px;
+	}
 }
 
 @media screen and (min-width:1920px) {
+
+	/* 屏幕宽度大于1920px时固定图片大小 */
 	.screenshot {
 		width: 336px;
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
+
+
 }

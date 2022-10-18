@@ -1,4 +1,4 @@
-//var $ = mdui.$;
+$$ = mdui.$;
 function scrollShadowListener(appbar) {
     //获取当前滚动条高度
     var topp = $(document).scrollTop();
