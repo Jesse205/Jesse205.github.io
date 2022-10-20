@@ -57,7 +57,6 @@ body {
     font-size: 16px;
 }
 
-
 .jesse205-btn-outlined {
     border: 1px solid rgba(0, 0, 0, .12);
     border-radius: 4px;
@@ -65,7 +64,6 @@ body {
     box-shadow: none;
     margin: auto
 }
-
 
 .jesse205-btn-withicon {
     justify-content: center;
@@ -84,16 +82,35 @@ body {
 
 }
 
+.jesse205-chip-outlined {
+    border: 1px solid rgba(0, 0, 0, .12);
+    background-color: unset !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.mdui-theme-accent-indigo .mdui-text-color-theme-accent {
+    color: #3F51B5 !important;
+}
+.mdui-theme-accent-indigo .mdui-color-theme-accent {
+    background-color: #5C6BC0!important;
+}
+
 @media (prefers-color-scheme: dark) {
+    .jesse205-theme-html-auto {
+        color-scheme: dark;
+    }
+
     .mdui-theme-layout-auto {
         background-color: #212121 !important;
+        color-scheme: dark;
     }
 
     .mdui-theme-layout-auto .mdui-toolbar {
         background-color: #212121 !important;
     }
 
-    .mdui-theme-layout-auto .jesse205-card {
+    .mdui-theme-layout-auto .jesse205-card-outlined {
         border: 1px solid rgba(255, 255, 255, .12);
     }
 
@@ -103,5 +120,13 @@ body {
 
     .mdui-theme-layout-auto .jesse205-btn-outlined {
         border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .mdui-theme-layout-auto .jesse205-chip-outlined {
+        border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .mdui-theme-accent-indigo .mdui-text-color-theme-accent {
+        color: #5C6BC0 !important;
     }
 }
