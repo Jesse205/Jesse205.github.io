@@ -21,7 +21,7 @@ body {
 
 /* 卡片 */
 .jesse205-card-outlined {
-    border: 1px solid rgba(0, 0, 0, .12);
+    border: 1px solid rgba(0, 0, 0, .12) !important;
     border-radius: 8px;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -58,7 +58,7 @@ body {
 }
 
 .jesse205-btn-outlined {
-    border: 1px solid rgba(0, 0, 0, .12);
+    border: 1px solid rgba(0, 0, 0, .12) !important;
     border-radius: 4px;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -82,18 +82,12 @@ body {
 
 }
 
-.jesse205-chip-outlined {
-    border: 1px solid rgba(0, 0, 0, .12);
-    background-color: unset !important;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
 .mdui-theme-accent-indigo .mdui-text-color-theme-accent {
     color: #3F51B5 !important;
 }
+
 .mdui-theme-accent-indigo .mdui-color-theme-accent {
-    background-color: #5C6BC0!important;
+    background-color: #5C6BC0 !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,7 +105,7 @@ body {
     }
 
     .mdui-theme-layout-auto .jesse205-card-outlined {
-        border: 1px solid rgba(255, 255, 255, .12);
+        border: 1px solid rgba(255, 255, 255, .12) !important;
     }
 
     .mdui-theme-layout-auto .jesse205-card-media-covered-auto {
@@ -119,11 +113,11 @@ body {
     }
 
     .mdui-theme-layout-auto .jesse205-btn-outlined {
-        border: 1px solid rgba(255, 255, 255, .12);
+        border: 1px solid rgba(255, 255, 255, .12) !important;
     }
 
     .mdui-theme-layout-auto .jesse205-chip-outlined {
-        border: 1px solid rgba(255, 255, 255, .12);
+        border: 1px solid rgba(255, 255, 255, .12) !important;
     }
 
     .mdui-theme-accent-indigo .mdui-text-color-theme-accent {

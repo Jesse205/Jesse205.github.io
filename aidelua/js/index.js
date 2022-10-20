@@ -39,7 +39,7 @@ function addConfig(config) {
     var content = links[i]
     linksObj.append('<div class="mdui-col">\
     <a href="' + content.href + '" target="_blank">\
-      <div class="jesse205-chip-outlined jesse205-hoverable mdui-chip mdui-text-color-theme-400">\
+      <div class="jesse205-hoverable mdui-btn mdui-ripple mdui-text-color-theme-400 ">\
         <span class="mdui-chip-title">' + content.name + '</span>\
       </div>\
     </a>\
