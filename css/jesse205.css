@@ -73,6 +73,7 @@ body {
     margin: auto;
 }
 
+.jesse205-btn-withicon img,
 .jesse205-btn-withicon i {
     margin-right: 4px;
 }
@@ -101,7 +102,7 @@ body {
     }
 
     .mdui-theme-layout-auto .mdui-toolbar {
-        background-color: #212121 !important;
+        background-color: #212121;
     }
 
     .mdui-theme-layout-auto .jesse205-card-outlined {

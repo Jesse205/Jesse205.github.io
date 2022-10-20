@@ -31,7 +31,7 @@ function addConfig(config) {
     var content = contact[i]
     contactObj.append('<div class="mdui-col">\
         <a class="jesse205-btn-outlined jesse205-btn-withicon jesse205-hoverable mdui-btn mdui-ripple" href="' + content.href + '" target="_blank" mdui-tooltip=\'' + JSON.stringify(content.tooltip) + '\'>\
-            <i class="mdui-icon material-icons">' + content.icon + '</i>' + content.title + '</a>\
+            <' + content.icontag + ' class="mdui-icon material-icons" src="' + content.iconsrc + '" alt>' + content.icon + '</' + content.icontag + '>' + content.title + '</a>\
       </div>')
   }
   //友情链接
@@ -54,8 +54,18 @@ $(document).ready(function () {
   $.getJSON("https://gitee.com/api/v5/repos/Jesse205/AideLua/releases/latest", function (data) {
     $("#download").text("下载 (" + data.tag_name + ")");
     new mdui.Tooltip('#download', {
-      content: ("更新日志：\r\n"+data.body).replace(/\r\n/g, "<br>")
+      content: ("更新日志：\r\n" + data.body).replace(/\r\n/g, "<br>")
     });
   });
-
+  $(window).scroll(function () {
+    var appbar = $("#appbar")
+    var toolbar = $("#toolbar")
+    var topp = $(document).scrollTop();
+    scrollShadowListener(appbar)
+    if (topp > 0) {
+      toolbar.removeClass("toolbar-top")
+    } else {
+      toolbar.addClass("toolbar-top")
+    }
+  })
 });
