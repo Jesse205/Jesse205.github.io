@@ -173,6 +173,7 @@ header>img {
 
 .links a>div>span {
 	padding: 0;
+	text-transform: initial;
 }
 
 footer {
