@@ -1,13 +1,28 @@
 function addConfig(config) {
+  var menus = config.menus
   var screenshot = config.screenshot
+  var developers = config.developers
   var contact = config.contact
   var links = config.links
-  var developers = config.developers
 
-  var developersObj = $("#developers")
+  var toolbarObj = $("#toolbar")
+  var moreMenuObj = $("#menu-more")
   var screenshotsObj = $("#screenshots")
+  var developersObj = $("#developers")
   var contactObj = $("#contact")
   var linksObj = $("#links")
+
+  for (i = 0; i < menus.length; i++) {
+    var content = menus[i]
+    if (content.type == "menu") {
+      toolbarObj.append('<a href="' + content.href + '" class="mdui-btn jesse205-btn-icon-text mdui-hidden-xs-down" targrt="' + content.targrt + '">' + content.title + '</a>')
+      moreMenuObj.append('<li class="mdui-menu-item">\
+      <a href="' + content.href + '" class="mdui-ripple" targrt="' + content.targrt + '">' + content.title + '</a>\
+    </li>')
+    } else if (content.type == "divider") {
+      moreMenuObj.append('<li class="mdui-divider"></li>')
+    }
+  }
   //开发者
   for (i = 0; i < developers.length; i++) {
     var content = developers[i]
@@ -39,7 +54,7 @@ function addConfig(config) {
     var content = links[i]
     linksObj.append('<div class="mdui-col">\
     <a href="' + content.href + '" target="_blank">\
-      <div class="jesse205-hoverable mdui-btn mdui-ripple mdui-text-color-theme-400 ">\
+      <div class="mdui-btn mdui-ripple mdui-text-color-theme-400 ">\
         <span class="mdui-chip-title">' + content.name + '</span>\
       </div>\
     </a>\
