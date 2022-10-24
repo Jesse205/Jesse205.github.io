@@ -15,7 +15,7 @@ function addConfig(config) {
   for (i = 0; i < menus.length; i++) {
     var content = menus[i]
     if (content.type == "menu") {
-      toolbarObj.append('<a href="' + content.href + '" class="mdui-btn jesse205-btn-icon-text mdui-hidden-xs-down" targrt="' + content.targrt + '">' + content.title + '</a>')
+      toolbarObj.append('<a href="' + content.href + '" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down" targrt="' + content.targrt + '">' + content.title + '</a>')
       moreMenuObj.append('<li class="mdui-menu-item">\
       <a href="' + content.href + '" class="mdui-ripple" targrt="' + content.targrt + '">' + content.title + '</a>\
     </li>')
