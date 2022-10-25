@@ -15,9 +15,9 @@ function addConfig(config) {
   for (i = 0; i < menus.length; i++) {
     var content = menus[i]
     if (content.type == "menu") {
-      menusObj.append('<a href="' + content.href + '" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down" targrt="' + content.targrt + '">' + content.title + '</a>')
+      menusObj.append('<a href="' + content.href + '" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down" targrt="' + content.target + '">' + content.title + '</a>')
       moreMenuObj.append('<li class="mdui-menu-item">\
-      <a href="' + content.href + '" class="mdui-ripple" targrt="' + content.targrt + '">' + content.title + '</a>\
+      <a href="' + content.href + '" class="mdui-ripple" targrt="' + content.target + '">' + content.title + '</a>\
     </li>')
     } else if (content.type == "divider") {
       moreMenuObj.append('<li class="mdui-divider"></li>')
@@ -54,9 +54,7 @@ function addConfig(config) {
     var content = links[i]
     linksObj.append('<div class="mdui-col">\
     <a href="' + content.href + '" target="_blank">\
-      <div class="mdui-btn mdui-ripple mdui-text-color-theme-400 ">\
-        <span class="mdui-chip-title">' + content.name + '</span>\
-      </div>\
+      <div class="mdui-btn mdui-ripple mdui-text-color-theme-400 ">' + content.name + '</div>\
     </a>\
   </div>')
   }

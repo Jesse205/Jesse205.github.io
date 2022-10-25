@@ -1,0 +1,58 @@
+[
+    {
+        "packageName": "com.Jesse205.plugin.shareddatamanager",
+        "name": "SharedData 管理器",
+        "description": "管理Androlua+的SharedData",
+        "versionCode": 1399,
+        "versionName": "1.3",
+        "utilVersion": "3.1",
+        "minVersionCode": 50499,
+        "targetVersionCode": 59999,
+        "updateLog": "修复设置页面图标问题，新增快速滚动",
+        "size": "14.8KB",
+        "developer": "Jesse205",
+        "updateDate": "2022-10-07"
+    },
+    {
+        "packageName": "com.aidelua.bottomline",
+        "name": "底线",
+        "description": "字面意思",
+        "versionCode": 1099,
+        "versionName": "1.0",
+        "utilVersion": "3.1",
+        "minVersionCode": 50499,
+        "targetVersionCode": 59999,
+        "updateLog": null,
+        "size": "1.77KB",
+        "developer": "Jesse205",
+        "updateDate": "2022-09-27"
+    },
+    {
+        "packageName": "com.aidelua.md2edit",
+        "name": "Material Design 2 输入框",
+        "description": "",
+        "versionCode": 1099,
+        "versionName": "1.0",
+        "utilVersion": "3.1",
+        "minVersionCode": 50499,
+        "targetVersionCode": 59999,
+        "updateLog": null,
+        "size": "13.9KB",
+        "developer": "Jesse205",
+        "updateDate": "2022-09-27"
+    },
+    {
+        "packageName": "com.aidelua.commandBar",
+        "name": "命令栏",
+        "description": "",
+        "versionCode": 3199,
+        "versionName": "3.1",
+        "utilVersion": "3.1",
+        "minVersionCode": 50499,
+        "targetVersionCode": 59999,
+        "updateLog": "优化水波纹",
+        "size": "1.36KB",
+        "developer": "Jesse205",
+        "updateDate": "2022-09-15"
+    }
+]

@@ -6,14 +6,6 @@ body {
     background-color: white;
 }
 
-.mdui-toolbar>.mdui-btn-icon {
-    border-radius: 20px;
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    border-radius: 20px;
-}
-
 .mdui-toolbar>.jesse205-toolbar-menusSpace {
     display: flex;
 }
@@ -28,7 +20,7 @@ body {
 }
 
 .jesse205-hoverable:hover {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 10%), 0 1px 10px 0 rgba(0, 0, 0, 10%);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* 卡片 */
@@ -97,16 +89,24 @@ body {
     border-radius: 20px !important;
     display: flex;
     align-items: center;
-    text-transform: revert;
+    text-transform: none;
 }
 
 .mdui-btn {
     border-radius: 4px;
 }
 
+.mdui-btn-icon,
+.mdui-toolbar .mdui-btn-icon {
+    border-radius: 50%;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+}
+
 .mdui-menu {
     border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 10%), 0 8px 10px 1px rgb(0 0 0 / 4%), 0 3px 14px 2px rgb(0 0 0 / 2%);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1), 0 8px 10px 1px rgba(0, 0, 0, 0.04), 0 3px 14px 2px rgba(0, 0, 0, 0.02);
 }
 
 .mdui-theme-accent-indigo .mdui-text-color-theme-accent {

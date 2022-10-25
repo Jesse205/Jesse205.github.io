@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="jesse205-theme-html-auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <base target="_blank">
+    <title>Aide Lua 插件库</title>
+    <link rel="icon" sizes="any" mask="" href="favicon.png">
+    <!-- jQuery -->
+    <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script>
+
+    <!-- MDUI -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+
+    <!-- Jesse205Library -->
+    <link rel="stylesheet" href="/css/jesse205.css" />
+    <script src="/js/jesse205.js"></script>
+
+    <!-- 当前页面 -->
+    <script type="text/javascript" src="js/plugins.js"></script>
+</head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
+    <!-- 标题栏 -->
+    <div id="appbar" class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed mdui-shadow-0">
+        <div class="mdui-toolbar">
+            <a class="mdui-typo-title">Aide Lua 插件库</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="/AideLua/plugin/" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
+                targrt="_blank">插件文档</a>
+            <a href="https://www.123pan.com/s/G7a9-cdek" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
+                targrt="_blank">更多插件</a>
+            <a class="mdui-btn mdui-btn-icon mdui-hidden-sm-up"" mdui-menu=" {target:'#toolbar_menu'}"
+                mdui-tooltip="{'content':'更多选项'}">
+                <i class="mdui-icon material-icons">more_vert</i>
+            </a>
+            <ul class="mdui-menu" id="toolbar_menu">
+                <li class="mdui-menu-item"><a href="/AideLua/plugin/" class="mdui-ripple" target="_blank">插件文档</a></li>
+                <li class="mdui-menu-item"><a href="https://www.123pan.com/s/G7a9-cdek" class="mdui-ripple" target="_blank">更多插件</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="plugins"
+        class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1"></div>
+
+</body>
+
+</html>

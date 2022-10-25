@@ -181,12 +181,10 @@ header>img {
 	text-align: center;
 	overflow: hidden;
 	border: 0 !important;
+	padding: 0;
+	text-transform: none;
 }
 
-.links a>div>span {
-	padding: 0;
-	text-transform: initial;
-}
 
 footer {
 	padding: 8px;

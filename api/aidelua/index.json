@@ -9,6 +9,12 @@
             "type": "menu"
         },
         {
+            "title": "插件下载",
+            "href": "plugins.html",
+            "target": "_blank",
+            "type": "menu"
+        },
+        {
             "title": "使用文档",
             "href": "/AideLua/",
             "target": "_self",
@@ -20,13 +26,13 @@
         {
             "title": "Gitee 仓库",
             "href": "https://gitee.com/Jesse205/AideLua",
-            "target": "_self",
+            "target": "_blank",
             "type": "menu"
         },
         {
             "title": "Github 仓库",
             "href": "https://github.com/Jesse205/AideLua",
-            "target": "_self",
+            "target": "_blank",
             "type": "menu"
         }
     ],
