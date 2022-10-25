@@ -136,6 +136,7 @@ header>img {
 .developers div {
 	width: 120px;
 	text-align: center;
+	margin: 8px;
 }
 
 .developers h1 {

@@ -6,6 +6,18 @@ body {
     background-color: white;
 }
 
+.mdui-toolbar>.mdui-btn-icon {
+    border-radius: 20px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.mdui-toolbar>.jesse205-toolbar-menusSpace {
+    display: flex;
+}
+
 /* IE浏览器不支持百分数 */
 .jesse205-shadow-4 {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
@@ -78,12 +90,11 @@ body {
     margin-right: 4px;
 }
 
-.jesse205-btn-icon-text,
-.mdui-toolbar>.jesse205-btn-icon-text {
+.jesse205-btn-icon-text {
     font-size: 14px;
     min-width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 20px !important;
     display: flex;
     align-items: center;
     text-transform: revert;
@@ -91,14 +102,6 @@ body {
 
 .mdui-btn {
     border-radius: 4px;
-}
-
-.mdui-toolbar>.mdui-btn-icon {
-    border-radius: 50%;
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    border-radius: 20px;
 }
 
 .mdui-menu {

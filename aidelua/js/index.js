@@ -5,7 +5,7 @@ function addConfig(config) {
   var contact = config.contact
   var links = config.links
 
-  var toolbarObj = $("#toolbar")
+  var menusObj = $("#menus")
   var moreMenuObj = $("#menu-more")
   var screenshotsObj = $("#screenshots")
   var developersObj = $("#developers")
@@ -15,7 +15,7 @@ function addConfig(config) {
   for (i = 0; i < menus.length; i++) {
     var content = menus[i]
     if (content.type == "menu") {
-      toolbarObj.append('<a href="' + content.href + '" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down" targrt="' + content.targrt + '">' + content.title + '</a>')
+      menusObj.append('<a href="' + content.href + '" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down" targrt="' + content.targrt + '">' + content.title + '</a>')
       moreMenuObj.append('<li class="mdui-menu-item">\
       <a href="' + content.href + '" class="mdui-ripple" targrt="' + content.targrt + '">' + content.title + '</a>\
     </li>')
@@ -83,4 +83,5 @@ $(document).ready(function () {
       toolbar.addClass("toolbar-top")
     }
   })
+  mdui.mutation()
 });

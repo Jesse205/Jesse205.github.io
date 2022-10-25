@@ -45,12 +45,8 @@
             "title": "Title",
             "summary": "Summary",
             "src": "img/template_screenshot.jpg"
-        },
-        {
-            "title": "Title",
-            "summary": "Summary",
-            "src": "img/template_screenshot.jpg"
         }
+
     ],
     "developers": [
         {
