@@ -2,31 +2,31 @@
     {
         "name": "Aide Lua",
         "summary": "为更方便的移动开发",
-        "image": "images/aidelua_card.png",
+        "image": "images/graphs/aidelua.png",
         "src": "/aidelua"
     },
     {
         "name": "Edde Lua",
         "summary": "为更好看的用户界面",
-        "image": "images/aidelua_card.png",
-        "src": "https://gitee.com/Jesse205/AideLua/blob/master/README_eddelua.md"
+        "image": "images/graphs/aidelua.png",
+        "src": ""
     },
     {
         "name": "哈兔Box",
         "summary": "简洁蓝白风工具箱",
-        "image": "images/aidelua_card.png",
-        "src": "/helotool"
+        "image": "images/graphs/aidelua.png",
+        "src": ""
     },
     {
         "name": "畅玩6X工具箱",
         "summary": "不止为畅玩6X开发",
-        "image": "images/aidelua_card.png",
-        "src": "."
+        "image": "images/graphs/aidelua.png",
+        "src": ""
     },
     {
         "name": "百度一下Lite",
         "summary": "特别简洁的浏览器主页",
-        "image": "images/aidelua_card.png",
+        "image": "images/graphs/aidelua.png",
         "src": "./baiduhomelite"
     }
 ]
