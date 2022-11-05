@@ -1,8 +1,8 @@
 {
-    "name": "百度一下Lite",
-    "short_name": "百度Lite",
+    "name": "百度一下 Lite",
+    "short_name": "百度 Lite",
     "start_url": "/baiduhomelite/",
-    "description": "特别简单的百度首页",
+    "description": "特别简洁的浏览器主页",
     "author": "Jesse205",
     "lang": "zh-CN",
     "display": "minimal-ui",

@@ -24,9 +24,15 @@
         "src": ""
     },
     {
-        "name": "百度一下Lite",
+        "name": "百度一下 Lite",
         "summary": "特别简洁的浏览器主页",
         "image": "images/graphs/aidelua.png",
-        "src": "./baiduhomelite"
+        "src": "./baiduhomelite/"
+    },
+    {
+        "name": "桌面时钟 Lite",
+        "summary": "一款占用低、兼容性强的时钟",
+        "image": "images/graphs/aidelua.png",
+        "src": "./deskclocklite/"
     }
 ]

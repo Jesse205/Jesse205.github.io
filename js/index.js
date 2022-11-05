@@ -8,7 +8,7 @@ function addApps(apps) {
                 <div class="mdui-card-media">\
                     <img src="'+ content.image + '" alt="'+ content.name + '" draggable="false" />\
                     <div class="jesse205-card-media-covered-light mdui-card-media-covered mdui-card-media-covered-transparent">\
-                        <div class="jesse205-card-primary mdui-card-primary">\
+                        <div class="mdui-card-primary">\
                             <div class="mdui-card-primary-title">'+ content.name + '</div>\
                             <div class="mdui-card-primary-subtitle">'+ content.summary + '</div>\
                         </div>\

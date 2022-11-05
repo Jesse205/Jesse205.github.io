@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>桌面时钟 Lite</title>
+  <meta name="keywords" content="时钟,桌面时钟">
+  <meta itemprop="name" content="桌面时钟 Lite">
+  <meta itemprop="description" name="description" content="一款占用低、兼容性强的时钟">
+  <meta name="author" content="Jesse205" />
+
+  <link rel="icon" sizes="any" mask="" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <script type="text/javascript">
+    var lastTime;
+    var lastDate;
+    weekDayMap = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    function clock() {
+      var now = new Date();
+      var time = now.toLocaleTimeString();
+      var date = (now.getMonth() + 1) + "月" + now.getDate() + "日 " + weekDayMap[now.getDay()];
+      if (time != lastTime) {
+        document.getElementById("time").innerText = time;
+        lastTime = time;
+      }
+      if (date != lastDate) {
+        document.getElementById("date").innerText = date;
+        lastDate = date;
+      }
+    }
+  </script>
+  <style>
+    html,
+    body {
+      background-color: black;
+      color-scheme: dark;
+      color: white;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      justify-content: space-evenly;
+      align-items: center;
+      font-family: system-ui, "HarmonyOS Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    }
+
+    #time {
+      font-size: 22vw;
+      margin: auto;
+    }
+
+    #date {
+      font-size: 12px;
+      margin: auto;
+      display: block;
+      position: fixed;
+      bottom: 24px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /*这是手表最大的了吧 */
+    @media screen and (min-width:240px) {
+      #time {
+        font-size: 24vw;
+      }
+
+      #date {
+        font-size: 16px;
+        bottom: 16px;
+      }
+    }
+
+    @media screen and (min-width:320px) {
+      #date {
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (min-width:600px) {
+      #time {
+        font-size: 20vw;
+      }
+
+      #date {
+        font-size: 20px;
+        bottom: 24px;
+      }
+    }
+
+    @media screen and (min-width:1280px) {
+      #date {
+        font-size: 34px;
+        bottom: 32px;
+      }
+    }
+
+    @media screen and (min-width:1600px) {
+      #date {
+        font-size: 48px;
+        bottom: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div align="center" id="time"></div>
+  <div align="center" id="date"></div>
+  <script type="text/javascript">
+    self.setInterval("clock()", 100);
+    clock()
+  </script>
+</body>
+
+</html>
