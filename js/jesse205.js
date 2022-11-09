@@ -10,3 +10,17 @@ function scrollShadowListener(appbar) {
         appbar.addClass("mdui-shadow-0")
     }
 }
+
+function initMenu(menusList,menusObj,moreMenuObj) {
+    for (i = 0; i < menusList.length; i++) {
+        var content = menusList[i];
+        if (content.type == "menu") {
+            menusObj.append('<a href="' + content.href + '" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down" targrt="' + content.target + '">' + content.title + '</a>')
+            moreMenuObj.append('<li class="mdui-menu-item">\
+          <a href="' + content.href + '" class="mdui-ripple" targrt="' + content.target + '">' + content.title + '</a>\
+        </li>');
+        } else if (content.type == "divider") {
+            moreMenuObj.append('<li class="mdui-divider"></li>');
+        }
+    }
+}

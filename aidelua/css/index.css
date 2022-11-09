@@ -1,6 +1,5 @@
 .toolbar-top {
 	background-color: transparent !important;
-	transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
 }
 
 .toolbar {
@@ -8,7 +7,11 @@
 }
 
 .toolbar-top .mdui-typo-title {
-	display: none;
+	opacity: 0;
+}
+
+.mdui-typo-title {
+	transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
 }
 
 header>div {

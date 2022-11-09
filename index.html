@@ -29,18 +29,27 @@
   <script src="js/index.js"></script>
 </head>
 
-<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo jesse205-theme-layout-cardDesign mdui-theme-layout-auto">
   <!-- 标题栏 -->
   <div id="appbar" class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed mdui-shadow-0">
     <div class="mdui-toolbar">
       <a class="mdui-typo-title">Edde 互联</a>
       <div class="mdui-toolbar-spacer"></div>
+      <div id="menus" class="jesse205-toolbar-menusSpace">
+      </div>
+      <a class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}" mdui-tooltip="{'content':'更多选项'}">
+        <i class="mdui-icon material-icons">more_vert</i>
+      </a>
+      <ul class="mdui-menu" id="menu-more">
+      </ul>
     </div>
   </div>
-  <div id="applications"
-    class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1">
+  <div class="mdui-container">
+    <!-- 可扩展面板 -->
+    <div id="mainlist" class="mdui-panel mdui-panel-gapless mdui-m-y-1 jesse205-card-outlined"
+      mdui-panel="{accordion: false}">
+    </div>
   </div>
-
 </body>
 
 </html>

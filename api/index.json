@@ -1,0 +1,28 @@
+{
+    "menus": [
+        {
+            "type": "divider"
+        },
+        {
+            "title": "Gitee 主页",
+            "href": "https://gitee.com/Jesse205/AideLua",
+            "target": "_blank",
+            "type": "menu"
+        },
+        {
+            "title": "Github 主页",
+            "href": "https://github.com/Jesse205/AideLua",
+            "target": "_blank",
+            "type": "menu"
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "title": "发送邮件",
+            "href": "mailto:jesse205@qq.com",
+            "target": "_blank",
+            "type": "menu"
+        }
+    ]
+}

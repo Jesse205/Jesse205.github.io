@@ -1,38 +1,62 @@
 [
     {
-        "name": "Aide Lua",
-        "summary": "为更方便的移动开发",
-        "image": "images/graphs/aidelua.png",
-        "src": "/aidelua"
+        "name": "Android 应用程序",
+        "id":"android_applications",
+        "items": [
+            {
+                "name": "Aide Lua",
+                "summary": "为更方便的移动开发",
+                "image": "images/graphs/aidelua.png",
+                "src": "/aidelua"
+            },
+            {
+                "name": "Edde Lua",
+                "summary": "为更好看的用户界面",
+                "image": "images/graphs/aidelua.png",
+                "src": ""
+            },
+            {
+                "name": "哈兔Box",
+                "summary": "简洁蓝白风工具箱",
+                "image": "images/graphs/aidelua.png",
+                "src": ""
+            },
+            {
+                "name": "桌面时钟 Lite",
+                "summary": "占用低、兼容性强的时钟",
+                "image": "images/graphs/deskclocklite.png",
+                "src": "https://github.com/Jesse205/Desk-Clock-Lite"
+            }
+        ]
     },
     {
-        "name": "Edde Lua",
-        "summary": "为更好看的用户界面",
-        "image": "images/graphs/aidelua.png",
-        "src": ""
+        "name": "Windows 软件",
+        "id":"windoiws_softwares",
+        "items": [
+            {
+                "name": "畅玩6X工具箱",
+                "summary": "不止为畅玩6X开发",
+                "image": "images/graphs/aidelua.png",
+                "src": ""
+            }
+        ]
     },
     {
-        "name": "哈兔Box",
-        "summary": "简洁蓝白风工具箱",
-        "image": "images/graphs/aidelua.png",
-        "src": ""
-    },
-    {
-        "name": "畅玩6X工具箱",
-        "summary": "不止为畅玩6X开发",
-        "image": "images/graphs/aidelua.png",
-        "src": ""
-    },
-    {
-        "name": "百度一下 Lite",
-        "summary": "特别简洁的浏览器主页",
-        "image": "images/graphs/aidelua.png",
-        "src": "./baiduhomelite/"
-    },
-    {
-        "name": "桌面时钟 Lite",
-        "summary": "一款占用低、兼容性强的时钟",
-        "image": "images/graphs/aidelua.png",
-        "src": "./deskclocklite/"
+        "name": "PWA 应用",
+        "id":"pwa_applications",
+        "items": [
+            {
+                "name": "百度一下 Lite",
+                "summary": "特别简洁的浏览器主页",
+                "image": "images/graphs/baidulite.png",
+                "src": "./baiduhomelite/"
+            },
+            {
+                "name": "桌面时钟 Lite",
+                "summary": "打开就能用的时钟",
+                "image": "images/graphs/deskclocklite.png",
+                "src": "./deskclocklite/"
+            }
+        ]
     }
 ]
