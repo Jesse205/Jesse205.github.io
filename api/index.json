@@ -1,9 +1,6 @@
 {
     "menus": [
         {
-            "type": "divider"
-        },
-        {
             "title": "Gitee 主页",
             "href": "https://gitee.com/Jesse205/AideLua",
             "target": "_blank",

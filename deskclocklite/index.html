@@ -19,8 +19,23 @@
     weekDayMap = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
     function clock() {
       var now = new Date();
-      var time = now.toLocaleTimeString();
-      var date = (now.getMonth() + 1) + "月" + now.getDate() + "日 " + weekDayMap[now.getDay()];
+      var month = now.getMonth() + 1; //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+      var day = now.getDay(); //获取日
+      var date = now.getDate(); //获取日期
+      var hour = now.getHours(); //获取小时
+      var minute = now.getMinutes(); //获取分钟
+      var second = now.getSeconds(); //获取秒
+
+      //补0
+      if (month < 10) month = "0" + month;
+      if (date < 10) date = "0" + date;
+      if (hour < 10) hour = "0" + hour;
+      if (minute < 10) minute = "0" + minute;
+      if (second < 10) second = "0" + second;
+
+      var time = hour + ":" + minute + ":" + second;
+      var date = (month + 1) + "月" + date + "日 " + weekDayMap[now.getDay()];
+
       if (time != lastTime) {
         document.getElementById("time").innerText = time;
         lastTime = time;
@@ -41,29 +56,45 @@
       height: 100%;
       width: 100%;
       margin: auto;
-      justify-content: space-evenly;
       align-items: center;
-      font-family: system-ui, "HarmonyOS Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-family: "HarmonyOS Sans SC", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
     #time {
-      font-size: 22vw;
+      font-size: 192px;
       margin: auto;
     }
 
     #date {
-      font-size: 12px;
+      font-size: 18px;
       margin: auto;
       display: block;
       position: fixed;
-      bottom: 24px;
+      bottom: 16px;
       color: rgba(255, 255, 255, 0.8);
+      /*兼容IE */
+      left: 0;
+      right: 0;
+    }
+
+    @media screen and (min-width:0px) {
+
+      #time {
+        font-size: 44px;
+        font-size: 22vw !important;
+      }
+
+      #date {
+        font-size: 12px;
+        bottom: 24px;
+      }
     }
 
     /*这是手表最大的了吧 */
     @media screen and (min-width:240px) {
       #time {
-        font-size: 24vw;
+        font-size: 60px;
+        font-size: 24vw !important;
       }
 
       #date {
@@ -73,6 +104,10 @@
     }
 
     @media screen and (min-width:320px) {
+      #time {
+        font-size: 80px;
+      }
+
       #date {
         font-size: 18px;
       }
@@ -80,7 +115,8 @@
 
     @media screen and (min-width:600px) {
       #time {
-        font-size: 20vw;
+        font-size: 144px;
+        font-size: 20vw !important;
       }
 
       #date {
@@ -90,6 +126,10 @@
     }
 
     @media screen and (min-width:1280px) {
+      #time {
+        font-size: 288px;
+      }
+
       #date {
         font-size: 34px;
         bottom: 40px;
@@ -97,6 +137,10 @@
     }
 
     @media screen and (min-width:1600px) {
+      #time {
+        font-size: 360px;
+      }
+
       #date {
         font-size: 48px;
         bottom: 56px;
@@ -106,8 +150,9 @@
 </head>
 
 <body>
-  <div align="center" id="time"></div>
   <div align="center" id="date"></div>
+  <div align="center" id="time"></div>
+
   <script type="text/javascript">
     self.setInterval("clock()", 100);
     clock()
