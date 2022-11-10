@@ -29,7 +29,8 @@
   <script src="js/index.js"></script>
 </head>
 
-<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo jesse205-theme-layout-cardDesign mdui-theme-layout-auto">
+<body
+  class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo jesse205-theme-layout-cardDesign mdui-theme-layout-auto">
   <!-- 标题栏 -->
   <div id="appbar" class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed mdui-shadow-0">
     <div class="mdui-toolbar">
@@ -37,7 +38,8 @@
       <div class="mdui-toolbar-spacer"></div>
       <div id="menus" class="jesse205-toolbar-menusSpace">
       </div>
-      <a class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}" mdui-tooltip="{'content':'更多选项'}">
+      <a class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+        mdui-tooltip="{'content':'更多选项'}">
         <i class="mdui-icon material-icons">more_vert</i>
       </a>
       <ul class="mdui-menu" id="menu-more">
@@ -46,10 +48,22 @@
   </div>
   <div class="mdui-container">
     <!-- 可扩展面板 -->
-    <div id="mainlist" class="mdui-panel mdui-panel-gapless mdui-m-y-1 jesse205-card-outlined"
-      mdui-panel="{accordion: false}">
+    <div id="mainlist" class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined" mdui-panel>
     </div>
-  </div>
+
+    <div class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined" mdui-panel>
+      <div class="mdui-panel-item mdui-panel-item-open">
+        <div class="mdui-panel-item-header mdui-ripple mdui-p-x-2">
+          <div class="mdui-panel-item-title">友情链接</div>
+          <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <div class="mdui-panel-item-body mdui-p-x-1">
+          <div id="links" class="links">
+          </div>
+        </div>
+      </div>
+    </div>
+
 </body>
 
 </html>

@@ -106,16 +106,16 @@
     ],
     "links": [
         {
-            "name": "Jesse205网站",
+            "name": "Edde 互联",
             "href": "/"
         },
         {
             "name": "哈兔Box",
-            "href": "/"
+            "href": "https://gitee.com/Jesse205/hellotool"
         },
         {
-            "name": "畅玩6X工具箱",
-            "href": "/"
+            "name": "VuePress",
+            "href": "https://vuepress.vuejs.org/zh/"
         },
         {
             "name": "MDUI",
@@ -126,8 +126,8 @@
             "href": "https://yunchu.cxoip.com/"
         },
         {
-            "name": "AIDE 高级设置版",
-            "href": "/"
+            "name": "AIDE Pro",
+            "href": "https://aidepro.top"
         }
     ]
 }

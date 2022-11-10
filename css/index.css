@@ -1,0 +1,18 @@
+.links {
+    font-size: 0;
+}
+
+.link-btn {
+    border-radius: 18px;
+    margin: 8px;
+    text-transform: none;
+}
+
+.card-image {
+    aspect-ratio: 16/9;
+}
+
+.panel {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

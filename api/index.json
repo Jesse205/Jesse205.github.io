@@ -2,13 +2,13 @@
     "menus": [
         {
             "title": "Gitee 主页",
-            "href": "https://gitee.com/Jesse205/AideLua",
+            "href": "https://gitee.com/Jesse205",
             "target": "_blank",
             "type": "menu"
         },
         {
             "title": "Github 主页",
-            "href": "https://github.com/Jesse205/AideLua",
+            "href": "https://github.com/Jesse205",
             "target": "_blank",
             "type": "menu"
         },
@@ -20,6 +20,16 @@
             "href": "mailto:jesse205@qq.com",
             "target": "_blank",
             "type": "menu"
+        }
+    ],
+    "links": [
+        {
+            "name": "AIDE Pro",
+            "href": "https://aidepro.top"
+        },
+        {
+            "name": "MDUI",
+            "href": "https://www.mdui.org/"
         }
     ]
 }
