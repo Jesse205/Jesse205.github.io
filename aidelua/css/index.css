@@ -116,6 +116,7 @@ header>img {
 .screenshot {
 	width: 100%;
 	display: block;
+	aspect-ratio: 1.6;
 }
 
 .screenshot-item {
@@ -191,7 +192,7 @@ header>img {
 
 footer {
 	padding: 8px;
-	color: rgba(0, 0, 0, .54);
+	color: #616161;
 	background-color: #F5F5F5;
 	text-align: center
 }

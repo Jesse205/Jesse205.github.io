@@ -8,11 +8,20 @@
   <title>桌面时钟 Lite</title>
   <meta name="keywords" content="时钟,桌面时钟">
   <meta itemprop="name" content="桌面时钟 Lite">
-  <meta itemprop="description" name="description" content="一款占用低、兼容性强的时钟">
+  <meta itemprop="description" name="description"
+    content="一款占用低、兼容性强的PWA版本数字时钟。此时钟最低兼容 Internet Explorer 10。“Edde 互联”主页有Android版本，支持 Android2.3 到 Android13。（OLED屏幕慎用，会烧屏）">
   <meta name="author" content="Jesse205" />
 
-  <link rel="icon" sizes="any" mask="" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#212121">
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+  <meta name="theme-color" content="#000000">
+
   <script type="text/javascript">
     var lastTime;
     var lastDate;
@@ -45,6 +54,21 @@
         lastDate = date;
       }
     }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/deskclocklite/serviceWorker.js', { scope: '/deskclocklite/' }).then(function (reg) {
+        // registration worked
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+      }).catch(function (error) {
+        // registration failed
+        console.log('Registration failed with ' + error);
+      });
+    }
+    window.addEventListener('load', function () {
+      self.setInterval("clock()", 100);
+      clock();
+    })
+
+
   </script>
   <style>
     html,
@@ -152,11 +176,6 @@
 <body>
   <div align="center" id="date"></div>
   <div align="center" id="time"></div>
-
-  <script type="text/javascript">
-    self.setInterval("clock()", 100);
-    clock()
-  </script>
 </body>
 
 </html>

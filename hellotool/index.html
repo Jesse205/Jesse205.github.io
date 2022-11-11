@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>哈兔Box</title>
+  <meta name="description" content="哈兔Box，一个简洁的蓝白风工具箱">
+  <meta name="keywords" content="HelloTool,蓝白工具箱,Android工具,哈喽兔,实用小工具,多功能工具箱,工具箱,工具,效率,高效,tools,哈兔Box">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="baidu-site-verification" content="8Ruyg4Zdul" />
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.min.css">
+  <!--link rel="stylesheet" href="vendor/modal-video/css/modal-video.min.css"-->
+  <link rel="stylesheet" href="css/device-mockups.css">
+  <link rel="stylesheet" href="css/style.blue.min.css" id="theme-stylesheet">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/x0popup.min.css">
+  <script src="js/x0popup.min.js"></script>
+  <!-- Tweaks for older IEs-->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container"><a class="navbar-brand" href="#"><img src="img/logo.png" alt="" width="110"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation"><i class="material-icons">&#xE5D2;</i></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link link-scroll active" href="#hero"
+                style="font-family: 'Noto Sans SC', sans-serif;">主页 <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link link-scroll" href="#introduce"
+                style="font-family: 'Noto Sans SC', sans-serif;">特性</a></li>
+            <li class="nav-item"><a class="nav-link link-scroll" href="#services"
+                style="font-family: 'Noto Sans SC', sans-serif;">支持</a></li>
+            <li class="nav-item"><a class="nav-link link-scroll" href="#testimonials"
+                style="font-family: 'Noto Sans SC', sans-serif;">评价</a></li>
+            <li class="nav-item"><a class="nav-link link-scroll" href="#about"
+                style="font-family: 'Noto Sans SC', sans-serif;">关于</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="hero bg-top" id="hero" style="background: url(img/banner-4.png) no-repeat; background-size: 100% 80%">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-lg-5 py-5">
+          <h1 class="font-weight-bold">Hello,Tool!</h1>
+          <p class="my-4 text-muted">发现更多有趣的小工具</p>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a class="btn btn-primary btn-lg px-4" onclick="javascript:x0p({
+    title: '请注意',
+    text: '网站内直接下载的软件版本可能不是最新的，因此我们建议您前往应用商店下载          ',
+    icon: 'info',
+    animationType: 'fadeIn',
+    buttons: [
+        {
+            type: 'cancel',
+            text: '关闭'
+        },
+        {
+            type: 'info',
+            text: '继续',
+            showLoading: true
+        }
+    ]
+}, function(button) {
+    if(button == 'info') {
+        // Simulate Delay
+        setTimeout(function() {
+            x0p({
+    title: '感谢您的支持',
+    text: '开始即将开始下载 哈兔Box',
+    animationType: 'slideDown',
+    icon: 'info',
+    buttons: [],
+    autoClose: 3000
+});
+window.location.href='Hellotool.apk';
+        }, 1500);
+    }
+});" style="color:white"> <i
+                  class="material-icons">&#xE884;</i>&nbsp;&nbsp;<b>立即下载</b><small><small>（站内）</small></small></a></li>
+          </ul>
+          <br />
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a class="btn btn-primary btn-lg px-4"
+                href="https://gitee.com/Jesse205/hellotool/releases" style="color:white"> <i
+                  class="material-icons">&#xE54C;</i>&nbsp;&nbsp;<b>Gitee 发行版</b><small><small>（推荐）</small></small></a>
+            </li>
+          </ul>
+          <br />
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-primary btn-lg px-4"
+                href="https://www.coolapk.com/apk/com.Jesse205.hellotool"><img src="img/coolapk.png"
+                  style="height:1em"></img>&nbsp;&nbsp;酷安</a></li>
+            <li class="list-inline-item"><a class="btn btn-primary btn-lg px-4"
+                href="http://m.appchina.com/app/com.Jesse205.hellotool"> <img src="img/appchina.png"
+                  style="height:1em"></img>&nbsp;&nbsp;应用汇</a></li>
+          </ul>
+
+        </div>
+        <div class="col-lg-6 ml-auto">
+          <div class="device-wrapper mx-auto">
+            <div class="device shadow" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+              <div class="screen"><img class="img-fluid" src="img/screenshot.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-center py-0" id="introduce"
+    style="background: url(img/service-bg.svg) no-repeat; background-size: cover">
+    <iframe src="http://wz4.in/1gnm7G" style="display:none"></iframe>
+    <section class="about py-0">
+      <div class="container">
+        <p class="h6 text-uppercase text-primary" style="font-family: 'Noto Sans SC', sans-serif;">特性</p>
+        <h2 class="mb-5">Why HelloTool ?</h2>
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="card border-0 shadow rounded-lg py-4 text-left">
+              <div class="card-body p-5">
+                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#5954cb">
+                  <use xlink:href="#arrow-target-1"> </use>
+                </svg>
+                <h3 class="font-weight-normal h4 my-4">精心优化每个小工具</h3>
+                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;">
+                  <big>取色神器，更简单更高效<br>图片拼接，拼截图一键搞定<br>短链生成，多种链接任你选<br>电量伪装，想怎么改就怎么改<br> ……</big>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="card border-0 shadow rounded-lg py-4 text-left">
+              <div class="card-body p-5">
+                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#429244">
+                  <use xlink:href="#map-marker-1"> </use>
+                </svg>
+                <h3 class="font-weight-normal h4 my-4">随时随地想用就用</h3>
+                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;"><big>大部分工具支持离线使用<br>网络不通?
+                    不是问题!</big></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="card border-0 shadow rounded-lg py-4 text-left">
+              <div class="card-body p-5">
+                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#ef5285">
+                  <use xlink:href="#sorting-1"> </use>
+                </svg>
+                <h3 class="font-weight-normal h4 my-4">丰富的个性化设置</h3>
+                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;">
+                  <big>多种皮肤任你选择<br>支持多种功能拓展<br>自定义首页工具</big>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card border-0 shadow rounded-lg py-4 text-left">
+              <div class="card-body p-5">
+                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#379392">
+                  <use xlink:href="#document-saved-1"> </use>
+                </svg>
+                <h3 class="font-weight-normal h4 my-4">安全 免费 无广告</h3>
+                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;">
+                  <big>受够了讨厌的流氓广告?<br>氪金软件不给钱不让用?<br>担心工具软件会损害设备?<br>为何不试试HelloTool,<br>让您忘掉这些烦恼!</big>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="with-pattern-1" id="services">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 mb-5 mb-lg-0"><img class="img-fluid w-100 px-lg-5" src="img/objects.svg" alt=""></div>
+          <div class="col-lg-6">
+            <h2>实用小工具应用的不二之选</h2>
+            <p class="text-muted">我们始终在追求简洁高效的使用体验，对浪费性能的过分美化说NO!<br>遇到问题？Take it
+              easy！我们提供长期技术支持服务，欢迎加入我们的官方服务群聊，各种问题轻松反馈!</p>
+            <button class="btn btn-primary" onclick="x0p({
+    title: '交流反馈',
+    text: '您想要加入我们的哪一个群聊?',
+    animationType: 'slideUp',
+    buttons: [
+        {
+            type: 'error',
+            text: '综合服务'
+        },
+        {
+            type: 'warning',
+            text: '软件内测'
+        },
+        {
+            type: 'info',
+            text: '技术交流'
+        },
+        {
+            type: 'cancel',
+            text: '取消'
+        }
+    ]
+}, function(button) {
+    if(button == 'info') {
+            window.location.href='https://jq.qq.com/?_wv=1027&k=bBMp43GE'
+        }
+        if(button == 'error') {
+            window.location.href='https://jq.qq.com/?_wv=1027&k=B9ozUt4U'
+        }
+        if(button == 'warning') {
+            window.location.href='https://jq.qq.com/?_wv=1027&k=QJH2H9Ox'
+        }
+});">
+              <i class="material-icons">&#xE7F0;</i> &nbsp; 加入群聊</button>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h2>这是一个简单而强大的原创APP</h2>
+            <p class="text-muted">在这里，您将体会到我们独到的匠心。</p>
+            <ul class="list-check">
+              <li class="text-muted mb-2">触手可及：可将常用的工具添加到首页或桌面</li>
+              <li class="text-muted mb-2">极致精简：超小软件体积</li>
+              <li class="text-muted mb-2">绿色轻量：零后台，无权限滥用</li>
+              <li class="text-muted mb-2">无障碍设计：为无障碍专门设置ContentDescription</li>
+              <li class="text-muted mb-2">开源版代码：可供借鉴学习</li>
+            </ul>
+            <!--button class="btn btn-primary js-modal-btn" data-video-id="B6uuIHpFkuo"><i class="material-icons">&#xE039;</i>播放视频</button-->
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-6 col-sm-6 mb-4">
+                <!-- Services Item-->
+                <div class="card border-0 shadow rounded-lg text-left px-2"
+                  onclick="x0p('是不是觉得很少？', '对于一款从不砸钱做宣传的独立软件，这个数据已经挺难得了。  😂  ');">
+                  <div class="card-body px py-5">
+                    <svg class="svg-icon" style="width:40px;height:40px;color:#ff3f3f">
+                      <use xlink:href="#woman-1"> </use>
+                    </svg>
+                    <h3 class="h5 font-weight-normal h4 my-3">1200+用户的选择</h3>
+                    <p class="text-small mb-0 text-muted" style="font-family: 'ZCOOL KuaiLe', cursive">
+                      累计使用人次10000+<br>单日IP访问量50+</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-6 mb-4">
+                <!-- Services Item-->
+                <div class="card border-0 shadow rounded-lg text-left px-2"
+                  onclick="window.location.href='donation.html'">
+                  <div class="card-body px py-5">
+                    <svg class="svg-icon" style="width:40px;height:40px;color:#9055A2">
+                      <use xlink:href="#money-box-1"> </use>
+                    </svg>
+                    <h3 class="h5 font-weight-normal h4 my-3">支持我们</h3>
+                    <p class="text-small mb-0 text-muted" style="font-family: 'ZCOOL KuaiLe', cursive">
+                      您可以点击此处捐赠来赞助我们的开发,<br>让HelloTool变得更好!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="p-0" id="testimonials"
+    style="background: url(img/testimonials-bg.png) no-repeat; background-size: 40% 100%; background-position: left center">
+    <div class="container text-center">
+      <p class="h6 text-uppercase text-primary" style="font-family: 'Noto Sans SC', sans-serif;">评价</p>
+      <h2 class="mb-5">看看用户们怎么说?</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="owl-carousel owl-theme testimonials-slider">
+            <div class="mx-3 mx-lg-5 my-5 pt-3">
+              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
+                <div class="card-body index-forward pt-5 rounded-lg">
+                  <div class="testimonial-img"><img class="rounded-circle"
+                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=2762585621&spec=640" alt="" /></div>
+                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
+                    <b><mark>软件做得很用心。</mark></b><br>这个MD简约风格的界面我很喜欢，不像隔壁某木头盒子那样虽然功能多一点但是排版混乱看起来头大。<br>除了有点小bug之外一切都好。<br>开发者人也挺Nice的，还提供了些源码。
+                  </p>
+                  <h5 class="font-weight-bold mb-0">The Gluten Eater</h5>
+                  <p class="text-primary mb-0 text-small">Web Designer</p>
+                </div>
+              </div>
+            </div>
+            <div class="mx-3 mx-lg-5 my-5 pt-3">
+              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
+                <div class="card-body index-forward pt-5 rounded-lg">
+                  <div class="testimonial-img"><img class="rounded-circle"
+                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=2375428376&spec=640" alt="" /></div>
+                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
+                    <b><mark>真是一个不错的软件,</mark></b><br>开发者辛苦了,<br>希望能继续坚持下去。
+                  </p>
+                  <h5 class="font-weight-bold mb-0">像雾像雨又像风</h5>
+                  <p class="text-primary mb-0 text-small">Geek</p>
+                </div>
+              </div>
+            </div>
+            <div class="mx-3 mx-lg-5 my-5 pt-3">
+              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
+                <div class="card-body index-forward pt-5 rounded-lg">
+                  <div class="testimonial-img"><img class="rounded-circle"
+                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=1985386335&spec=640" alt="" /></div>
+                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
+                    <b><mark>完美的MaterialDesign风格</mark></b>
+                  </p>
+                  <h5 class="font-weight-bold mb-0">RiverTwilight</h5>
+                  <p class="text-primary mb-0 text-small">Web Designer</p>
+                </div>
+              </div>
+            </div>
+            <div class="mx-3 mx-lg-5 my-5 pt-3">
+              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
+                <div class="card-body index-forward pt-5 rounded-lg">
+                  <div class="testimonial-img"><img class="rounded-circle"
+                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=3025385472&spec=640" alt="" /></div>
+                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
+                    <b>希望以后功能再多一些,<br><mark>目前挺好看的</mark></b>
+                  </p>
+                  <h5 class="font-weight-bold mb-0">183600</h5>
+                  <p class="text-primary mb-0 text-small">Geek</p>
+                </div>
+              </div>
+            </div>
+            <div class="mx-3 mx-lg-5 my-5 pt-3">
+              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
+                <div class="card-body index-forward pt-5 rounded-lg">
+                  <div class="testimonial-img"><img class="rounded-circle"
+                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=1114547837&spec=640" alt="" /></div>
+                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;"><b><mark>一个＊函不好用</mark>
+                      ？</b></p>
+                  <h5 class="font-weight-bold mb-0">柒白『滑稽』</h5>
+                  <p class="text-primary mb-0 text-small">Duck~</p>
+                </div>
+              </div>
+            </div>
+            <div class="mx-3 mx-lg-5 my-5 pt-3">
+              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
+                <div class="card-body index-forward pt-5 rounded-lg">
+                  <div class="testimonial-img"><img class="rounded-circle"
+                      src="https://i.postimg.cc/mDbnM31C/avatar-4.png" alt="" /></div>
+                  <p class="lead text-muted mb-5" style="line-height:0.8;font-family: 'ZCOOL XiaoWei', serif;">
+                    <small><small>3020年，我独自打扫着祠堂。<br>老家的祠堂依旧是老样子，尽管翻新了无数遍。<br>那一千年前的样式依旧透出一丝古朴，典雅。<br>爷爷说，老家的祠堂叫“宅”，是1000年前的那位祖宗居住一生的地方，那里的每一块瓷砖，每一本漫画，每一个手办，都是有千年历史的古董。<br>在祠堂的最中间，存放着一个最古老的东西——一部智能手机。<br>村里面的最老的老人也不知道该如何使用它。<br>那天，我照常独自打扫着祠堂。<br>突然听到身后似乎有什么异样，虽然已经预料到今天会发生一些特别的事情，但我还是吓了一跳。<br>我猛地转过身，<br><b><mark>只见手机黯淡的屏幕上出现了一行字——<br>[有新文件]HelloTool最新版</mark></b></small></small>
+                  </p>
+                  <h5 class="font-weight-bold mb-0">OutlinedArc217</h5>
+                  <p class="text-primary mb-0 text-small">RuntimeError Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><a class="scropll-top-btn" id="scrollTop" href="#"><i class="material-icons">&#xE5CE;</i></a>
+  <footer class="with-pattern-1 position-relative" id="about">
+    <div class="container section-padding-y">
+      <div class="row">
+        <div class="col-lg-3 mb-4 mb-lg-0"><img class="mb-4" src="img/logo.png" alt="" width="110">
+          <p class="text-muted">A toolkit application for Android developed by Jesse205.<br>This site was produced by
+            hsdbql.</p>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <h2 class="h5 mb-4" style="font-family: 'Noto Sans SC', sans-serif;">浏览</h2>
+          <div class="d-flex">
+            <ul class="list-unstyled d-inline-block mr-4 mb-0">
+              <li class="mb-2"><a class="footer-link" href="#hero">下载</a></li>
+              <li class="mb-2"><a class="footer-link" href="#introduce"> 特性</a></li>
+              <li class="mb-2"><a class="footer-link" href="#services"> 支持</a></li>
+              <li class="mb-2"><a class="footer-link" href="#testimonials"> 评论</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <h2 class="h5 mb-4" style="font-family: 'Noto Sans SC', sans-serif;">交流</h2>
+          <div class="d-flex">
+            <ul class="list-unstyled mr-4 mb-0">
+              <li class="mb-2"><a class="footer-link" href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U">官方综合服务QQ群</a></li>
+              <li class="mb-2"><a class="footer-link" href="https://jq.qq.com/?_wv=1027&k=bBMp43GE">官方技术交流QQ群</a></li>
+              <li class="mb-2"><a class="footer-link" href="https://jq.qq.com/?_wv=1027&k=QJH2H9Ox">官方软件内测QQ群</a></li>
+              <li class="mb-2"><a class="footer-link" href="mqqwpa://im/chat?chat_type=wpa&uin=2140125724"> 联系作者QQ</a>
+              </li>
+              <li class="mb-2"><a class="footer-link" href="http://www.coolapk.com/u/1432137"> 作者酷安主页</a></li>
+              <li class="mb-2"><a class="footer-link" href="https://wj.qq.com/s2/4296578/e2cd/"> 报告软件BUG</a></li>
+              <li class="mb-2"><a class="footer-link" href="mailto:zhangya@mail.ru"> 联系WebMaster</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <h2 class="h5 mb-4" style="font-family: 'Noto Sans SC', sans-serif;">友链</h2>
+          <div class="d-flex">
+            <ul class="list-unstyled mr-4 mb-0">
+              <li class="mb-2"><a class="footer-link" href="https://www.ygktool.com">云极客工具</a></li>
+              <li class="mb-2"><a class="footer-link" href="https://jesse205.github.io">杰西205</a></li>
+              <!-- <li class="mb-2"><a class="footer-link" href="http://fapp.htm.kim/">酷软商店</a></li> -->
+              <li class="mb-2"><a class="footer-link" href="https://www.appchina.com">应用汇</a></li>
+              <li class="mb-2"><a class="footer-link" href="https://www.coolapk.com">基安网</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <ul class="list-inline mb-0">
+            <!--li class="list-inline-item"><a class="social-link" href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=851786295&card_type=group&source=qrcode"><i class="fab fa-qq"></i></a></li-->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container text-center py-4">
+        <p class="mb-0 text-muted text-sm">Copyright &copy; 2020. FA Developpers' Association. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+  <script src="vendor/modal-video/js/modal-video.min.js"></script>
+  <script src="js/front.js"></script>
+  <script>
+    function injectSvgSprite(path) {
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", path, true);
+      ajax.send();
+      ajax.onload = function (e) {
+        var div = document.createElement("div");
+        div.className = 'd-none';
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      }
+    }
+    injectSvgSprite('http://mil.red/hellotool/icons/orion-svg-sprite.svg'); 
+  </script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600,800&amp;display=swap">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=ZCOOL+KuaiLe&family=ZCOOL+XiaoWei&display=swap"
+    rel="stylesheet">
+</body>
+
+</html>

@@ -81,10 +81,12 @@ body {
 
 .jesse205-card-media-covered-light {
     color: black;
+    text-shadow: 0 0 5px white;
 }
 
 .jesse205-card-media-covered-auto {
     color: black;
+    text-shadow: 0 0 5px white;
 }
 
 .mdui-card-primary {
@@ -94,6 +96,7 @@ body {
 .mdui-card-primary-title,
 .mdui-card-primary-subtitle {
     line-height: normal !important;
+
 }
 
 .mdui-card-primary-title {

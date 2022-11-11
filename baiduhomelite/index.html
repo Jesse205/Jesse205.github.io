@@ -5,20 +5,26 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 
+	<title>百度一下 Lite</title>
+	<meta name="keywords" content="首页,主页,浏览器">
+	<meta itemprop="name" content="百度一下 Lite">
+	<meta itemprop="description" name="description" content="一款特别简单的浏览器主页，极简风格，支持暗黑模式，同时也是PWA应用。此主页不含任何的广告，只有百度图标、搜索框和搜索按钮。">
+	<meta name="author" content="Jesse205" />
+	<meta name="theme-color" content="black" />
+
 	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#3388ff">
 	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="manifest" href="manifest.json">
 	<meta name="apple-mobile-web-app-title" content="百度一下 Lite">
 	<meta name="application-name" content="百度一下 Lite">
 	<meta name="msapplication-TileColor" content="#3388ff">
-	<meta name="msapplication-config" content="/icons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+	<meta name="msapplication-config" content="icons/browserconfig.xml">
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212121" />
 
-	<link rel="manifest" href="manifest.json">
-	<title>百度一下</title>
-	<meta name="theme-color" content="black" />
 	<script type="text/javascript">
 		function search() {
 			var value = document.getElementById("search_input").value;
@@ -26,6 +32,15 @@
 				window.location.href = "http://www.baidu.com/s?ch=3&ie=utf-8&wd=" + value;
 			}
 			return false;
+		}
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/baiduhomelite/serviceWorker.js', { scope: '/baiduhomelite/' }).then(function (reg) {
+				// registration worked
+				console.log('Registration succeeded. Scope is ' + reg.scope);
+			}).catch(function (error) {
+				// registration failed
+				console.log('Registration failed with ' + error);
+			});
 		}
 	</script>
 	<style>

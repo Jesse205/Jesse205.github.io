@@ -30,6 +30,18 @@
         {
             "name": "MDUI",
             "href": "https://www.mdui.org/"
+        },
+        {
+            "name": "云极客工具",
+            "href": "https://www.ygktool.com/"
+        },
+        {
+            "name": "Github",
+            "href": "https://www.github.com/"
+        },
+        {
+            "name": "Gitee",
+            "href": "https://www.gitee.com/"
         }
     ]
 }

@@ -3,7 +3,9 @@
     "short_name": "百度 Lite",
     "start_url": "/baiduhomelite/",
     "description": "特别简洁的浏览器主页",
+    "id": "baiduhomelite",
     "author": "Jesse205",
+    "scope": "/baiduhomelite/",
     "lang": "zh-CN",
     "display": "minimal-ui",
     "icons": [
@@ -17,6 +19,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "relatedApp": []
+    ]
 }
