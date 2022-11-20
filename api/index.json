@@ -7,6 +7,12 @@
             "type": "menu"
         },
         {
+            "title": "GitLab 主页",
+            "href": "https://gitlab.com/Jesse205",
+            "target": "_blank",
+            "type": "menu"
+        },
+        {
             "title": "Github 主页",
             "href": "https://github.com/Jesse205",
             "target": "_blank",
@@ -36,12 +42,16 @@
             "href": "https://www.ygktool.com/"
         },
         {
-            "name": "Github",
-            "href": "https://www.github.com/"
-        },
-        {
             "name": "Gitee",
             "href": "https://www.gitee.com/"
+        },
+        {
+            "name": "GitLab",
+            "href": "https://gitlab.com/"
+        },
+        {
+            "name": "Github",
+            "href": "https://www.github.com/"
         }
     ]
 }

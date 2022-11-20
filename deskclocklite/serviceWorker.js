@@ -17,7 +17,6 @@ this.addEventListener('install', function (event) {
 });
 
 this.addEventListener('fetch', function (event) {
-    console.log("onFetch", event)
     event.respondWith(
         caches.match(event.request).then(function (r) {
             console.log('[Service Worker] Fetching resource: ' + event.request.url);
