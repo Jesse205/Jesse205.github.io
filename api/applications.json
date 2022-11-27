@@ -7,19 +7,25 @@
                 "name": "Aide Lua",
                 "summary": "为更方便的移动开发",
                 "image": "images/graphs/aidelua.png",
-                "src": "/aidelua"
+                "src": "/aidelua/"
             },
             {
                 "name": "Edde Lua",
                 "summary": "为更好看的用户界面",
                 "image": "images/graphs/aidelua.png",
-                "src": ""
+                "src": "/aidelua/"
+            },
+            {
+                "name": "AndroLuaX",
+                "summary": "添加了 AndroidX 的 AndroLua+",
+                "image": "images/graphs/androluax.png",
+                "src": "https://gitlab.com/Jesse205/androluax"
             },
             {
                 "name": "哈兔Box",
                 "summary": "简洁蓝白风工具箱",
                 "image": "images/graphs/aidelua.png",
-                "src": "/hellotool"
+                "src": "/hellotool/"
             },
             {
                 "name": "桌面时钟 Lite",

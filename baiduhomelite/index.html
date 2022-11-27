@@ -8,7 +8,8 @@
 	<title>百度一下 Lite</title>
 	<meta name="keywords" content="首页,主页,浏览器">
 	<meta itemprop="name" content="百度一下 Lite">
-	<meta itemprop="description" name="description" content="一款特别简单的浏览器主页，极简风格，支持暗黑模式，同时也是PWA应用。此主页不含任何的广告，只有百度图标、搜索框和搜索按钮。">
+	<meta itemprop="description" name="description"
+		content="一款特别简单的浏览器主页，极简风格，支持暗黑模式，同时也是PWA应用。此主页不含任何的广告，只有百度图标、搜索框和搜索按钮。">
 	<meta name="author" content="Jesse205" />
 
 	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -43,14 +44,26 @@
 		}
 	</script>
 	<style>
+		html,
 		body {
-			padding-top: 10%;
-			text-align: center;
+			height: 100%;
 		}
 
+		.logoSpace {
+			height: 37%;
+			position: relative;
+		}
+
+
 		.logo {
+			margin: auto;
+			display: block;
 			height: 68px;
 			max-width: 214px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
 		}
 
 		#search_input {
@@ -71,7 +84,8 @@
 			margin: 20px auto;
 			background-color: #F4F4F4;
 			border-radius: 8px;
-			display: flex;
+			display: block;
+			position: relative;
 		}
 
 		.search_button {
@@ -85,6 +99,9 @@
 			background-color: #536DFE;
 			padding: 0 12px;
 			transition: box-shadow .25s cubic-bezier(.4, .2, 0, 1);
+			position: absolute;
+			right: 0;
+			top: 0;
 		}
 
 		.search_button:hover:active {
@@ -116,8 +133,9 @@
 </head>
 
 <body>
-	<img class="logo" src="logo.png" draggable="false" alt />
-	<br />
+	<div class="logoSpace">
+		<img class="logo" src="logo.png" draggable="false" alt />
+	</div>
 	<form onsubmit="return search()" class="search_form">
 		<input type="text" value="" id="search_input" aria-label="搜索框">
 		<input type="submit" class="search_button" value="百度一下">
