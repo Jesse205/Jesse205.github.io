@@ -1,4 +1,4 @@
-var cacheName = 'BaiduHomeLite-v1';
+var cacheName = 'BaiduHomeLite-v2';
 var appShellFiles = [
     './',
     'index.html',
