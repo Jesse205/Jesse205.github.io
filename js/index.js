@@ -2,11 +2,12 @@ const { createApp, ref, watchEffect } = Vue
 
 const APPS_URL = "/api/applications.json"
 const CONFIG_URL = "/api/index.json"
-
+const apps = ref(null)
+const config = ref(null)
+const isTop = ref(true)
 createApp({
   data() {
-    const apps = ref(null)
-    const config = ref(null)
+
     fetch(APPS_URL)
       .then((res) => res.json())
       .then((json) => (apps.value = json))
@@ -23,13 +24,14 @@ createApp({
 
     return {
       apps,
-      config
+      config,
+      isTop
     }
   },
   mounted() {
     window.addEventListener('scroll', function () {
       var scrollTop = window.pageYOffset
-      scrollShadowListener($$("#appbar"), scrollTop)
+      isTop.value = Boolean(scrollTop <= 0)
     })
     $$("#mainlist").mutation()
     $$("#linkslist").mutation()

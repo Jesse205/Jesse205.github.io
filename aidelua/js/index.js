@@ -1,3 +1,45 @@
+const { createApp, ref, watchEffect } = Vue
+
+const CONFIG_URL = "/api/aidelua/index.json"
+const APPCONFIG_URL = "https://gitee.com/api/v5/repos/Jesse205/AideLua/releases/latest"
+const config = ref(null)
+const appConfig = ref(null)
+const isTop = ref(true)
+
+createApp({
+  data() {
+    fetch(CONFIG_URL)
+      .then((res) => res.json())
+      .then((json) => (config.value = json))
+      .catch(function (error) {
+        console.error(error)
+      })
+    fetch(APPCONFIG_URL)
+      .then((res) => res.json())
+      .then((json) => (appConfig.value = json))
+      .catch(function (error) {
+        console.error(error)
+      })
+    return {
+      config,
+      appConfig,
+      isTop
+    }
+  },
+  mounted() {
+
+    window.addEventListener('scroll', function () {
+      var scrollTop = window.pageYOffset
+      isTop.value = Boolean(scrollTop <= 0)
+    })
+    mdui.mutation()
+  },
+  updated() {
+    mdui.mutation()
+  }
+}).mount('#app')
+
+
 function addConfig(config) {
   var menus = config.menus;
   var screenshot = config.screenshot;
@@ -53,7 +95,7 @@ function addConfig(config) {
   linksObj.mutation();
 
 }
-$(document).ready(function () {
+/* $(document).ready(function () {
   $.getJSON("/api/aidelua/index.json", function (data) {
     addConfig(data);
   });
@@ -63,15 +105,4 @@ $(document).ready(function () {
       content: ("更新日志：\r\n" + data.body).replace(/\r\n/g, "<br>")
     });
   });
-  $(window).scroll(function () {
-    var appbar = $("#appbar");
-    var toolbar = $("#toolbar");
-    var topp = $(document).scrollTop();
-    scrollShadowListener(appbar,scrollTop);
-    if (topp > 0) {
-      toolbar.removeClass("toolbar-top");
-    } else {
-      toolbar.addClass("toolbar-top");
-    }
-  });
-});
+}); */
