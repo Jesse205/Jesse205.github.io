@@ -5,30 +5,35 @@
         "items": [
             {
                 "name": "Aide Lua",
+                "id": "aidelua",
                 "summary": "为更方便的移动开发",
                 "image": "images/graphs/aidelua.png",
                 "src": "/aidelua/"
             },
             {
                 "name": "Edde Lua",
+                "id": "eddelua",
                 "summary": "为更好看的用户界面",
                 "image": "images/graphs/aidelua.png",
                 "src": "/aidelua/"
             },
             {
                 "name": "AndroLuaX",
+                "id": "androluax",
                 "summary": "添加了 AndroidX 的 AndroLua+",
                 "image": "images/graphs/androluax.png",
                 "src": "https://gitlab.com/Jesse205/androluax"
             },
             {
                 "name": "哈兔Box",
+                "id": "hellotool",
                 "summary": "简洁蓝白风工具箱",
                 "image": "images/graphs/aidelua.png",
                 "src": "/hellotool/"
             },
             {
                 "name": "桌面时钟 Lite",
+                "id": "deskclocklite",
                 "summary": "占用低、兼容性强的时钟",
                 "image": "images/graphs/deskclocklite.png",
                 "src": "https://github.com/Jesse205/Desk-Clock-Lite"
@@ -41,6 +46,7 @@
         "items": [
             {
                 "name": "畅玩6X工具箱",
+                "id": "honor6xtools",
                 "summary": "不止为畅玩6X开发",
                 "image": "images/graphs/aidelua.png",
                 "src": ""
@@ -53,12 +59,14 @@
         "items": [
             {
                 "name": "百度一下 Lite",
+                "id": "baiduhomelite",
                 "summary": "特别简洁的浏览器主页",
                 "image": "images/graphs/baidulite.png",
                 "src": "./baiduhomelite/"
             },
             {
                 "name": "桌面时钟 Lite",
+                "id": "deskclocklite",
                 "summary": "打开就能用的时钟",
                 "image": "images/graphs/deskclocklite.png",
                 "src": "./deskclocklite/"

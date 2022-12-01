@@ -1,8 +1,8 @@
 $$ = mdui.$;
-function scrollShadowListener(appbar) {
+function scrollShadowListener(appbar,scrollTop) {
     //获取当前滚动条高度
-    var topp = $(document).scrollTop();
-    if (topp > 0) {
+    
+    if (scrollTop > 0) {
         appbar.removeClass("mdui-shadow-0")
         appbar.addClass("jesse205-shadow-4")
     } else {
@@ -10,6 +10,7 @@ function scrollShadowListener(appbar) {
         appbar.addClass("mdui-shadow-0")
     }
 }
+
 
 function initMenu(menusList,menusObj,moreMenuObj) {
     for (i = 0; i < menusList.length; i++) {

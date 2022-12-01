@@ -67,7 +67,7 @@ $(document).ready(function () {
     var appbar = $("#appbar");
     var toolbar = $("#toolbar");
     var topp = $(document).scrollTop();
-    scrollShadowListener(appbar);
+    scrollShadowListener(appbar,scrollTop);
     if (topp > 0) {
       toolbar.removeClass("toolbar-top");
     } else {

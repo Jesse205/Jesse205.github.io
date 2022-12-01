@@ -14,7 +14,12 @@
 
   <link rel="icon" sizes="any" mask="" href="favicon.png">
   <!-- jQuery -->
-  <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script>
+  <!-- <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script> -->
+
+  <!-- Vue -->
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <!-- MDUI -->
   <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
@@ -26,44 +31,102 @@
 
   <!-- 当前页面 -->
   <link rel="stylesheet" href="css/index.css" />
-  <script src="js/index.js"></script>
 </head>
 
 <body
   class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo jesse205-theme-layout-cardDesign mdui-theme-layout-auto">
-  <!-- 标题栏 -->
-  <div id="appbar" class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed mdui-shadow-0">
-    <div class="mdui-toolbar">
-      <p class="mdui-typo-title">Edde 互联</p>
-      <div class="mdui-toolbar-spacer"></div>
-      <div id="menus" class="jesse205-toolbar-menusSpace">
+
+
+  <!-- 这是Vue的 -->
+  <div id="app" class="mdui-container">
+    <!-- 标题栏 -->
+    <div id="appbar" class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <p class="mdui-typo-title">Edde 互联</p>
+        <div class="mdui-toolbar-spacer"></div>
+        <template v-if="config">
+          <!-- 菜单区域 -->
+          <template v-for="content in config.menus">
+            <a v-if="content.type=='menu'" :href="content.href"
+              class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
+              targrt="' + content.target + '">{{content.title}}</a>
+          </template>
+          <!-- 更多菜单按钮 -->
+          <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+            mdui-tooltip="{'content':'更多选项'}">
+            <i class="mdui-icon material-icons">more_vert</i>
+          </div>
+          <!-- 弹出菜单 -->
+          <ul class="mdui-menu" id="menu-more">
+            <template v-for="content in config.menus">
+              <li v-if="content.type=='menu'" class="mdui-menu-item">
+                <a :href="content.href" class="mdui-ripple" targrt="' + content.target + '">{{content.title}}</a>
+              </li>
+              <li v-if="content.type=='divider'" class="mdui-divider"></li>
+            </template>
+          </ul>
+        </template>
       </div>
-      <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
-        mdui-tooltip="{'content':'更多选项'}">
-        <i class="mdui-icon material-icons">more_vert</i>
-      </div>
-      <ul class="mdui-menu" id="menu-more">
-      </ul>
-    </div>
-  </div>
-  <div class="mdui-container">
-    <!-- 可扩展面板 -->
-    <div id="mainlist" class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined" mdui-panel>
     </div>
 
-    <div class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined" mdui-panel>
+    <!-- 可扩展面板 -->
+    <div v-if="apps && apps.length!=0" id="mainlist" class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined"
+      mdui-panel>
+      <div v-for="group in apps" class="mdui-panel-item mdui-panel-item-open" :key="group.id">
+        <!-- 面板header -->
+        <div class="mdui-panel-item-header mdui-ripple mdui-p-x-2">
+          <div class="mdui-panel-item-title">{{group.name}}</div>
+          <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <!-- 面板body -->
+        <div class="mdui-panel-item-body mdui-p-x-2">
+          <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4">
+            <!-- 单个卡片 -->
+            <template v-for="content in group.items" :key="group.id+'_'+content.id">
+              <div class="mdui-col mdui-p-a-1">
+                <a :href="content.src " target="_blank">
+                  <div
+                    class="jesse205-card-outlined jesse205-hoverable jesse205-shadow-transition mdui-card mdui-ripple">
+                    <div class="mdui-card-media">
+                      <img class="card-image" :src="content.image" :alt="content.name" draggable="false" />
+                      <div
+                        class="jesse205-card-media-covered-light mdui-card-media-covered mdui-card-media-covered-transparent">
+                        <div class="mdui-card-primary">
+                          <div class="mdui-card-primary-title">{{content.name}}</div>
+                          <div class="mdui-card-primary-subtitle">{{content.summary}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="config && config.links && config.links.length!=0" id="linkslist"
+      class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined" mdui-panel>
       <div class="mdui-panel-item mdui-panel-item-open">
         <div class="mdui-panel-item-header mdui-ripple mdui-p-x-2">
           <div class="mdui-panel-item-title">友情链接</div>
           <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
         </div>
         <div class="mdui-panel-item-body mdui-p-x-1">
-          <div id="links" class="links">
+          <div class="links">
+            <a v-for="content in config.links"
+              class="mdui-btn mdui-ripple jesse205-btn-outlined link-btn jesse205-hoverable" :href="content.href"
+              target="_blank">{{content.name}}
+            </a>
           </div>
         </div>
       </div>
     </div>
 
+  </div>
+
+  <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-var cacheName = 'BaiduHomeLite-v2';
+var cacheName = 'BaiduHomeLite-v3';
 var appShellFiles = [
     './',
     'index.html',
@@ -29,5 +29,25 @@ this.addEventListener('fetch', function (event) {
                 });
             });
         })
+    );
+});
+
+this.addEventListener('activate', function (event) {
+    event.waitUntil(
+        Promise.all([
+            // 更新客户端
+            self.clients.claim(),
+
+            // 清理旧版本
+            caches.keys().then(function (cacheList) {
+                return Promise.all(
+                    cacheList.map(function (oldCacheName) {
+                        if (oldCacheName !== cacheName) {
+                            return caches.delete(oldCacheName);
+                        }
+                    })
+                );
+            })
+        ])
     );
 });
