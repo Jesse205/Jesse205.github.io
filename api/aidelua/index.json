@@ -106,6 +106,18 @@
     ],
     "links": [
         {
+            "name": "AIDE Pro",
+            "href": "https://www.aidepro.top"
+        },
+        {
+            "name": "MDUI",
+            "href": "https://www.mdui.org/"
+        },
+        {
+            "name": "VuePress",
+            "href": "https://vuepress.vuejs.org/zh/"
+        },
+        {
             "name": "Edde 互联",
             "href": "/"
         },
@@ -114,20 +126,8 @@
             "href": "https://gitee.com/Jesse205/hellotool"
         },
         {
-            "name": "VuePress",
-            "href": "https://vuepress.vuejs.org/zh/"
-        },
-        {
-            "name": "MDUI",
-            "href": "https://www.mdui.org/"
-        },
-        {
             "name": "云储",
             "href": "https://yunchu.cxoip.com/"
-        },
-        {
-            "name": "AIDE Pro",
-            "href": "https://aidepro.top"
         }
     ]
 }

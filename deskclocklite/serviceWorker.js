@@ -1,4 +1,4 @@
-var cacheName = 'DeskClockLite-v3';
+var cacheName = 'DeskClockLite-v4';
 var appShellFiles = [
     './',
     'index.html',

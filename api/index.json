@@ -30,16 +30,8 @@
     ],
     "links": [
         {
-            "name": "AIDE Pro",
-            "href": "https://aidepro.top"
-        },
-        {
             "name": "MDUI",
             "href": "https://www.mdui.org/"
-        },
-        {
-            "name": "云极客工具",
-            "href": "https://www.ygktool.com/"
         },
         {
             "name": "Gitee",
@@ -52,6 +44,14 @@
         {
             "name": "Github",
             "href": "https://www.github.com/"
+        },
+        {
+            "name": "AIDE Pro",
+            "href": "https://www.aidepro.top"
+        },
+        {
+            "name": "云极客工具",
+            "href": "https://www.ygktool.com/"
         }
     ]
 }

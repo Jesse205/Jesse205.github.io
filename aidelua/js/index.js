@@ -6,7 +6,7 @@ const config = ref(null)
 const appConfig = ref(null)
 const isTop = ref(true)
 
-createApp({
+var app = createApp({
   data() {
     fetch(CONFIG_URL)
       .then((res) => res.json())
@@ -37,7 +37,10 @@ createApp({
   updated() {
     mdui.mutation()
   }
-}).mount('#app')
+})
+window.onload = function () {
+  app.mount('#app')
+}
 
 
 function addConfig(config) {

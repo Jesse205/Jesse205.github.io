@@ -43,7 +43,7 @@
       if (second < 10) second = "0" + second;
 
       var time = hour + ":" + minute + ":" + second;
-      var date = (month + 1) + "月" + date + "日 " + weekDayMap[now.getDay()];
+      var date = (month) + "月" + date + "日 " + weekDayMap[now.getDay()];
 
       if (time != lastTime) {
         document.getElementById("time").innerText = time;

@@ -5,7 +5,7 @@ const CONFIG_URL = "/api/index.json"
 const apps = ref(null)
 const config = ref(null)
 const isTop = ref(true)
-createApp({
+var app = createApp({
   data() {
 
     fetch(APPS_URL)
@@ -40,4 +40,7 @@ createApp({
     $$("#mainlist").mutation()
     $$("#linkslist").mutation()
   }
-}).mount('#app')
+})
+window.onload = function () {
+  app.mount('#app')
+}
