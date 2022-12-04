@@ -49,8 +49,7 @@
         <template v-if="config">
           <!-- 菜单区域 -->
           <template v-for="item in config.menus" :key="item.title">
-            <a v-if="item.type=='menu'" :href="item.href"
-              class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
+            <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
               :targrt="item.target">{{item.title}}</a>
           </template>
           <!-- 更多菜单按钮 -->
