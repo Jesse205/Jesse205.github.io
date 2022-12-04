@@ -58,10 +58,10 @@
         <div class="mdui-toolbar-spacer"></div>
         <template v-if="config">
           <!-- 菜单区域 -->
-          <template v-for="content in config.menus">
-            <a v-if="content.type=='menu'" :href="content.href"
+          <template v-for="item in config.menus" :key="item.title">
+            <a v-if="item.type=='menu'" :href="item.href"
               class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-              targrt="' + content.target + '">{{content.title}}</a>
+              :targrt="item.target">{{item.title}}</a>
           </template>
           <!-- 更多菜单按钮 -->
           <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
@@ -70,11 +70,11 @@
           </div>
           <!-- 弹出菜单 -->
           <ul class="mdui-menu" id="menu-more">
-            <template v-for="content in config.menus">
-              <li v-if="content.type=='menu'" class="mdui-menu-item">
-                <a :href="content.href" class="mdui-ripple" targrt="' + content.target + '">{{content.title}}</a>
+            <template v-for="item in config.menus" :key="item.title">
+              <li v-if="item.type=='menu'" class="mdui-menu-item">
+                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
               </li>
-              <li v-if="content.type=='divider'" class="mdui-divider"></li>
+              <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
             </template>
           </ul>
         </template>
@@ -102,7 +102,7 @@
       <div class="subgroup mdui-col-xs-12 mdui-col-md-4">
         <h1 class="title mdui-text-color-theme-accent">关于我们</h1>
         <div id="developers" class="developers">
-          <div v-for="item in config.developers">
+          <div v-for="item in config.developers" :key="item.name">
             <img class="avatar jesse205-card-outlined" :src="item.avatar" draggable="false" alt />
             <h1 class="mdui-text-center title">{{item.name}}</h1>
             <p class="mdui-text-center subtitle mdui-text-color-theme-secondary">{{item.summary}}</p>
@@ -115,7 +115,7 @@
         <h1 class="title mdui-text-color-theme-accent">联系我们</h1>
         <div id="contact"
           class="item contact bottom-links mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-2 mdui-row-lg-3 mdui-row-xl-4">
-          <div v-for="item in config.contact" class="mdui-col">
+          <div v-for="item in config.contact" class="mdui-col" :key="item.title">
             <a class="jesse205-btn-outlined jesse205-btn-withicon jesse205-hoverable mdui-btn mdui-ripple"
               :href="item.href" target="_blank" :mdui-tooltip='JSON.stringify(item.tooltip)'>
               <i class="mdui-icon material-icons" :src="item.iconsrc" alt>{{item.icon}}</i>{{item.title}}</a>
@@ -128,7 +128,7 @@
         <h1 class="title mdui-text-color-theme-accent">友情链接</h1>
         <div id="links"
           class="item links bottom-links mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-2 mdui-row-lg-4 mdui-row-xl-5">
-          <div v-for="item in config.links" class="mdui-col">
+          <div v-for="item in config.links" class="mdui-col" :key="item.name">
             <a :href="item.href" target="_blank">
               <div class="mdui-btn mdui-ripple mdui-text-color-theme-400 ">{{item.name}}</div>
             </a>

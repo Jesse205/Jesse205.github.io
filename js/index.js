@@ -41,6 +41,6 @@ var app = createApp({
     $$("#linkslist").mutation()
   }
 })
-window.onload = function () {
+$$(function () {
   app.mount('#app')
-}
+})

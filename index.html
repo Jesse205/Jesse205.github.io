@@ -48,10 +48,10 @@
         <div class="mdui-toolbar-spacer"></div>
         <template v-if="config">
           <!-- 菜单区域 -->
-          <template v-for="content in config.menus">
-            <a v-if="content.type=='menu'" :href="content.href"
+          <template v-for="item in config.menus" :key="item.title">
+            <a v-if="item.type=='menu'" :href="item.href"
               class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-              targrt="' + content.target + '">{{content.title}}</a>
+              :targrt="item.target">{{item.title}}</a>
           </template>
           <!-- 更多菜单按钮 -->
           <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
@@ -60,11 +60,11 @@
           </div>
           <!-- 弹出菜单 -->
           <ul class="mdui-menu" id="menu-more">
-            <template v-for="content in config.menus">
-              <li v-if="content.type=='menu'" class="mdui-menu-item">
-                <a :href="content.href" class="mdui-ripple" targrt="' + content.target + '">{{content.title}}</a>
+            <template v-for="item in config.menus" :key="item.title">
+              <li v-if="item.type=='menu'" class="mdui-menu-item">
+                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
               </li>
-              <li v-if="content.type=='divider'" class="mdui-divider"></li>
+              <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
             </template>
           </ul>
         </template>
