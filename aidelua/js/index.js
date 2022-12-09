@@ -27,7 +27,6 @@ var app = createApp({
     }
   },
   mounted() {
-
     window.addEventListener('scroll', function () {
       var scrollTop = window.pageYOffset
       isTop.value = Boolean(scrollTop <= 0)
@@ -41,3 +40,11 @@ var app = createApp({
 $$(function () {
   app.mount('#app')
 })
+
+navigator.serviceWorker.register('/aidelua/serviceWorker.js', { scope: '/aidelua/' }).then(function (reg) {
+  // registration worked
+  console.log('Registration succeeded. Scope is ' + reg.scope);
+}).catch(function (error) {
+  // registration failed
+  console.log('Registration failed with ' + error);
+});

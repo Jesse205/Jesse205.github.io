@@ -9,6 +9,18 @@
   <meta name="description" itemprop="description" content="依赖 AIDE ，使用 Lua 快速、高效开发的工具" />
   <meta name="keywords" itemprop="keywords" content="lua|androlua|alua|aidelua" />
   <meta name="author" content="&copy;0047ol" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/aidelua/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/aidelua/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/aidelua/favicon-16x16.png">
+  <link rel="mask-icon" href="/aidelua/images/icons/safari-pinned-tab.svg" color="#3F51B5">
+  <link rel="shortcut icon" href="/aidelua/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/aidelua/browserconfig.xml">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212121" />
+
+
   <title>Aide Lua</title>
   <link rel="icon" sizes="any" mask="" href="favicon.png">
 
@@ -35,9 +47,9 @@
 <body class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
   <div id="app">
     <header>
-      <img src="img/top_background.png" draggable="false" alt />
+      <img src="images/top_background.png" draggable="false" alt />
       <div>
-        <img class="icon jesse205-shadow-4" src="img/aidelua_logo.jpg" alt />
+        <img class="icon jesse205-shadow-4" src="images/aidelua_logo.jpg" alt />
         <h1 class="app-title mdui-text-color-theme-accent">Aide Lua Pro</h1>
         <p class="app-summary mdui-text-color-theme-secondary">一款依赖Aide的Lua编辑器</p>
         <div class="app-goup-btn">
@@ -51,7 +63,7 @@
     </header>
 
     <!-- 标题栏 -->
-    <div id="appbar" class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
+    <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
       :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
       <div id="toolbar" class="mdui-toolbar" :class="{'toolbar-top':isTop}">
         <p class="mdui-typo-title">Aide Lua Pro</p>

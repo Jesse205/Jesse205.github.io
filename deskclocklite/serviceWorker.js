@@ -1,11 +1,13 @@
-var cacheName = 'DeskClockLite-v4';
+const cacheName = 'DeskClockLite-v4';
+const BASE_PATH = "/deskclocklite"
 var appShellFiles = [
-    './',
-    'index.html',
-    'favicon.ico',
-    'favicon-16x16.png',
-    'favicon-32x32.png',
+    BASE_PATH + '/',
+    BASE_PATH + '/index.html',
+    BASE_PATH + '/favicon.ico',
+    BASE_PATH + '/favicon-16x16.png',
+    BASE_PATH + '/favicon-32x32.png',
 ]
+
 this.addEventListener('install', function (event) {
     console.log('[Service Worker] Install', event);
     event.waitUntil(
@@ -20,13 +22,7 @@ this.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function (r) {
             console.log('[Service Worker] Fetching resource: ' + event.request.url);
-            return r || fetch(event.request).then(function (response) {
-                return caches.open(cacheName).then(function (cache) {
-                    console.log('[Service Worker] Caching new resource: ' + event.request.url);
-                    cache.put(event.request, response.clone());
-                    return response;
-                });
-            });
+            return r || fetch(event.request)
         })
     );
 });

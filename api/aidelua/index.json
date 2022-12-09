@@ -40,22 +40,22 @@
         {
             "title": "丰富的支持库",
             "summary": "多种多样的支持库，帮助用户解决选择困难症",
-            "src": "img/template_screenshot.jpg"
+            "src": "images/template_screenshot.jpg"
         },
         {
             "title": "强大的模板",
             "summary": "采用模块化模板，大幅提升了模板开发难度",
-            "src": "img/template_screenshot.jpg"
+            "src": "images/template_screenshot.jpg"
         },
         {
             "title": "自由的插件",
             "summary": "随时可能出问题的插件，培养用户良好的查错习惯",
-            "src": "img/template_screenshot.jpg"
+            "src": "images/template_screenshot.jpg"
         },
         {
             "title": "卡顿的体验",
             "summary": "作者正在竭尽全力通过此工具帮你摆脱手机开发",
-            "src": "img/template_screenshot.jpg"
+            "src": "images/template_screenshot.jpg"
         }
     ],
     "developers": [

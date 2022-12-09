@@ -1,39 +1,57 @@
-function addPlugins(plugins) {
-  var pluginsObj = $$('#plugins')
-  for (i = 0; i < plugins.length; i++) {
-    var content = plugins[i];
-    var description = content.description;
-    description = (description) ? description : '暂无介绍';
-    pluginsObj.append('<div class="mdui-col mdui-p-a-1">\
-    <div class="jesse205-card-outlined jesse205-hoverable jesse205-shadow-transition mdui-card mdui-p-a-1">\
-        <div class="mdui-card-menu">\
-            <span>14.8KB</span>\
-        </div>\
-        <div class="mdui-m-a-1">\
-            <div class="" style="font-size: 16px;">' + content.name + '</div>\
-            <div class="mdui-text-color-theme-secondary">v' + content.versionName + '｜' + content.updateDate + '</div>\
-        </div>\
-        <div class="mdui-m-a-1">' + description + '</div>\
-        <div class="mdui-m-a-1 mdui-text-color-theme-secondary">开发者：' + content.developer + '</div>\
-        <a href="' + content.url + '" class="mdui-m-a-2 mdui-btn mdui-btn-icon mdui-color-theme" \
-            style="bottom: 0; right: 0; position: absolute;">\
-            <i class="mdui-icon material-icons">file_download</i>\
-        </a>\
-    </div>\
-</div>');
-  };
-};
+const { createApp, ref, watchEffect } = Vue
 
-$(document).ready(function () {
-  $$.ajax({
-    method: 'GET',
-    url: '/api/aidelua/plugins.json',
-    success: function (data) {
-      addPlugins(JSON.parse(data));
+const PLUGINS_URL = "/api/aidelua/plugins.json"
+const plugins = ref(null)
+const isTop = ref(true)
+const menus = [
+  {
+    "title": "插件文档",
+    "href": "/AideLua/plugin/",
+    "target": "_blank",
+    "type": "menu"
+  },
+  {
+    "title": "更多插件",
+    "href": "https://www.123pan.com/s/G7a9-cdek",
+    "target": "_blank",
+    "type": "menu"
+  }
+]
+
+var app = createApp({
+  data() {
+    fetch(PLUGINS_URL)
+      .then((res) => res.json())
+      .then((json) => (plugins.value = json))
+      .catch(function (error) {
+        console.error(error)
+      })
+
+    return {
+      plugins,
+      menus,
+      isTop
     }
-  });
-  $(window).scroll(function () {
-    var appbar = $("#appbar")
-    scrollShadowListener(appbar)
-  })
+  },
+  mounted() {
+    window.addEventListener('scroll', function () {
+      var scrollTop = window.pageYOffset
+      isTop.value = Boolean(scrollTop <= 0)
+    })
+    mdui.mutation()
+  },
+  updated() {
+    mdui.mutation()
+  }
+})
+$$(function () {
+  app.mount('#app')
+})
+
+navigator.serviceWorker.register('/aidelua/serviceWorker.js', { scope: '/aidelua/' }).then(function (reg) {
+  // registration worked
+  console.log('Registration succeeded. Scope is ' + reg.scope);
+}).catch(function (error) {
+  // registration failed
+  console.log('Registration failed with ' + error);
 });

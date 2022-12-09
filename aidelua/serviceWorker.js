@@ -1,13 +1,14 @@
-var cacheName = 'BaiduHomeLite-v5';
-const BASE_PATH = "/baiduhomelite"
+var cacheName = 'AideLua-v1';
+const BASE_PATH = "/aidelua"
 var appShellFiles = [
     BASE_PATH + '/',
-    BASE_PATH + '/index.html',
+    BASE_PATH + '/plugins.html',
     BASE_PATH + '/logo.png',
     BASE_PATH + '/favicon.ico',
     BASE_PATH + '/favicon-16x16.png',
     BASE_PATH + '/favicon-32x32.png',
 ]
+
 this.addEventListener('install', function (event) {
     console.log('[Service Worker] Install', event);
     event.waitUntil(

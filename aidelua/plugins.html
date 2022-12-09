@@ -6,9 +6,23 @@
     <meta name="viewport" content="width=device-width" />
     <base target="_blank">
     <title>Aide Lua 插件库</title>
-    <link rel="icon" sizes="any" mask="" href="favicon.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/aidelua/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/aidelua/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/aidelua/favicon-16x16.png">
+    <link rel="mask-icon" href="/aidelua/images/icons/safari-pinned-tab.svg" color="#3F51B5">
+    <link rel="shortcut icon" href="/aidelua/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/aidelua/browserconfig.xml">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212121" />
+
     <!-- jQuery -->
-    <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script> -->
+
+    <!-- Vue -->
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
     <!-- MDUI -->
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
@@ -23,29 +37,61 @@
 </head>
 
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
-    <!-- 标题栏 -->
-    <div id="appbar" class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed mdui-shadow-0">
-        <div class="mdui-toolbar">
-            <a class="mdui-typo-title">Aide Lua 插件库</a>
-            <div class="mdui-toolbar-spacer"></div>
-            <a href="/AideLua/plugin/" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-                targrt="_blank">插件文档</a>
-            <a href="https://www.123pan.com/s/G7a9-cdek" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-                targrt="_blank">更多插件</a>
-            <a class="mdui-btn mdui-btn-icon mdui-hidden-sm-up"" mdui-menu=" {target:'#toolbar_menu'}"
-                mdui-tooltip="{'content':'更多选项'}">
-                <i class="mdui-icon material-icons">more_vert</i>
-            </a>
-            <ul class="mdui-menu" id="toolbar_menu">
-                <li class="mdui-menu-item"><a href="/AideLua/plugin/" class="mdui-ripple" target="_blank">插件文档</a></li>
-                <li class="mdui-menu-item"><a href="https://www.123pan.com/s/G7a9-cdek" class="mdui-ripple" target="_blank">更多插件</a></li>
-            </ul>
+    <div id="app">
+        <!-- 标题栏 -->
+        <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
+            :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
+            <div class="mdui-toolbar">
+                <p class="mdui-typo-title">Aide Lua 插件库</p>
+                <div class="mdui-toolbar-spacer"></div>
+                <template v-if="menus">
+                    <!-- 菜单区域 -->
+                    <template v-for="item in menus" :key="item.title">
+                        <a v-if="item.type=='menu'" :href="item.href"
+                            class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
+                            :targrt="item.target">{{item.title}}</a>
+                    </template>
+                    <!-- 更多菜单按钮 -->
+                    <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+                        mdui-tooltip="{'content':'更多选项'}">
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                    <!-- 弹出菜单 -->
+                    <ul class="mdui-menu" id="menu-more">
+                        <template v-for="item in menus" :key="item.title">
+                            <li v-if="item.type=='menu'" class="mdui-menu-item">
+                                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
+                            </li>
+                            <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+                        </template>
+                    </ul>
+                </template>
+            </div>
+        </div>
+
+        <div v-if="plugins" id="plugins"
+            class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1">
+
+            <div v-for="item in plugins" class="mdui-col mdui-p-a-1">
+                <div class="jesse205-card-outlined jesse205-hoverable jesse205-shadow-transition mdui-card mdui-p-a-1">
+                    <div class="mdui-card-menu">
+                        <span>{{item.size}}</span>
+                    </div>
+                    <div class="mdui-m-a-1">
+                        <div class="" style="font-size: 16px;">{{item.name}}</div>
+                        <div class="mdui-text-color-theme-secondary">v{{item.versionName}} | {{item.updateDate}}</div>
+                    </div>
+                    <div class="mdui-m-a-1">{{item.description || '暂无介绍'}}</div>
+                    <div class="mdui-m-a-1 mdui-text-color-theme-secondary">开发者：{{item.developer}}</div>
+                    <a :href="item.url" class="mdui-m-a-2 mdui-btn mdui-btn-icon mdui-color-theme"
+                        style="bottom: 0; right: 0; position: absolute;">
+                        <i class="mdui-icon material-icons">file_download</i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <div id="plugins"
-        class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1"></div>
-
 </body>
 
 </html>
