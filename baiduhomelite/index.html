@@ -26,13 +26,6 @@
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212121" />
 
 	<script type="text/javascript">
-		function search() {
-			var value = document.getElementById("search_input").value;
-			if (value != "") {
-				window.location.href = "http://www.baidu.com/s?ch=3&ie=utf-8&wd=" + value;
-			}
-			return false;
-		}
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('/baiduhomelite/serviceWorker.js', { scope: '/baiduhomelite/' }).then(function (reg) {
 				// registration worked
@@ -55,30 +48,37 @@
 			position: relative;
 		}
 
-
 		.logo {
-			margin: auto;
+			margin: 0 auto;
 			display: block;
 			height: 68px;
-			max-width: 214px;
+			width: 214px;
 			position: absolute;
-			left: 0;
-			right: 0;
+			/* 为了在IE7上实现居中 */
+			left: 50%;
 			bottom: 0;
+			margin-left: -107px;
+		}
+
+		.inputSpace {
+			height: 100%;
+			outline: 0;
+			position: absolute;
+			right: 90px;
+			left: 0;
+			margin: 0 8px;
 		}
 
 		#search_input {
-			/* width: 100%; */
-			height: 40px;
+			/* 不直接设置百分百是为了兼容IE8 */
+			height: 20px;
 			background-color: transparent;
 			border: none;
 			outline: 0;
 			font-size: 16px;
 			color: #000000;
-			padding: 0 8px;
-			position: absolute;
-			right: 90px;
-			left: 0;
+			width: 100%;
+			padding: 10px 0;
 		}
 
 		.search_form {
@@ -95,13 +95,13 @@
 		.search_button {
 			width: 90px;
 			height: 40px;
+			padding: 0;
 			color: #FFFFFF;
 			font-size: 16px;
 			font-weight: bold;
 			border: none;
 			border-radius: 8px;
 			background-color: #536DFE;
-			/* padding: 0 12px; */
 			transition: box-shadow .25s cubic-bezier(.4, .2, 0, 1);
 			position: absolute;
 			right: 0;
@@ -138,10 +138,15 @@
 
 <body>
 	<div class="logoSpace">
+
 		<img class="logo" src="logo.png" draggable="false" alt />
+
 	</div>
-	<form onsubmit="return search()" class="search_form">
-		<input type="text" value="" id="search_input" aria-label="搜索框">
+	<form action="http://www.baidu.com/s?ch=3&ie=utf-8"
+		onsubmit="return document.getElementById('search_input').value!=''" class="search_form">
+		<div class="inputSpace">
+			<input type="text" name="wd" value="" id="search_input" aria-label="搜索框">
+		</div>
 		<input type="submit" class="search_button" value="百度一下">
 	</form>
 

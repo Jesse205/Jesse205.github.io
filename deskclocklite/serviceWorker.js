@@ -1,4 +1,4 @@
-const cacheName = 'DeskClockLite-v4';
+const cacheName = 'DeskClockLite-v5';
 const BASE_PATH = "/deskclocklite"
 var appShellFiles = [
     BASE_PATH + '/',
