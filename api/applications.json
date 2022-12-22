@@ -72,5 +72,25 @@
                 "src": "./deskclocklite/"
             }
         ]
+    },
+    {
+        "name": "各种文档",
+        "id": "pwa_applications",
+        "items": [
+            {
+                "name": "AndroLua+ 文档",
+                "id": "androlua",
+                "summary": "经过精心整理后的文档",
+                "image": "images/graphs/aidelua.png",
+                "src": "https://jesse205.github.io/AideLua/androluapro/"
+            },
+            {
+                "name": "Magisk 中文文档",
+                "id": "magisk",
+                "summary": "精心机翻，仅供参考",
+                "image": "images/graphs/aidelua.png",
+                "src": "./"
+            }
+        ]
     }
 ]

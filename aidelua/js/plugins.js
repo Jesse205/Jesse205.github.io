@@ -6,7 +6,7 @@ const isTop = ref(true)
 const menus = [
   {
     "title": "插件文档",
-    "href": "/AideLua/plugin/",
+    "href": "https://jesse205.github.io/AideLua/plugin/",
     "target": "_blank",
     "type": "menu"
   },
