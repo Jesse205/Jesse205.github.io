@@ -3,6 +3,7 @@ const BASE_PATH = "/deskclocklite"
 var appShellFiles = [
     BASE_PATH + '/',
     BASE_PATH + '/index.html',
+    BASE_PATH + '/serviceWorker.js',
     BASE_PATH + '/favicon.ico',
     BASE_PATH + '/favicon-16x16.png',
     BASE_PATH + '/favicon-32x32.png',
@@ -27,22 +28,14 @@ this.addEventListener('fetch', function (event) {
     );
 });
 
-this.addEventListener('activate', function (event) {
+self.addEventListener('activate', function (event) {
     event.waitUntil(
-        Promise.all([
-            // 更新客户端
-            self.clients.claim(),
-
-            // 清理旧版本
-            caches.keys().then(function (cacheList) {
-                return Promise.all(
-                    cacheList.map(function (oldCacheName) {
-                        if (oldCacheName !== cacheName) {
-                            return caches.delete(oldCacheName);
-                        }
-                    })
-                );
-            })
-        ])
+        caches.keys().then(function (keyList) {
+            return Promise.all(keyList.map(function (key) {
+                if (cacheName.indexOf(key) === -1) {
+                    return caches.delete(key);
+                }
+            }));
+        })
     );
 });

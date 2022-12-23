@@ -3,13 +3,14 @@ const BASE_PATH = "/aidelua"
 var appShellFiles = [
     BASE_PATH + '/',
     BASE_PATH + '/plugins.html',
+    BASE_PATH + '/serviceWorker.js',
     BASE_PATH + '/logo.png',
     BASE_PATH + '/favicon.ico',
     BASE_PATH + '/favicon-16x16.png',
     BASE_PATH + '/favicon-32x32.png',
 ]
 
-this.addEventListener('install', function (event) {
+self.addEventListener('install', function (event) {
     console.log('[Service Worker] Install', event);
     event.waitUntil(
         caches.open(cacheName).then(function (cache) {
@@ -19,7 +20,7 @@ this.addEventListener('install', function (event) {
     );
 });
 
-this.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function (r) {
             console.log('[Service Worker] Fetching resource: ' + event.request.url);
@@ -28,22 +29,14 @@ this.addEventListener('fetch', function (event) {
     );
 });
 
-this.addEventListener('activate', function (event) {
+self.addEventListener('activate', function (event) {
     event.waitUntil(
-        Promise.all([
-            // 更新客户端
-            self.clients.claim(),
-
-            // 清理旧版本
-            caches.keys().then(function (cacheList) {
-                return Promise.all(
-                    cacheList.map(function (oldCacheName) {
-                        if (oldCacheName !== cacheName) {
-                            return caches.delete(oldCacheName);
-                        }
-                    })
-                );
-            })
-        ])
+        caches.keys().then(function (keyList) {
+            return Promise.all(keyList.map(function (key) {
+                if (cacheName.indexOf(key) === -1) {
+                    return caches.delete(key);
+                }
+            }));
+        })
     );
 });
