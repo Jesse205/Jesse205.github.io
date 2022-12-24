@@ -1,13 +1,10 @@
 {
-    "name": "Edde 网站",
-    "short_name": "Edde 网站",
+    "name": "Edde 系列",
+    "short_name": "Edde 系列",
     "start_url": "/",
     "display": "standalone",
-    "description": "Edde应用测试",
-    "orientation": "natural",
+    "description": "Edde 系列产品",
     "prefer_related_applications": false,
-    "theme_color": "#FFFFFF",
-    "background_color": "#FFFFFF",
     "icons": [
         {
             "src": "favicon.png",

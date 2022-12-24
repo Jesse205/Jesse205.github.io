@@ -8,30 +8,31 @@
     "scope": "/baiduhomelite/",
     "lang": "zh-CN",
     "display": "minimal-ui",
+    "orientation": "natural",
     "icons": [
         {
-            "src": "icons/android-chrome-192x192.png",
+            "src": "/baiduhomelite/icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/android-chrome-512x512.png",
+            "src": "/baiduhomelite/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icons/android-chrome-512x512.png",
+            "src": "/baiduhomelite/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icons/maskable_icon_x512.png",
+            "src": "/baiduhomelite/icons/maskable_icon_x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose":"maskable"
         },
         {
-            "src": "icons/maskable_icon.png",
+            "src": "/baiduhomelite/icons/maskable_icon.png",
             "sizes": "1024x1024",
             "type": "image/png",
             "purpose":"maskable"
