@@ -88,8 +88,9 @@
                 "name": "Magisk 中文文档",
                 "id": "magisk",
                 "summary": "精心机翻，仅供参考",
-                "image": "images/graphs/aidelua.png",
-                "src": "./"
+                "image": "images/graphs/magiskchinesedocument.png",
+                "src": "https://jesse205.github.io/MagiskChineseDocument/",
+                "dark":true
             }
         ]
     }

@@ -89,7 +89,8 @@
                     <div class="mdui-card-media">
                       <img class="card-image" :src="content.image" :alt="content.name" draggable="false" />
                       <div
-                        class="jesse205-card-media-covered-light mdui-card-media-covered mdui-card-media-covered-transparent">
+                        class="mdui-card-media-covered mdui-card-media-covered-transparent"
+                        :class="[content.dark?'jesse205-card-media-covered-dark':'jesse205-card-media-covered-light']">
                         <div class="mdui-card-primary">
                           <div class="mdui-card-primary-title">{{content.name}}</div>
                           <div class="mdui-card-primary-subtitle">{{content.summary}}</div>
