@@ -18,7 +18,7 @@ const menus = [
   }
 ]
 
-var app = createApp({
+let app = createApp({
   data() {
     fetch(PLUGINS_URL)
       .then((res) => res.json())
@@ -35,7 +35,7 @@ var app = createApp({
   },
   mounted() {
     window.addEventListener('scroll', function () {
-      var scrollTop = window.pageYOffset
+      let scrollTop = window.pageYOffset
       isTop.value = Boolean(scrollTop <= 0)
     })
     mdui.mutation()

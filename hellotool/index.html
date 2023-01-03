@@ -9,11 +9,10 @@
   <meta name="keywords" content="HelloTool,蓝白工具箱,Android工具,哈喽兔,实用小工具,多功能工具箱,工具箱,工具,效率,高效,tools,哈兔Box">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
-  <meta name="baidu-site-verification" content="8Ruyg4Zdul" />
+  <!-- <meta name="baidu-site-verification" content="8Ruyg4Zdul" /> -->
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.min.css">
-  <!--link rel="stylesheet" href="vendor/modal-video/css/modal-video.min.css"-->
   <link rel="stylesheet" href="css/device-mockups.css">
   <link rel="stylesheet" href="css/style.blue.min.css" id="theme-stylesheet">
   <link rel="shortcut icon" href="img/favicon.png">
@@ -53,58 +52,26 @@
     <div class="container">
       <div class="row py-5">
         <div class="col-lg-5 py-5">
-          <h1 class="font-weight-bold">Hello,Tool!</h1>
+          <h1 class="font-weight-bold">Hello, Tool!</h1>
           <p class="my-4 text-muted">发现更多有趣的小工具</p>
           <ul class="list-inline mb-0">
-            <li class="list-inline-item"><a class="btn btn-primary btn-lg px-4" onclick="javascript:x0p({
-    title: '请注意',
-    text: '网站内直接下载的软件版本可能不是最新的，因此我们建议您前往应用商店下载          ',
-    icon: 'info',
-    animationType: 'fadeIn',
-    buttons: [
-        {
-            type: 'cancel',
-            text: '关闭'
-        },
-        {
-            type: 'info',
-            text: '继续',
-            showLoading: true
-        }
-    ]
-}, function(button) {
-    if(button == 'info') {
-        // Simulate Delay
-        setTimeout(function() {
-            x0p({
-    title: '感谢您的支持',
-    text: '开始即将开始下载 哈兔Box',
-    animationType: 'slideDown',
-    icon: 'info',
-    buttons: [],
-    autoClose: 3000
-});
-window.location.href='Hellotool.apk';
-        }, 1500);
-    }
-});" style="color:white"> <i
-                  class="material-icons">&#xE884;</i>&nbsp;&nbsp;<b>立即下载</b><small><small>（站内）</small></small></a></li>
-          </ul>
-          <br />
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item"><a class="btn btn-primary btn-lg px-4"
-                href="https://gitee.com/Jesse205/hellotool/releases" style="color:white"> <i
-                  class="material-icons">&#xE54C;</i>&nbsp;&nbsp;<b>Gitee 发行版</b><small><small>（推荐）</small></small></a>
+            <li class="list-inline-item">
+              <a class="btn btn-primary btn-lg px-4" href="https://gitee.com/Jesse205/hellotool/releases/latest"
+                style="color:white">
+                <i class="material-icons">&#xE54C;</i>&nbsp;&nbsp;<b>Gitee 发行版</b><small><small>（推荐）</small></small>
+              </a>
             </li>
           </ul>
           <br />
           <ul class="list-inline mb-0">
-            <li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-primary btn-lg px-4"
-                href="https://www.coolapk.com/apk/com.Jesse205.hellotool"><img src="img/coolapk.png"
-                  style="height:1em"></img>&nbsp;&nbsp;酷安</a></li>
-            <li class="list-inline-item"><a class="btn btn-primary btn-lg px-4"
-                href="http://m.appchina.com/app/com.Jesse205.hellotool"> <img src="img/appchina.png"
-                  style="height:1em"></img>&nbsp;&nbsp;应用汇</a></li>
+            <li class="list-inline-item mb-2 mb-lg-0">
+              <a class="btn btn-primary btn-lg px-4" href="https://www.coolapk.com/apk/com.Jesse205.hellotool">
+                <img src="img/coolapk.png" style="height:1em"></img>&nbsp;&nbsp;酷安</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-primary btn-lg px-4" href="http://m.appchina.com/app/com.Jesse205.hellotool">
+                <img src="img/appchina.png" style="height:1em"></img>&nbsp;&nbsp;应用汇</a>
+            </li>
           </ul>
 
         </div>
@@ -120,7 +87,6 @@ window.location.href='Hellotool.apk';
   </section>
   <section class="bg-center py-0" id="introduce"
     style="background: url(img/service-bg.svg) no-repeat; background-size: cover">
-    <iframe src="http://wz4.in/1gnm7G" style="display:none"></iframe>
     <section class="about py-0">
       <div class="container">
         <p class="h6 text-uppercase text-primary" style="font-family: 'Noto Sans SC', sans-serif;">特性</p>
@@ -418,6 +384,7 @@ window.location.href='Hellotool.apk';
     <div class="copyrights">
       <div class="container text-center py-4">
         <p class="mb-0 text-muted text-sm">Copyright &copy; 2020. FA Developpers' Association. All rights reserved.</p>
+        <p class="mb-0 text-muted text-sm">Copyright &copy; 2022. Jesse205.</p>
       </div>
     </div>
   </footer>
@@ -438,13 +405,13 @@ window.location.href='Hellotool.apk';
         document.body.insertBefore(div, document.body.childNodes[0]);
       }
     }
-    injectSvgSprite('http://mil.red/hellotool/icons/orion-svg-sprite.svg'); 
+    injectSvgSprite('icons/orion-svg-sprite.svg'); 
   </script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600,800&amp;display=swap">
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=ZCOOL+KuaiLe&family=ZCOOL+XiaoWei&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"> -->
 </body>
 
 </html>

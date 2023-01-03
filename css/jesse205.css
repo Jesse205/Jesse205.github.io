@@ -154,7 +154,7 @@ body {
 
 .mdui-menu {
     border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1), 0 8px 10px 1px rgba(0, 0, 0, 0.04), 0 3px 14px 2px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 1px 5px -3px rgb(0 0 0 / 10%), 0 3px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 2%);
 }
 
 .mdui-theme-accent-indigo .mdui-text-color-theme-accent {
@@ -167,6 +167,48 @@ body {
 
 .mdui-panel-item-title {
     width: auto;
+}
+
+@keyframes hideOverflowYOnAnimating {
+    0% {
+        overflow-y: hidden;
+    }
+
+    25% {
+        overflow-y: hidden;
+    }
+
+    50% {
+        overflow-y: hidden;
+    }
+
+    75% {
+        overflow-y: hidden;
+    }
+
+    100% {
+        overflow-y: auto;
+    }
+}
+
+.mdui-menu>div {
+    transform: scale(2);
+}
+
+.mdui-menu-open {
+    overflow-y: auto;
+    animation: hideOverflowYOnAnimating .3s;
+}
+
+.mdui-menu-closing>div,
+.mdui-menu-open>div {
+    transform: scale(1);
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: .3s;
+    transition-property: opacity, visibility, -webkit-transform;
+    transition-property: transform, opacity, visibility;
+    transition-property: transform, opacity, visibility, -webkit-transform;
+    will-change: transform;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -191,7 +233,7 @@ body {
         color: white;
         text-shadow: 0 0 5px black;
     }
-    
+
 
     .mdui-theme-layout-auto .jesse205-btn-outlined {
         border: 1px solid rgba(255, 255, 255, .12) !important;

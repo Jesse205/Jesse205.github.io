@@ -14,13 +14,13 @@
 	transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
 }
 
-header>div {
+.hero>div {
 	text-align: center;
 	margin-top: -40px;
 	opacity: 0.9999999;
 }
 
-header>img {
+.hero>img {
 	height: 160px;
 	width: 100%;
 	object-fit: cover;
@@ -189,6 +189,9 @@ header>img {
 	text-transform: none;
 }
 
+.links a>div:hover {
+	text-decoration: underline;
+}
 
 footer {
 	padding: 8px;
@@ -227,11 +230,11 @@ footer {
 		width: 112px
 	}
 
-	header>img {
+	.hero>img {
 		height: 200px;
 	}
 
-	header>div {
+	.hero>div {
 		margin-top: -56px;
 	}
 }

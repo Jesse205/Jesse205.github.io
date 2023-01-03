@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="sharename" itemprop="name" content="Aide Lua Pro" />
   <meta name="shareimage" itemprop="image" content="https://p.qlogo.cn/gh/628045718/628045718/" />
   <meta name="description" itemprop="description" content="依赖 AIDE ，使用 Lua 快速、高效开发的工具" />
@@ -23,9 +23,6 @@
 
   <title>Aide Lua</title>
   <link rel="icon" sizes="any" mask="" href="favicon.png">
-
-  <!-- jQuery -->
-  <!-- <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script> -->
 
   <!-- Vue -->
   <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
@@ -47,6 +44,40 @@
 <body class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
   <div id="app">
     <header>
+      <!-- 标题栏 -->
+      <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
+        :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
+        <div id="toolbar" class="mdui-toolbar" :class="{'toolbar-top':isTop}"
+          style="transition: all .2s cubic-bezier(.4, 0, .2, 1)">
+          <p class="mdui-typo-title">Aide Lua Pro</p>
+          <div class="mdui-toolbar-spacer"></div>
+          <template v-if="config">
+            <!-- 菜单区域 -->
+            <template v-for="item in config.menus" :key="item.title">
+              <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
+                :targrt="item.target">{{item.title}}</a>
+            </template>
+            <!-- 更多菜单按钮 -->
+            <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+              mdui-tooltip="{'content':'更多选项'}">
+              <i class="mdui-icon material-icons">more_vert</i>
+            </div>
+            <!-- 弹出菜单 -->
+            <ul class="mdui-menu" id="menu-more">
+              <div>
+                <template v-for="item in config.menus" :key="item.title">
+                  <li v-if="item.type=='menu'" class="mdui-menu-item">
+                    <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
+                  </li>
+                  <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+                </template>
+              </div>
+            </ul>
+          </template>
+        </div>
+      </div>
+    </header>
+    <div class="hero">
       <img src="images/top_background.png" draggable="false" alt />
       <div>
         <img class="icon jesse205-shadow-4" src="images/aidelua_logo.jpg" alt />
@@ -54,41 +85,11 @@
         <p class="app-summary mdui-text-color-theme-secondary">一款依赖Aide的Lua编辑器</p>
         <div class="app-goup-btn">
           <a id="download" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
-            href="https://gitee.com/Jesse205/AideLua/releases" target="_blank"
-            :mdui-tooltip='appConfig?JSON.stringify({"content":("更新日志：<br>" + appConfig.body.replace(/\r\n/g, "<br>"))}):null'>
-            下载{{appConfig?" ("+appConfig.tag_name+")":null}}</a>
+            href="https://gitee.com/Jesse205/AideLua/releases/latest" target="_blank"
+            :mdui-tooltip="appConfig?JSON.stringify({content:('更新日志：<br>' + appConfig.body.replace(/\r\n/g, '<br>'))}):null">
+            下载{{appConfig?` (${appConfig.tag_name})`:null}}</a>
           <a class="mdui-btn mdui-ripple" href="https://gitee.com/Jesse205/AideLua" target="_blank">Gitee 仓库</a>
         </div>
-      </div>
-    </header>
-
-    <!-- 标题栏 -->
-    <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
-      :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
-      <div id="toolbar" class="mdui-toolbar" :class="{'toolbar-top':isTop}">
-        <p class="mdui-typo-title">Aide Lua Pro</p>
-        <div class="mdui-toolbar-spacer"></div>
-        <template v-if="config">
-          <!-- 菜单区域 -->
-          <template v-for="item in config.menus" :key="item.title">
-            <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-              :targrt="item.target">{{item.title}}</a>
-          </template>
-          <!-- 更多菜单按钮 -->
-          <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
-            mdui-tooltip="{'content':'更多选项'}">
-            <i class="mdui-icon material-icons">more_vert</i>
-          </div>
-          <!-- 弹出菜单 -->
-          <ul class="mdui-menu" id="menu-more">
-            <template v-for="item in config.menus" :key="item.title">
-              <li v-if="item.type=='menu'" class="mdui-menu-item">
-                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
-              </li>
-              <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
-            </template>
-          </ul>
-        </template>
       </div>
     </div>
 
@@ -96,12 +97,10 @@
 
     <div v-if="config" class="screenshots group mdui-container-fluid mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4">
       <div>
-
         <div v-for="item in config.screenshot" class="screenshot-item mdui-container mdui-col">
           <h1 class="title mdui-text-color-theme-accent">{{item.title}}</h1>
           <p class="subtitle mdui-text-color-theme-secondary">{{item.summary}}</p>
           <img class="screenshot jesse205-card-outlined" :src="item.src" alt />
-
         </div>
       </div>
     </div>

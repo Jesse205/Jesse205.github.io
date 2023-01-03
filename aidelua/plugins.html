@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base target="_blank">
     <title>Aide Lua 插件库</title>
 
@@ -16,9 +16,6 @@
     <meta name="msapplication-config" content="/aidelua/icons/browserconfig.xml">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212121" />
-
-    <!-- jQuery -->
-    <!-- <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script> -->
 
     <!-- Vue -->
     <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
@@ -58,12 +55,14 @@
                     </div>
                     <!-- 弹出菜单 -->
                     <ul class="mdui-menu" id="menu-more">
-                        <template v-for="item in menus" :key="item.title">
-                            <li v-if="item.type=='menu'" class="mdui-menu-item">
-                                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
-                            </li>
-                            <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
-                        </template>
+                        <div>
+                            <template v-for="item in menus" :key="item.title">
+                                <li v-if="item.type=='menu'" class="mdui-menu-item">
+                                    <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
+                                </li>
+                                <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+                            </template>
+                        </div>
                     </ul>
                 </template>
             </div>

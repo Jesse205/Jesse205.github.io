@@ -5,7 +5,7 @@ const CONFIG_URL = "/api/index.json"
 const apps = ref(null)
 const config = ref(null)
 const isTop = ref(true)
-var app = createApp({
+let app = createApp({
   data() {
 
     fetch(APPS_URL)
@@ -30,7 +30,7 @@ var app = createApp({
   },
   mounted() {
     window.addEventListener('scroll', function () {
-      var scrollTop = window.pageYOffset
+      let scrollTop = window.pageYOffset
       isTop.value = Boolean(scrollTop <= 0)
     })
     $$("#mainlist").mutation()

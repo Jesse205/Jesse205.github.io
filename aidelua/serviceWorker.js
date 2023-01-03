@@ -1,10 +1,9 @@
-var cacheName = 'AideLua-v1';
+var cacheName = 'AideLua-v3';
 const BASE_PATH = "/aidelua"
 var appShellFiles = [
     BASE_PATH + '/',
     BASE_PATH + '/plugins.html',
     BASE_PATH + '/serviceWorker.js',
-    BASE_PATH + '/logo.png',
     BASE_PATH + '/favicon.ico',
     BASE_PATH + '/favicon-16x16.png',
     BASE_PATH + '/favicon-32x32.png',
@@ -33,7 +32,7 @@ self.addEventListener('activate', function (event) {
     event.waitUntil(
         caches.keys().then(function (keyList) {
             return Promise.all(keyList.map(function (key) {
-                if (cacheName.indexOf(key) === -1) {
+                if (cacheName !== key) {
                     return caches.delete(key);
                 }
             }));

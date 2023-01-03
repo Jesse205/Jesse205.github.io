@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="manifest" href="/manifest.json" />
 
   <title>Edde互联</title>
@@ -11,10 +11,9 @@
   <meta itemprop="name" content="Edde网站">
   <meta itemprop="description" name="description" content="Edde应用测试">
   <meta name="author" content="Jesse205" />
+  <meta name="robots" content="all,follow">
 
-  <link rel="icon" sizes="any" mask="" href="favicon.png">
-  <!-- jQuery -->
-  <!-- <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script> -->
+  <link rel="icon" sizes="any" href="favicon.png">
 
   <!-- Vue -->
   <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
@@ -38,35 +37,39 @@
   class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo jesse205-theme-layout-cardDesign mdui-theme-layout-auto">
   <!-- 这是Vue的 -->
   <div id="app" class="mdui-container">
-    <!-- 标题栏 -->
-    <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
-      :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
-      <div class="mdui-toolbar">
-        <p class="mdui-typo-title">Edde 互联</p>
-        <div class="mdui-toolbar-spacer"></div>
-        <template v-if="config">
-          <!-- 菜单区域 -->
-          <template v-for="item in config.menus" :key="item.title">
-            <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-              :targrt="item.target">{{item.title}}</a>
-          </template>
-          <!-- 更多菜单按钮 -->
-          <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
-            mdui-tooltip="{'content':'更多选项'}">
-            <i class="mdui-icon material-icons">more_vert</i>
-          </div>
-          <!-- 弹出菜单 -->
-          <ul class="mdui-menu" id="menu-more">
+    <header>
+      <!-- 标题栏 -->
+      <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
+        :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
+        <div class="mdui-toolbar">
+          <p class="mdui-typo-title">Edde 互联</p>
+          <div class="mdui-toolbar-spacer"></div>
+          <template v-if="config">
+            <!-- 菜单区域 -->
             <template v-for="item in config.menus" :key="item.title">
-              <li v-if="item.type=='menu'" class="mdui-menu-item">
-                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
-              </li>
-              <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+              <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
+                :targrt="item.target">{{item.title}}</a>
             </template>
-          </ul>
-        </template>
+            <!-- 更多菜单按钮 -->
+            <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+              mdui-tooltip="{'content':'更多选项'}">
+              <i class="mdui-icon material-icons">more_vert</i>
+            </div>
+            <!-- 弹出菜单 -->
+            <ul class="mdui-menu" id="menu-more">
+              <div>
+                <template v-for="item in config.menus" :key="item.title">
+                  <li v-if="item.type=='menu'" class="mdui-menu-item">
+                    <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
+                  </li>
+                  <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+                </template>
+              </div>
+            </ul>
+          </template>
+        </div>
       </div>
-    </div>
+    </header>
 
     <!-- 可扩展面板 -->
     <div v-if="apps && apps.length!=0" id="mainlist" class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined"
@@ -88,8 +91,7 @@
                     class="jesse205-card-outlined jesse205-hoverable jesse205-shadow-transition mdui-card mdui-ripple">
                     <div class="mdui-card-media">
                       <img class="card-image" :src="content.image" :alt="content.name" draggable="false" />
-                      <div
-                        class="mdui-card-media-covered mdui-card-media-covered-transparent"
+                      <div class="mdui-card-media-covered mdui-card-media-covered-transparent"
                         :class="[content.dark?'jesse205-card-media-covered-dark':'jesse205-card-media-covered-light']">
                         <div class="mdui-card-primary">
                           <div class="mdui-card-primary-title">{{content.name}}</div>

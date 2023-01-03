@@ -1,4 +1,4 @@
-var cacheName = 'BaiduHomeLite-v7';
+var cacheName = 'BaiduHomeLite-v8';
 const BASE_PATH = "/baiduhomelite"
 var appShellFiles = [
     BASE_PATH + '/',
@@ -32,7 +32,7 @@ self.addEventListener('activate', function (event) {
     event.waitUntil(
         caches.keys().then(function (keyList) {
             return Promise.all(keyList.map(function (key) {
-                if (cacheName.indexOf(key) === -1) {
+                if (cacheName !== key) {
                     return caches.delete(key);
                 }
             }));
