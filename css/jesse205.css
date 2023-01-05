@@ -191,13 +191,22 @@ body {
     }
 }
 
+.mdui-menu {
+    transition-duration: 0s;
+}
+
 .mdui-menu>div {
     transform: scale(2);
 }
 
 .mdui-menu-open {
     overflow-y: auto;
+    transition-duration: .3s;
     animation: hideOverflowYOnAnimating .3s;
+}
+
+.mdui-menu-closing {
+    transition-duration: .3s;
 }
 
 .mdui-menu-closing>div,
