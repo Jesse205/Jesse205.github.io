@@ -81,16 +81,16 @@
                 "name": "AndroLua+ 文档",
                 "id": "androlua",
                 "summary": "经过精心整理后的文档",
-                "image": "images/graphs/aidelua.png",
+                "image": "images/graphs/androluadocument.png",
                 "src": "https://jesse205.github.io/AideLua/androluapro/"
             },
             {
                 "name": "Magisk 中文文档",
                 "id": "magisk",
                 "summary": "精心机翻，仅供参考",
-                "image": "images/graphs/magiskchinesedocument.png",
+                "image": "images/graphs/magiskchinesedocument.jpeg",
                 "src": "https://jesse205.github.io/MagiskChineseDocument/",
-                "dark":true
+                "dark":false
             }
         ]
     }
