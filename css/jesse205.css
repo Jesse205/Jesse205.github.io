@@ -59,6 +59,10 @@ body {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
+.jesse205-shadow-8 {
+    box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08)
+}
+
 .jesse205-shadow-transition {
     transition: box-shadow .25s cubic-bezier(.4, .2, 0, 1), -webkit-box-shadow .25s cubic-bezier(.4, .2, 0, 1) !important;
 }
@@ -154,7 +158,7 @@ body {
 
 .mdui-menu {
     border-radius: 4px;
-    box-shadow: 0 1px 5px -3px rgb(0 0 0 / 10%), 0 3px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 2%);
+    box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08)
 }
 
 .mdui-theme-accent-indigo .mdui-text-color-theme-accent {
