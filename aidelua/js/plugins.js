@@ -1,6 +1,6 @@
 const { createApp, ref, watchEffect } = Vue
 
-const PLUGINS_URL = "/api/aidelua/plugins.json"
+const PLUGINS_URL = "https://jesse205.github.io/AideLua/plugins.json"
 const plugins = ref(null)
 const isTop = ref(true)
 const menus = [
