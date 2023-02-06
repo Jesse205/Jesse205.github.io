@@ -1,8 +1,7 @@
 const { createApp, ref, watchEffect } = Vue
 
 const PLUGINS_URL = "/api/aidelua/plugins.json"
-const plugins = ref(null)
-const isTop = ref(true)
+
 const menus = [
   {
     "title": "插件文档",
@@ -19,14 +18,15 @@ const menus = [
 ]
 
 let app = createApp({
-  data() {
+  setup() {
     fetch(PLUGINS_URL)
       .then((res) => res.json())
       .then((json) => (plugins.value = json))
       .catch(function (error) {
         console.error(error)
       })
-
+    const plugins = ref(null)
+    const isTop = ref(true)
     return {
       plugins,
       menus,
@@ -36,7 +36,7 @@ let app = createApp({
   mounted() {
     window.addEventListener('scroll', function () {
       let scrollTop = window.pageYOffset
-      isTop.value = Boolean(scrollTop <= 0)
+      this.isTop = Boolean(scrollTop <= 0)
     })
     mdui.mutation()
   },

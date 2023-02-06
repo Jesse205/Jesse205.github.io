@@ -2,12 +2,13 @@ const { createApp, ref, watchEffect } = Vue
 
 const CONFIG_URL = "/api/aidelua/index.json"
 const APPCONFIG_URL = "https://gitee.com/api/v5/repos/Jesse205/AideLua/releases/latest"
-const config = ref(null)
-const appConfig = ref(null)
-const isTop = ref(true)
+
 
 let app = createApp({
-  data() {
+  setup() {
+    const config = ref(null)
+    const appConfig = ref(null)
+    const isTop = ref(true)
     fetch(CONFIG_URL)
       .then((res) => res.json())
       .then((json) => (config.value = json))
@@ -27,9 +28,9 @@ let app = createApp({
     }
   },
   mounted() {
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', () => {
       let scrollTop = window.pageYOffset
-      isTop.value = Boolean(scrollTop <= 0)
+      this.isTop = Boolean(scrollTop <= 0)
     })
     mdui.mutation()
   },
@@ -37,14 +38,13 @@ let app = createApp({
     mdui.mutation()
   }
 })
+
 $$(function () {
   app.mount('#app')
 })
 
 navigator.serviceWorker.register('/aidelua/serviceWorker.js', { scope: '/aidelua/' }).then(function (reg) {
-  // registration worked
   console.log('Registration succeeded. Scope is ' + reg.scope);
 }).catch(function (error) {
-  // registration failed
   console.log('Registration failed with ' + error);
 });

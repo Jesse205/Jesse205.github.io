@@ -26,19 +26,22 @@
 	<script type="text/javascript">
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('/baiduhomelite/serviceWorker.js', { scope: '/baiduhomelite/' }).then(function (reg) {
-				// registration worked
 				console.log('Registration succeeded. Scope is ' + reg.scope);
 			}).catch(function (error) {
-				// registration failed
 				console.log('Registration failed with ' + error);
 			});
 		}
 	</script>
 	<style>
+		html {
+			overflow-y: auto;
+		}
+
 		html,
 		body {
 			height: 100%;
 			margin: 0;
+			text-align: center;
 		}
 
 		.logoSpace {
@@ -70,6 +73,7 @@
 		#search_input {
 			/* 不直接设置百分百是为了兼容IE8 */
 			height: 20px;
+			/* height: 100%; */
 			background-color: transparent;
 			border: none;
 			outline: 0;
@@ -77,6 +81,7 @@
 			color: #000000;
 			width: 100%;
 			padding: 10px 0;
+			display: block;
 		}
 
 		.search_form {
@@ -115,6 +120,18 @@
 			box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 		}
 
+		.footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 8px;
+			text-align: center;
+			color: gray;
+			font-size: smaller;
+			opacity: 0.5;
+		}
+
 		@media (prefers-color-scheme: dark) {
 
 			html,
@@ -138,14 +155,16 @@
 	<div class="logoSpace">
 		<img class="logo" src="logo.png" draggable="false" alt />
 	</div>
-	<form action="https://www.baidu.com/s?ch=3&ie=utf-8"
-		onsubmit="return document.getElementById('search_input').value!=''" class="search_form">
+	<form action="https://www.baidu.com/s" onsubmit="return document.getElementById('search_input').value!=''"
+		class="search_form">
 		<div class="inputSpace">
-			<input type="text" name="wd" value="" id="search_input" aria-label="搜索框">
+			<input type="text" name="word" value="" id="search_input" aria-label="搜索框">
 		</div>
 		<input type="submit" class="search_button" value="百度一下">
 	</form>
-
+	<div class="footer">
+		本站是一个简洁的浏览器首页，与百度无关。
+	</div>
 </body>
 
 </html>

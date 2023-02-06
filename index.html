@@ -14,9 +14,8 @@
   <link rel="icon" sizes="any" href="favicon.png">
 
   <!-- Vue -->
-  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
+  <!-- <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script> -->
 
   <!-- MDUI -->
   <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
@@ -44,7 +43,7 @@
           <div class="mdui-toolbar-spacer"></div>
           <template v-if="config">
             <!-- 菜单区域 -->
-            <template v-for="item in config.menus" :key="item.title">
+            <template v-for="item in config.menus">
               <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
                 :targrt="item.target">{{item.title}}</a>
             </template>
@@ -56,7 +55,7 @@
             <!-- 弹出菜单 -->
             <ul class="mdui-menu" id="menu-more">
               <div>
-                <template v-for="item in config.menus" :key="item.title">
+                <template v-for="item in config.menus">
                   <li v-if="item.type=='menu'" class="mdui-menu-item">
                     <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
                   </li>
@@ -72,7 +71,7 @@
     <!-- 可扩展面板 -->
     <div v-if="apps && apps.length!=0" id="mainlist" class="panel mdui-panel mdui-panel-gapless jesse205-card-outlined"
       mdui-panel>
-      <div v-for="group in apps" class="mdui-panel-item mdui-panel-item-open" :key="group.id">
+      <div v-for="group in apps" class="mdui-panel-item mdui-panel-item-open">
         <!-- 面板header -->
         <div class="mdui-panel-item-header mdui-ripple mdui-p-x-2">
           <div class="mdui-panel-item-title">{{group.name}}</div>
@@ -82,7 +81,7 @@
         <div class="mdui-panel-item-body mdui-p-x-2">
           <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4">
             <!-- 单个卡片 -->
-            <template v-for="content in group.items" :key="group.id+'_'+content.id">
+            <template v-for="content in group.items">
               <div class="mdui-col mdui-p-a-1">
                 <a :href="content.src " target="_blank">
                   <div
