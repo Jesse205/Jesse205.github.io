@@ -1,154 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="jesse205-theme-html-auto">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="sharename" itemprop="name" content="Aide Lua Pro" />
-  <meta name="shareimage" itemprop="image" content="https://p.qlogo.cn/gh/628045718/628045718/" />
-  <meta name="description" itemprop="description" content="依赖 AIDE ，使用 Lua 快速、高效开发的工具" />
-  <meta name="keywords" itemprop="keywords" content="lua|androlua|alua|aidelua" />
-  <meta name="author" content="&copy;0047ol" />
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/aidelua/images/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/aidelua/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/aidelua/favicon-16x16.png">
-  <link rel="mask-icon" href="/aidelua/images/icons/safari-pinned-tab.svg" color="#3F51B5">
-  <link rel="shortcut icon" href="/aidelua/favicon.ico">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212121" />
-
-
-  <title>Aide Lua</title>
-  <link rel="icon" sizes="any" mask="" href="favicon.png">
-
-  <!-- Vue -->
-  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-
-  <!-- MDUI -->
-  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
-
-  <!-- Jesse205Library -->
-  <link rel="stylesheet" href="/css/jesse205.css" />
-  <script src="/js/jesse205.js"></script>
-
-  <!-- 当前页面 -->
-  <link rel="stylesheet" href="css/index.css" />
-  <script src="js/index.js"></script>
+  <script>
+    alert("官网搬家啦！新地址：https://aidelua.github.io/")
+  </script>
+  <meta http-equiv="refresh" content="0; url=https://aidelua.github.io/">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/aidelua/serviceWorker.js', { scope: '/aidelua/' }).then(function (reg) {
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+      }).catch(function (error) {
+        console.log('Registration failed with ' + error);
+      });
+    }
+  </script>
 </head>
-
-<body class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
-  <div id="app">
-    <header>
-      <!-- 标题栏 -->
-      <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
-        :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
-        <div id="toolbar" class="mdui-toolbar" :class="{'toolbar-top':isTop}"
-          style="transition: all .2s cubic-bezier(.4, 0, .2, 1)">
-          <p class="mdui-typo-title">Aide Lua Pro</p>
-          <div class="mdui-toolbar-spacer"></div>
-          <template v-if="config">
-            <!-- 菜单区域 -->
-            <template v-for="item in config.menus" :key="item.title">
-              <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-                :targrt="item.target">{{item.title}}</a>
-            </template>
-            <!-- 更多菜单按钮 -->
-            <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
-              mdui-tooltip="{'content':'更多选项'}">
-              <i class="mdui-icon material-icons">more_vert</i>
-            </div>
-            <!-- 弹出菜单 -->
-            <ul class="mdui-menu" id="menu-more">
-              <div>
-                <template v-for="item in config.menus" :key="item.title">
-                  <li v-if="item.type=='menu'" class="mdui-menu-item">
-                    <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
-                  </li>
-                  <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
-                </template>
-              </div>
-            </ul>
-          </template>
-        </div>
-      </div>
-    </header>
-    <div class="hero">
-      <img src="images/top_background.png" draggable="false" alt />
-      <div>
-        <img class="icon jesse205-shadow-4" src="images/aidelua_logo.jpg" alt />
-        <h1 class="app-title mdui-text-color-theme-accent">Aide Lua Pro</h1>
-        <p class="app-summary mdui-text-color-theme-secondary">一款依赖Aide的Lua编辑器</p>
-        <div class="app-goup-btn">
-          <a id="download" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
-            href="https://gitee.com/Jesse205/AideLua/releases/latest" target="_blank"
-            :mdui-tooltip="appConfig?JSON.stringify({content:('更新日志：<br>' + appConfig.body.replace(/\r\n/g, '<br>'))}):null">
-            下载{{appConfig?` (${appConfig.tag_name})`:null}}</a>
-          <a class="mdui-btn mdui-ripple" href="https://gitee.com/Jesse205/AideLua" target="_blank">Gitee 仓库</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div v-if="config" class="screenshots group mdui-container-fluid mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4">
-      <div>
-        <div v-for="item in config.screenshot" class="screenshot-item mdui-container mdui-col">
-          <h1 class="title mdui-text-color-theme-accent">{{item.title}}</h1>
-          <p class="subtitle mdui-text-color-theme-secondary">{{item.summary}}</p>
-          <img class="screenshot jesse205-card-outlined" :src="item.src" alt />
-        </div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div v-if="config" class="group mdui-row">
-      <!-- 关于我们板块 -->
-      <div class="subgroup mdui-col-xs-12 mdui-col-md-4">
-        <h1 class="title mdui-text-color-theme-accent">关于我们</h1>
-        <div id="developers" class="developers">
-          <div v-for="item in config.developers" :key="item.name">
-            <img class="avatar jesse205-card-outlined" :src="item.avatar" draggable="false" alt />
-            <h1 class="mdui-text-center title">{{item.name}}</h1>
-            <p class="mdui-text-center subtitle mdui-text-color-theme-secondary">{{item.summary}}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 联系我们板块 -->
-      <div class="subgroup mdui-col-xs-12 mdui-col-md-4">
-        <h1 class="title mdui-text-color-theme-accent">联系我们</h1>
-        <div id="contact"
-          class="item contact bottom-links mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-2 mdui-row-lg-3 mdui-row-xl-4">
-          <div v-for="item in config.contact" class="mdui-col" :key="item.title">
-            <a class="jesse205-btn-outlined jesse205-btn-withicon jesse205-hoverable mdui-btn mdui-ripple"
-              :href="item.href" target="_blank" :mdui-tooltip='JSON.stringify(item.tooltip)'>
-              <i class="mdui-icon material-icons" :src="item.iconsrc" alt>{{item.icon}}</i>{{item.title}}</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 友情链接板块 -->
-      <div class="subgroup mdui-col-xs-12 mdui-col-md-4">
-        <h1 class="title mdui-text-color-theme-accent">友情链接</h1>
-        <div id="links"
-          class="item links bottom-links mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-2 mdui-row-lg-4 mdui-row-xl-5">
-          <div v-for="item in config.links" class="mdui-col" :key="item.name">
-            <a :href="item.href" target="_blank">
-              <div class="mdui-btn mdui-ripple mdui-text-color-theme-400 ">{{item.name}}</div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <footer>
-      <p> Copyright 2022 AideLua All Rights Reserved</p>
-    </footer>
-  </div>
-</body>
 
 </html>

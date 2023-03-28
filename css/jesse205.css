@@ -1,75 +1,26 @@
+@import url(jesse205/shadow.css);
+@import url(jesse205/dialog.css);
+@import url(jesse205/panel.css);
+@import url(jesse205/menu.css);
+
 body {
+    /* 字体恢复为默认 */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* .jesse205-theme-layout-cardDesign {
-    background-color: #F5F5F5;
-} */
-
 .mdui-toolbar {
     background-color: white;
+    transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
 }
-
-/* .jesse205-theme-layout-cardDesign .mdui-toolbar {
-    background-color: #F5F5F5;
-} */
 
 .mdui-toolbar>.jesse205-toolbar-menusSpace {
     display: flex;
 }
 
-/* 优化扩展面板 */
-.mdui-panel::before {
-    border-radius: 8px;
+.mdui-overlay {
+    background: rgba(0, 0, 0, 0.35);
 }
 
-.mdui-panel {
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.mdui-panel-item-header {
-    height: 48px;
-    border-radius: 0;
-}
-
-.mdui-panel-item-open>.mdui-panel-item-header {
-    height: 48px;
-    border-radius: 7px;
-}
-
-.mdui-panel-item-arrow {
-    right: 12px;
-}
-
-.mdui-panel-item-open>.mdui-panel-item-header .mdui-panel-item-arrow {
-    top: 12px;
-}
-
-.mdui-panel-item-body::before {
-    height: 8px;
-}
-
-.mdui-panel-item-body::after {
-    height: 8px;
-}
-
-/* IE浏览器不支持百分数 */
-.jesse205-shadow-4 {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-.jesse205-shadow-8 {
-    box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08)
-}
-
-.jesse205-shadow-transition {
-    transition: box-shadow .25s cubic-bezier(.4, .2, 0, 1), -webkit-box-shadow .25s cubic-bezier(.4, .2, 0, 1) !important;
-}
-
-.jesse205-hoverable:hover {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
-}
 
 /* 卡片 */
 .jesse205-card-outlined {
@@ -92,6 +43,10 @@ body {
 .jesse205-card-media-covered-auto {
     color: black;
     text-shadow: 0 0 5px white;
+}
+
+.mdui-card {
+    border-radius: 8px;
 }
 
 .mdui-card-primary {
@@ -129,6 +84,7 @@ body {
     margin: auto;
 }
 
+
 .jesse205-btn-withicon img,
 .jesse205-btn-withicon i {
     margin-right: 4px;
@@ -156,72 +112,41 @@ body {
     height: 40px;
 }
 
-.mdui-menu {
-    border-radius: 4px;
-    box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08)
-}
-
+/* indigo */
+.mdui-theme-primary-indigo .mdui-text-color-theme,
 .mdui-theme-accent-indigo .mdui-text-color-theme-accent {
     color: #3F51B5 !important;
 }
 
+.mdui-theme-primary-indigo .mdui-color-theme,
 .mdui-theme-accent-indigo .mdui-color-theme-accent {
     background-color: #5C6BC0 !important;
 }
+
+/* blue */
+.mdui-theme-primary-blue .mdui-text-color-theme,
+.mdui-theme-accent-blue .mdui-text-color-theme-accent {
+    color: #1A73E8 !important;
+}
+
+.mdui-theme-primary-blue .mdui-color-theme,
+.mdui-theme-accent-blue .mdui-color-theme-accent {
+    background-color: #1A73E8 !important;
+    color: #fff !important;
+}
+
 
 .mdui-panel-item-title {
     width: auto;
 }
 
-@keyframes hideOverflowYOnAnimating {
-    0% {
-        overflow-y: hidden;
-    }
-
-    25% {
-        overflow-y: hidden;
-    }
-
-    50% {
-        overflow-y: hidden;
-    }
-
-    75% {
-        overflow-y: hidden;
-    }
-
-    100% {
-        overflow-y: auto;
-    }
+.mdui-spinner {
+    width: 40px;
+    height: 40px;
 }
 
-.mdui-menu {
-    transition-duration: 0s;
-}
-
-.mdui-menu>div {
-    transform: scale(2);
-}
-
-.mdui-menu-open {
-    overflow-y: auto;
-    transition-duration: .3s;
-    animation: hideOverflowYOnAnimating .3s;
-}
-
-.mdui-menu-closing {
-    transition-duration: .3s;
-}
-
-.mdui-menu-closing>div,
-.mdui-menu-open>div {
-    transform: scale(1);
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    transition-duration: .3s;
-    transition-property: opacity, visibility, -webkit-transform;
-    transition-property: transform, opacity, visibility;
-    transition-property: transform, opacity, visibility, -webkit-transform;
-    will-change: transform;
+.mdui-spinner-circle {
+    border-width: 4px !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -230,12 +155,16 @@ body {
     }
 
     .mdui-theme-layout-auto {
-        background-color: #212121 !important;
+        background-color: #202124 !important;
         color-scheme: dark;
     }
 
     .mdui-theme-layout-auto .mdui-toolbar {
-        background-color: #212121;
+        background-color: #202124;
+    }
+
+    .mdui-theme-layout-auto .jesse205-toolbar-float {
+        background-color: #38393D;
     }
 
     .mdui-theme-layout-auto .jesse205-card-outlined {
@@ -256,7 +185,41 @@ body {
         border: 1px solid rgba(255, 255, 255, .12) !important;
     }
 
-    .mdui-theme-layout-auto .mdui-theme-accent-indigo .mdui-text-color-theme-accent {
-        color: #5C6BC0 !important;
+
+    /* blue */
+    .mdui-theme-layout-auto.mdui-theme-primary-blue .mdui-text-color-theme,
+    .mdui-theme-layout-auto.mdui-theme-accent-blue .mdui-text-color-theme-accent {
+        color: #8AB4F8 !important;
+    }
+
+    .mdui-theme-layout-auto.mdui-theme-primary-blue .mdui-color-theme,
+    .mdui-theme-layout-auto.mdui-theme-accent-blue .mdui-color-theme-accent {
+        background-color: #8AB4F8 !important;
+    }
+}
+
+
+.jesse205-row-xs-1 .jesse205-col,
+.jesse205-row-sm-2 .jesse205-col,
+.jesse205-row-md-2 .jesse205-col {
+    width: 100%;
+}
+
+.jesse205-row-xs-1,
+.jesse205-row-sm-2,
+.jesse205-row-md-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width:600px) {
+    .jesse205-row-sm-2 .jesse205-col {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .jesse205-row-md-2 .jesse205-col {
+        width: 50%;
     }
 }

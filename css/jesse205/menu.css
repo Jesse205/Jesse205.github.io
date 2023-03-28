@@ -1,0 +1,55 @@
+/* 菜单 */
+@keyframes hideOverflowYOnAnimating {
+    0% {
+        overflow-y: hidden;
+    }
+
+    25% {
+        overflow-y: hidden;
+    }
+
+    50% {
+        overflow-y: hidden;
+    }
+
+    75% {
+        overflow-y: hidden;
+    }
+
+    100% {
+        overflow-y: auto;
+    }
+}
+
+.mdui-menu {
+    transition-duration: 0s;
+    opacity: 1;
+    border-radius: 4px;
+
+}
+
+.mdui-menu>div {
+    transform: scale(2);
+}
+
+.mdui-menu-open {
+    overflow-y: auto;
+    transition-duration: .3s;
+    animation: hideOverflowYOnAnimating .3s;
+}
+
+.mdui-menu-closing {
+    transition-duration: .3s;
+    opacity: 0;
+}
+
+.mdui-menu-closing>div,
+.mdui-menu-open>div {
+    transform: scale(1);
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: .3s;
+    transition-property: opacity, visibility, -webkit-transform;
+    transition-property: transform, opacity, visibility;
+    transition-property: transform, opacity, visibility, -webkit-transform;
+    will-change: transform;
+}

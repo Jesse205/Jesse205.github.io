@@ -1,96 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="jesse205-theme-html-auto">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base target="_blank">
-    <title>Aide Lua 插件库</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/aidelua/images/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/aidelua/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/aidelua/favicon-16x16.png">
-    <link rel="mask-icon" href="/aidelua/images/icons/safari-pinned-tab.svg" color="#3F51B5">
-    <link rel="shortcut icon" href="/aidelua/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="/aidelua/icons/browserconfig.xml">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212121" />
-
-    <!-- Vue -->
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-
-    <!-- MDUI -->
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
-
-    <!-- Jesse205Library -->
-    <link rel="stylesheet" href="/css/jesse205.css" />
-    <script src="/js/jesse205.js"></script>
-
-    <!-- 当前页面 -->
-    <script type="text/javascript" src="js/plugins.js"></script>
+    <script>
+        alert("官网搬家啦！新地址：https://aidelua.github.io/plugins.html")
+    </script>
+    <meta http-equiv="refresh" content="5; url=https://aidelua.github.io/plugins.html">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/aidelua/serviceWorker.js', { scope: '/aidelua/' }).then(function (reg) {
+                console.log('Registration succeeded. Scope is ' + reg.scope);
+            }).catch(function (error) {
+                console.log('Registration failed with ' + error);
+            });
+        }
+    </script>
 </head>
-
-<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
-    <div id="app">
-        <!-- 标题栏 -->
-        <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
-            :class="{'mdui-shadow-0':isTop,'jesse205-shadow-4':!isTop}">
-            <div class="mdui-toolbar">
-                <p class="mdui-typo-title">Aide Lua 插件库</p>
-                <div class="mdui-toolbar-spacer"></div>
-                <template v-if="menus">
-                    <!-- 菜单区域 -->
-                    <template v-for="item in menus" :key="item.title">
-                        <a v-if="item.type=='menu'" :href="item.href"
-                            class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-                            :targrt="item.target">{{item.title}}</a>
-                    </template>
-                    <!-- 更多菜单按钮 -->
-                    <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
-                        mdui-tooltip="{'content':'更多选项'}">
-                        <i class="mdui-icon material-icons">more_vert</i>
-                    </div>
-                    <!-- 弹出菜单 -->
-                    <ul class="mdui-menu" id="menu-more">
-                        <div>
-                            <template v-for="item in menus" :key="item.title">
-                                <li v-if="item.type=='menu'" class="mdui-menu-item">
-                                    <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
-                                </li>
-                                <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
-                            </template>
-                        </div>
-                    </ul>
-                </template>
-            </div>
-        </div>
-
-        <div v-if="plugins" id="plugins"
-            class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-row-xl-5 mdui-grid-list mdui-m-a-1">
-
-            <div v-for="item in plugins" class="mdui-col mdui-p-a-1">
-                <div class="jesse205-card-outlined jesse205-hoverable jesse205-shadow-transition mdui-card mdui-p-a-1">
-                    <div class="mdui-card-menu">
-                        <span>{{item.size}}</span>
-                    </div>
-                    <div class="mdui-m-a-1">
-                        <div class="" style="font-size: 16px;">{{item.name}}</div>
-                        <div class="mdui-text-color-theme-secondary">v{{item.versionName}} | {{item.updateDate}}</div>
-                    </div>
-                    <div class="mdui-m-a-1">{{item.description || '暂无介绍'}}</div>
-                    <div class="mdui-m-a-1 mdui-text-color-theme-secondary">开发者：{{item.developer}}</div>
-                    <a :href="item.url" class="mdui-m-a-2 mdui-btn mdui-btn-icon mdui-color-theme"
-                        style="bottom: 0; right: 0; position: absolute;">
-                        <i class="mdui-icon material-icons">file_download</i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</body>
 
 </html>

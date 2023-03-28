@@ -90,7 +90,15 @@
                 "summary": "精心机翻，仅供参考",
                 "image": "images/graphs/magiskchinesedocument.jpeg",
                 "src": "https://jesse205.github.io/MagiskChineseDocument/",
-                "dark":false
+                "dark": false
+            },
+            {
+                "name": "刷机指南",
+                "id": "flashandroiddevicesguidlines",
+                "summary": "万能的指南",
+                "image": "images/graphs/flashandroiddevicesguidlines.jpeg",
+                "src": "https://efadg.netlify.app/",
+                "dark": false
             }
         ]
     }

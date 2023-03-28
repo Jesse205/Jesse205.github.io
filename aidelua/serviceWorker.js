@@ -1,22 +1,5 @@
-var cacheName = 'AideLua-v3';
-const BASE_PATH = "/aidelua"
-var appShellFiles = [
-    BASE_PATH + '/',
-    BASE_PATH + '/plugins.html',
-    BASE_PATH + '/serviceWorker.js',
-    BASE_PATH + '/favicon.ico',
-    BASE_PATH + '/favicon-16x16.png',
-    BASE_PATH + '/favicon-32x32.png',
-]
-
 self.addEventListener('install', function (event) {
     console.log('[Service Worker] Install', event);
-    event.waitUntil(
-        caches.open(cacheName).then(function (cache) {
-            console.log('[Service Worker] Caching all: app shell and content');
-            return cache.addAll(appShellFiles);
-        })
-    );
 });
 
 self.addEventListener('fetch', function (event) {
@@ -32,9 +15,7 @@ self.addEventListener('activate', function (event) {
     event.waitUntil(
         caches.keys().then(function (keyList) {
             return Promise.all(keyList.map(function (key) {
-                if (cacheName !== key) {
-                    return caches.delete(key);
-                }
+                return caches.delete(key);
             }));
         })
     );

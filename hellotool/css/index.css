@@ -1,0 +1,83 @@
+html {
+    margin: 0;
+}
+
+.toolbar {
+    transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+}
+
+.toolbar-top {
+    background-color: transparent !important;
+}
+
+.downloadBtn {
+    margin: 8px;
+    height: 40px;
+}
+
+.downloadBtn>div {
+    height: 100%;
+}
+
+
+.hero {
+    background: url(../img/banner-4.png) no-repeat;
+    background-size: 100% 80%
+}
+
+.hero .mdui-col {
+    padding: 8px;
+}
+
+.hero>div {
+    padding: 100px 56px;
+}
+
+.device-wrapper {
+    margin: auto;
+    max-width: 300px;
+    width: 100%;
+    z-index: 999;
+    position: relative
+}
+
+.device {
+    background-image: url(../img/device-mockups/iPhoneX/portrait.png) !important;
+    z-index: 1;
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 202.898072%;
+}
+
+.device .screen {
+    position: absolute;
+    top: 15px;
+    left: 5%;
+    width: 90%;
+    height: 93.49030471%;
+    border: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.uiImg {
+    width: 100%;
+}
+
+.device {
+    max-width: 300px;
+    width: 100%;
+}
+
+.imgIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.bigIcon {
+    font-size: 56px;
+}
+
+.about .mdui-card {
+    height: 300px;
+}
