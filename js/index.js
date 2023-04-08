@@ -46,8 +46,20 @@ $$(function () {
           href: "https://www.ygktool.com/"
         },
         {
+          name: '磷光商店',
+          href: 'https://linguang.top/'
+        },
+        {
+          name: '云储',
+          href: 'https://yunchu.cxoip.com/'
+        },
+        {
           name: 'MDUI',
           href: 'https://www.mdui.org/'
+        },
+        {
+          name: 'Vue',
+          href: 'https://cn.vuejs.org/'
         },
         {
           name: 'Gitee',
@@ -58,13 +70,8 @@ $$(function () {
           href: 'https://gitlab.com/'
         },
         {
-          name: 'Github',
+          name: 'GitHub',
           href: 'https://www.github.com/'
-        },
-
-        {
-          name: 'Vue',
-          href: 'https://cn.vuejs.org/'
         }
       ]
     },
@@ -77,8 +84,8 @@ $$(function () {
         })
     },
     mounted() {
-      this.isTop=getTopState(window)
-      window.addEventListener('scroll', () => this.isTop=getTopState(window))
+      this.isTop = getTopState(window)
+      window.addEventListener('scroll', () => this.isTop = getTopState(window))
       $$("#mainlist").mutation()
       $$("#linkslist").mutation()
     },

@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="jesse205-theme-html-auto">
+<html lang="zh-CN" class="mdui-theme-html-auto">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
   <title>哈兔Box</title>
   <meta name="description" content="哈兔Box，一个简洁的蓝白风工具箱">
   <meta name="keywords" content="HelloTool,蓝白工具箱,Android工具,哈喽兔,实用小工具,多功能工具箱,工具箱,工具,效率,高效,tools,哈兔Box">
-  <meta name="viewport" content="width=device-width">
   <meta name="robots" content="all,follow">
-  <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css"> -->
-  <!-- <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.min.css"> -->
-  <!-- <link rel="stylesheet" href="css/device-mockups.css"> -->
-  <!-- <link rel="stylesheet" href="css/style.blue.min.css" id="theme-stylesheet"> -->
   <link rel="shortcut icon" href="favicon.png">
-  <!-- <link rel="stylesheet" href="css/x0popup.min.css"> -->
 
   <!-- Vue -->
   <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
@@ -23,56 +17,52 @@
   <!-- MDUI -->
   <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
   <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@mdi/font@7.1.96/css/materialdesignicons.min.css" />
 
   <!-- Jesse205Library -->
   <link rel="stylesheet" href="/css/jesse205.css" />
   <script src="/js/jesse205.js"></script>
-
-  <!-- <script src="js/x0popup.min.js"></script> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css" /> -->
-  <link rel="stylesheet" href="https://unpkg.com/@mdi/font@7.1.96/css/materialdesignicons.min.css" />
 
   <!-- 当前页面 -->
   <link rel="stylesheet" href="css/index.css" />
   <script src="js/index.js"></script>
 </head>
 
-<body class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
+<body class="mdui-theme-layout-auto">
   <!-- 这是Vue的 -->
   <div id="app">
-    <header>
-      <!-- 标题栏 -->
-      <div class="mdui-appbar jesse205-shadow-transition mdui-appbar-fixed"
-        :class="{'mdui-shadow-0':isTop,'mdui-shadow-4':!isTop}">
-        <div class="mdui-toolbar toolbar" :class="{'toolbar-top':isTop}">
-          <p class="mdui-typo-title">哈兔Box</p>
-          <div class="mdui-toolbar-spacer"></div>
-          <template v-if="menus">
-            <!-- 菜单区域 -->
-            <template v-for="item in menus">
-              <a v-if="item.type=='menu'" :href="item.href" class="jesse205-btn-icon-text mdui-btn mdui-hidden-xs-down"
-                :targrt="item.target">{{item.title}}</a>
-            </template>
-            <!-- 更多菜单按钮 -->
-            <div class="mdui-btn mdui-btn-icon mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
-              mdui-tooltip="{'content':'更多选项'}">
-              <i class="mdui-icon material-icons">more_vert</i>
-            </div>
-            <!-- 弹出菜单 -->
-            <ul class="mdui-menu" id="menu-more">
-              <div>
-                <template v-for="item in menus">
-                  <li v-if="item.type=='menu'" class="mdui-menu-item">
-                    <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
-                  </li>
-                  <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
-                </template>
-              </div>
-            </ul>
+
+    <!-- 标题栏 -->
+    <nav class="mdui-appbar mdui-appbar-fixed" :class="{'mdui-appbar-lifted':!isTop}">
+      <div class="mdui-toolbar" :class="{'mdui-toolbar-lifted':!isTop,'toolbar-top':isTop}">
+        <p class="mdui-typo-title">哈兔Box</p>
+        <div class="mdui-toolbar-spacer"></div>
+        <template v-if="menus">
+          <!-- 菜单区域 -->
+          <template v-for="item in menus">
+            <a v-if="item.type=='menu'" :href="item.href"
+              class="jesse205-btn-icon-text mdui-btn mdui-ripple mdui-hidden-xs-down"
+              :targrt="item.target">{{item.title}}</a>
           </template>
-        </div>
+          <!-- 更多菜单按钮 -->
+          <div class="mdui-btn mdui-btn-icon mdui-ripple mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+            mdui-tooltip="{'content':'更多选项'}">
+            <i class="mdui-icon material-icons">more_vert</i>
+          </div>
+          <!-- 弹出菜单 -->
+          <ul class="mdui-menu" id="menu-more">
+            <div>
+              <template v-for="item in menus">
+                <li v-if="item.type=='menu'" class="mdui-menu-item">
+                  <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
+                </li>
+                <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+              </template>
+            </div>
+          </ul>
+        </template>
       </div>
-    </header>
+    </nav>
 
     <section class="mdui-appbar-with-toolbar hero" id="hero">
       <div class="mdui-container">
@@ -82,29 +72,25 @@
             <p class="mdui-typo-subheading mdui-m-a-1">发现更多有趣的小工具</p>
             <div>
               <!-- 下载按钮 -->
-              <a class="mdui-btn mdui-color-theme-accent mdui-btn-raised mdui-ripple downloadBtn"
+              <a class="mdui-btn mdui-color-theme mdui-btn-raised mdui-ripple downloadBtn"
                 href="https://gitee.com/Jesse205/hellotool/releases/latest" target="_blank">
-                <div class="jesse205-btn-withicon">
-                  <img src="img/gitee-fill-round.svg" class="imgIcon" />
-                  <b>Gitee 发行版 (推荐)</b>
-                </div>
-                <a class="mdui-btn mdui-color-theme-accent mdui-btn-raised mdui-ripple downloadBtn"
-                  href="https://www.coolapk.com/apk/com.Jesse205.hellotool" target="_blank">
-                  <div class="jesse205-btn-withicon">
-                    <img src="img/coolapk.svg" class="imgIcon" />酷安
-                  </div>
-                </a>
-
-                <a class="mdui-btn mdui-color-theme-accent mdui-btn-raised mdui-ripple downloadBtn"
-                  href="http://m.appchina.com/app/com.Jesse205.hellotool" target="_blank">
-                  <div class="jesse205-btn-withicon">
-                    <img src="img/appchina.png" class="imgIcon" />应用汇
-                  </div>
-                </a>
-
+                <img src="img/gitee-fill-round.svg" class="imgIcon" />
+                <b>Gitee 发行版 (推荐)</b>
+              </a>
+              <a class="mdui-btn mdui-color-theme mdui-btn-raised mdui-ripple downloadBtn"
+                href="https://www.coolapk.com/apk/com.Jesse205.hellotool" target="_blank">
+                <img src="img/coolapk.svg" class="imgIcon" />
+                <span>酷安</span>
+              </a>
+              <a class="mdui-btn mdui-color-theme mdui-btn-raised mdui-ripple downloadBtn"
+                href="http://m.appchina.com/app/com.Jesse205.hellotool" target="_blank">
+                <img src="img/appchina.png" class="imgIcon" />
+                <span>应用汇</span>
+              </a>
             </div>
           </div>
           <div class="mdui-col">
+            <!-- 手机图 -->
             <div class="device-wrapper">
               <div class="device">
                 <div class="screen">
@@ -117,15 +103,15 @@
       </div>
     </section>
 
-    <section id="introduce" style="background: url(img/service-bg.svg) no-repeat; background-size: cover">
-      <!-- 关于 -->
+    <section id="introduce">
+      <!-- 特性 -->
       <section class="about">
         <div class="mdui-container">
-          <p class="mdui-typo-title mdui-text-color-theme">特性</p>
-          <h2>Why HelloTool ?</h2>
+          <h2 class="mdui-typo-title mdui-text-color-theme">特性</h2>
+          <h3>Why HelloTool ?</h3>
           <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-p-b-5">
             <div v-for="item in introduce" class="mdui-col mdui-p-a-1">
-              <div class="mdui-card mdui-shadow-4 rounded-lg mdui-p-a-4 mdui-typo-body-1">
+              <div class="mdui-card mdui-shadow-4 mdui-hoverable mdui-p-a-3 mdui-typo-body-1">
                 <span class="bigIcon mdi" :class="['mdui-text-color-'+item.iconColor, 'mdi-'+item.icon]"></span>
                 <h3 class="mdui-typo-title mdui-m-y-2">{{item.title}}</h3>
                 <p style="font-size: medium;" v-html="item.message.replace(/\n/g, '<br>')"></p>
@@ -143,10 +129,10 @@
               </div>
             </div>
             <div class="jesse205-col">
-              <h2>实用小工具应用的不二之选</h2>
-              <p class="text-muted">我们始终在追求简洁高效的使用体验，对浪费性能的过分美化说NO!<br>遇到问题？Take it
-                easy！我们提供长期技术支持服务，欢迎加入我们的官方服务群聊，各种问题轻松反馈!</p>
-              <a class="mdui-btn mdui-color-theme-accent jesse205-btn-withicon mdui-btn-raised mdui-ripple mdui-m-a-0"
+              <h3>实用小工具应用的不二之选</h3>
+              <p class="text-muted">我们始终在追求简洁高效的使用体验，对浪费性能的过分美化说NO!<br>
+                遇到问题？Take it easy！我们提供长期技术支持服务，欢迎加入我们的官方服务群聊，各种问题轻松反馈!</p>
+              <a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-m-a-0"
                 mdui-dialog="{target: '#joinGroupDialog'}">
                 <i class="mdui-icon material-icons">&#xE7F0;</i> 加入群聊
               </a>
@@ -162,14 +148,14 @@
                       href="https://jq.qq.com/?_wv=1027&k=QJH2H9Ox">技术交流</a>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
 
           <div class="jesse205-row-xs-1 jesse205-row-md-2 mdui-valign">
             <div class="jesse205-col">
-              <h2>这是一个简单而强大的原创APP</h2>
+              <h3>这是一个简单而强大的原创APP</h3>
               <p class="mdui-typo-title">在这里，您将体会到我们独到的匠心。</p>
               <ul class="mdui-typo">
                 <li>触手可及：可将常用的工具添加到首页或桌面</li>
@@ -182,15 +168,15 @@
             <div class="jesse205-col">
               <div class="jesse205-row-xs-1 jesse205-row-sm-2">
                 <div class="jesse205-col">
-                  <div class="mdui-card mdui-shadow-4 mdui-p-a-3 mdui-m-a-1">
+                  <div class="mdui-card mdui-shadow-4 mdui-hoverable mdui-p-a-3 mdui-m-a-1">
                     <span class="bigIcon mdui-text-color-red mdi mdi-account-multiple-outline"></span>
                     <h3 class="mdui-typo-title">1200+用户的选择</h3>
                     累计使用人次10000+<br>单日IP访问量50+
                   </div>
                 </div>
                 <div class="jesse205-col">
-                  <a class="mdui-card mdui-shadow-4 mdui-p-a-3 mdui-m-a-1 mdui-ripple" href="donation.html"
-                    style="display: block; text-decoration: none;">
+                  <a class="mdui-card mdui-shadow-4 mdui-hoverable mdui-p-a-3 mdui-m-a-1 mdui-ripple"
+                    href="donation.html" style="display: block; text-decoration: none;">
                     <span class="bigIcon mdui-text-color-purple mdi mdi-credit-card-outline"></span>
                     <h3 class="mdui-typo-title">支持我们</h3>
                     您可以点击此处捐赠来赞助我们的开发，让HelloTool变得更好!
@@ -203,100 +189,95 @@
       </section>
     </section>
 
-    <section id="testimonials"
-      style="background: url(img/testimonials-bg.png) no-repeat; background-size: 40% 100%; background-position: left center">
-      <div class="container text-center">
-        <p class="mdui-typo-title mdui-text-color-theme">评价</p>
-        <h2>看看用户们怎么说?</h2>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="owl-carousel owl-theme testimonials-slider">
-              <div class="mx-3 mx-lg-5 my-5 pt-3">
-                <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                  <div class="card-body index-forward pt-5 rounded-lg">
-                    <div class="testimonial-img"><img class="rounded-circle"
-                        src="http://q4.qlogo.cn/headimg_dl?dst_uin=2762585621&spec=640" alt="" /></div>
-                    <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                      <b><mark>软件做得很用心。</mark></b><br>这个MD简约风格的界面我很喜欢，不像隔壁某木头盒子那样虽然功能多一点但是排版混乱看起来头大。<br>除了有点小bug之外一切都好。<br>开发者人也挺Nice的，还提供了些源码。
-                    </p>
-                    <h5 class="font-weight-bold mb-0">The Gluten Eater</h5>
-                    <p class="text-primary mb-0 text-small">Web Designer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="mx-3 mx-lg-5 my-5 pt-3">
-                <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                  <div class="card-body index-forward pt-5 rounded-lg">
-                    <div class="testimonial-img"><img class="rounded-circle"
-                        src="http://q4.qlogo.cn/headimg_dl?dst_uin=2375428376&spec=640" alt="" /></div>
-                    <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                      <b><mark>真是一个不错的软件,</mark></b><br>开发者辛苦了,<br>希望能继续坚持下去。
-                    </p>
-                    <h5 class="font-weight-bold mb-0">像雾像雨又像风</h5>
-                    <p class="text-primary mb-0 text-small">Geek</p>
-                  </div>
-                </div>
-              </div>
-              <div class="mx-3 mx-lg-5 my-5 pt-3">
-                <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                  <div class="card-body index-forward pt-5 rounded-lg">
-                    <div class="testimonial-img"><img class="rounded-circle"
-                        src="http://q4.qlogo.cn/headimg_dl?dst_uin=1985386335&spec=640" alt="" /></div>
-                    <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                      <b><mark>完美的MaterialDesign风格</mark></b>
-                    </p>
-                    <h5 class="font-weight-bold mb-0">RiverTwilight</h5>
-                    <p class="text-primary mb-0 text-small">Web Designer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="mx-3 mx-lg-5 my-5 pt-3">
-                <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                  <div class="card-body index-forward pt-5 rounded-lg">
-                    <div class="testimonial-img"><img class="rounded-circle"
-                        src="http://q4.qlogo.cn/headimg_dl?dst_uin=3025385472&spec=640" alt="" /></div>
-                    <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                      <b>希望以后功能再多一些,<br><mark>目前挺好看的</mark></b>
-                    </p>
-                    <h5 class="font-weight-bold mb-0">183600</h5>
-                    <p class="text-primary mb-0 text-small">Geek</p>
-                  </div>
-                </div>
-              </div>
-              <div class="mx-3 mx-lg-5 my-5 pt-3">
-                <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                  <div class="card-body index-forward pt-5 rounded-lg">
-                    <div class="testimonial-img"><img class="rounded-circle"
-                        src="http://q4.qlogo.cn/headimg_dl?dst_uin=1114547837&spec=640" alt="" /></div>
-                    <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;"><b><mark>一个＊函不好用</mark>
-                        ？</b></p>
-                    <h5 class="font-weight-bold mb-0">柒白『滑稽』</h5>
-                    <p class="text-primary mb-0 text-small">Duck~</p>
-                  </div>
-                </div>
-              </div>
-              <div class="mx-3 mx-lg-5 my-5 pt-3">
-                <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                  <div class="card-body index-forward pt-5 rounded-lg">
-                    <div class="testimonial-img"><img class="rounded-circle"
-                        src="https://i.postimg.cc/mDbnM31C/avatar-4.png" alt="" /></div>
-                    <p class="lead text-muted mb-5" style="line-height:0.8;font-family: 'ZCOOL XiaoWei', serif;">
-                      <small><small>3020年，我独自打扫着祠堂。<br>老家的祠堂依旧是老样子，尽管翻新了无数遍。<br>那一千年前的样式依旧透出一丝古朴，典雅。<br>爷爷说，老家的祠堂叫“宅”，是1000年前的那位祖宗居住一生的地方，那里的每一块瓷砖，每一本漫画，每一个手办，都是有千年历史的古董。<br>在祠堂的最中间，存放着一个最古老的东西——一部智能手机。<br>村里面的最老的老人也不知道该如何使用它。<br>那天，我照常独自打扫着祠堂。<br>突然听到身后似乎有什么异样，虽然已经预料到今天会发生一些特别的事情，但我还是吓了一跳。<br>我猛地转过身，<br><b><mark>只见手机黯淡的屏幕上出现了一行字——<br>[有新文件]HelloTool最新版</mark></b></small></small>
-                    </p>
-                    <h5 class="font-weight-bold mb-0">OutlinedArc217</h5>
-                    <p class="text-primary mb-0 text-small">RuntimeError Developer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <section id="testimonials">
+      <div class="mdui-container">
+        <h2 class="mdui-typo-title mdui-text-color-theme">评价</h2>
+        <h3>看看用户们怎么说?</h3>
+        <div class="user-card mdui-card">
+          <div class="">
+            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=2762585621&spec=640" />
+            <b class="user-message">
+              <mark>软件做得很用心。</mark>
+              <br>
+              这个MD简约风格的界面我很喜欢，不像隔壁某木头盒子那样虽然功能多一点但是排版混乱看起来头大。<br>
+              除了有点小bug之外一切都好。<br>开发者人也挺Nice的，还提供了些源码。
+            </b>
+            <h5 class="user-name">The Gluten Eater</h5>
+            <p class="">Web Designer</p>
           </div>
         </div>
+
+        <div class="user-card mdui-card">
+          <div class="">
+            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=2375428376&spec=640" />
+            <b class="user-message">
+              <mark>真是一个不错的软件,</mark>
+              <br>开发者辛苦了,<br>希望能继续坚持下去。
+            </b>
+            <h5 class="user-name">像雾像雨又像风</h5>
+            <div class="">Geek</div>
+          </div>
+        </div>
+
+        <div class="user-card mdui-card">
+          <div class="">
+            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=1985386335&spec=640" />
+            <b class="user-message">
+              <mark>完美的MaterialDesign风格</mark>
+            </b>
+            <h5 class="user-name">RiverTwilight</h5>
+            <div class="">Web Designer</div>
+          </div>
+        </div>
+
+        <div class="user-card mdui-card">
+          <div class="">
+            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=3025385472&spec=640" />
+            <b class="user-message">
+              希望以后功能再多一些,<br><mark>目前挺好看的</mark>
+          </div>
+          <h5 class="user-name">183600</h5>
+          <div class="">Geek</div>
+        </div>
+
+
+        <div class="user-card mdui-card">
+          <div class="">
+            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=1114547837&spec=640" />
+            <b class="user-message">
+              <mark>一个＊函不好用</mark>？
+            </b>
+            <h5 class="user-name">柒白『滑稽』</h5>
+            <div class="">Duck~</div>
+          </div>
+        </div>
+
+        <div class="user-card mdui-card">
+          <div class="">
+            <img class="user-avatar" src="https://i.postimg.cc/mDbnM31C/avatar-4.png" />
+            <b class="user-message">
+              3020年，我独自打扫着祠堂。<br>
+              老家的祠堂依旧是老样子，尽管翻新了无数遍。<br>
+              那一千年前的样式依旧透出一丝古朴，典雅。<br>
+              爷爷说，老家的祠堂叫“宅”，是1000年前的那位祖宗居住一生的地方，那里的每一块瓷砖，每一本漫画，每一个手办，都是有千年历史的古董。<br>
+              在祠堂的最中间，存放着一个最古老的东西——一部智能手机。<br>村里面的最老的老人也不知道该如何使用它。<br>
+              那天，我照常独自打扫着祠堂。<br>
+              突然听到身后似乎有什么异样，虽然已经预料到今天会发生一些特别的事情，但我还是吓了一跳。<br>
+              我猛地转过身，<br>
+              <mark>只见手机黯淡的屏幕上出现了一行字——<br>
+                [有新文件]HelloTool最新版</mark>
+            </b>
+            <h5 class="user-name">OutlinedArc217</h5>
+            <div class="">RuntimeError Developer</div>
+          </div>
+        </div>
+
       </div>
     </section>
   </div>
 
-  <section id="introduce" style="background: url(img/service-bg.svg) no-repeat; background-size: cover">
-    <!-- <section class="about py-0">
+  <!-- <section id="introduce" style="background: url(img/service-bg.svg) no-repeat; background-size: cover"> -->
+  <!-- <section class="about py-0">
       <div class="container">
         <p class="h6 text-uppercase text-primary" style="font-family: 'Noto Sans SC', sans-serif;">特性</p>
         <h2 class="mb-5">Why HelloTool ?</h2>
@@ -355,7 +336,7 @@
         </div>
       </div>
     </section> -->
-    <section class="with-pattern-1" id="services">
+  <!--<section class="with-pattern-1" id="services">
       <div class="container">
         <div class="row align-items-center mb-5">
           <div class="col-lg-6 mb-5 mb-lg-0"><img class="img-fluid w-100 px-lg-5" src="img/objects.svg" alt=""></div>
@@ -410,12 +391,12 @@
               <li class="text-muted mb-2">无障碍设计：为无障碍专门设置ContentDescription</li>
               <li class="text-muted mb-2">开源版代码：可供借鉴学习</li>
             </ul>
-            <!--button class="btn btn-primary js-modal-btn" data-video-id="B6uuIHpFkuo"><i class="material-icons">&#xE039;</i>播放视频</button-->
+            <!~~button class="btn btn-primary js-modal-btn" data-video-id="B6uuIHpFkuo"><i class="material-icons">&#xE039;</i>播放视频</button~~>
           </div>
           <div class="col-lg-6">
             <div class="row">
               <div class="col-lg-6 col-sm-6 mb-4">
-                <!-- Services Item-->
+                <!~~ Services Item~~>
                 <div class="card border-0 shadow rounded-lg text-left px-2"
                   onclick="x0p('是不是觉得很少？', '对于一款从不砸钱做宣传的独立软件，这个数据已经挺难得了。  😂  ');">
                   <div class="card-body px py-5">
@@ -429,7 +410,7 @@
                 </div>
               </div>
               <div class="col-lg-6 col-sm-6 mb-4">
-                <!-- Services Item-->
+                <!~~ Services Item~~>
                 <div class="card border-0 shadow rounded-lg text-left px-2"
                   onclick="window.location.href='donation.html'">
                   <div class="card-body px py-5">
@@ -447,7 +428,7 @@
         </div>
       </div>
     </section>
-  </section>
+  </section>-->
   <section class="p-0" id="testimonials"
     style="background: url(img/testimonials-bg.png) no-repeat; background-size: 40% 100%; background-position: left center">
     <div class="container text-center">

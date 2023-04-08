@@ -2,6 +2,11 @@ html {
     margin: 0;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 .toolbar {
     transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
 }
@@ -15,8 +20,12 @@ html {
     height: 40px;
 }
 
-.downloadBtn>div {
-    height: 100%;
+.downloadBtn>* {
+    vertical-align: middle;
+}
+
+.downloadBtn img {
+    vertical-align: inherit;
 }
 
 
@@ -79,5 +88,34 @@ html {
 }
 
 .about .mdui-card {
-    height: 300px;
+    min-height: 280px;
+}
+
+#introduce {
+    background: url(../img/service-bg.png) no-repeat;
+    background-size: cover;
+}
+
+#testimonials {
+    background: url(../img/testimonials-bg.png) no-repeat;
+    background-size: 40% 100%;
+    background-position: left center;
+}
+
+.user-card {
+    max-width: 720px;
+    margin: 16px auto;
+    padding: 24px;
+}
+
+.user-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.user-name {}
+
+.user-message {
+    display: block;
 }

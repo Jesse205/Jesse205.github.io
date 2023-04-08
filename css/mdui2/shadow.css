@@ -1,0 +1,219 @@
+/**
+ * =============================================================================
+ * ************   Shadow 阴影   ************
+ * =============================================================================
+ */
+:root {
+    --mdui-shadow-0: none;
+    --mdui-shadow-1: 0 0px 2px -0.5px rgba(0, 0, 0, 0.4), 0 0px 1px 0 rgba(0, 0, 0, 0.06), 0 0px 0px 0 rgba(0, 0, 0, 0.04);
+    --mdui-shadow-2: 0 0px 3px -1px rgba(0, 0, 0, 0.4), 0 0px 3px 0 rgba(0, 0, 0, 0.06), 0 0px 3px 0 rgba(0, 0, 0, 0.04);
+    --mdui-shadow-3: 0 0px 3px -1px rgba(0, 0, 0, 0.4), 0 0px 4px 0 rgba(0, 0, 0, 0.06), 0 0px 4px 0 rgba(0, 0, 0, 0.04);
+    --mdui-shadow-4: 0 0px 4px -1.5px rgba(0, 0, 0, 0.4), 0 0px 5px 0 rgba(0, 0, 0, 0.06), 0 0px 5px 0 rgba(0, 0, 0, 0.04);
+    --mdui-shadow-5: 0 0px 5px -2px rgba(0, 0, 0, 0.4), 0 1px 8px 0 rgba(0, 0, 0, 0.06), 0 0px 7px 0 rgba(0, 0, 0, 0.04);
+    --mdui-shadow-6: 0 0px 5px -2px rgba(0, 0, 0, 0.4), 0 2px 10px 0 rgba(0, 0, 0, 0.06), 0 0px 9px 0 rgba(0, 0, 0, 0.04);
+    --mdui-shadow-7: 0 0px 5px -3px rgba(0, 0, 0, 0.4), 0 3px 10px 1px rgba(0, 0, 0, 0.06), 0 0px 8px 1px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-8: 0 1px 5px -3px rgba(0, 0, 0, 0.4), 0 4px 10px 1px rgba(0, 0, 0, 0.06), 0 0px 7px 2px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-9: 0 1px 6px -3px rgba(0, 0, 0, 0.4), 0 5px 12px 1px rgba(0, 0, 0, 0.06), 0 0px 8px 2px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-10: 0 2px 6px -3px rgba(0, 0, 0, 0.4), 0 6px 14px 1px rgba(0, 0, 0, 0.06), 0 0px 9px 3px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-11: 0 2px 7px -4px rgba(0, 0, 0, 0.4), 0 7px 15px 1px rgba(0, 0, 0, 0.06), 0 0px 10px 3px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-12: 0 3px 8px -4px rgba(0, 0, 0, 0.4), 0 8px 17px 2px rgba(0, 0, 0, 0.06), 0 1px 11px 4px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-13: 0 3px 8px -4px rgba(0, 0, 0, 0.4), 0 9px 19px 2px rgba(0, 0, 0, 0.06), 0 1px 12px 4px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-14: 0 3px 9px -4px rgba(0, 0, 0, 0.4), 0 10px 21px 2px rgba(0, 0, 0, 0.06), 0 1px 13px 4px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-15: 0 4px 9px -5px rgba(0, 0, 0, 0.4), 0 11px 22px 2px rgba(0, 0, 0, 0.06), 0 2px 14px 5px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-16: 0 4px 10px -5px rgba(0, 0, 0, 0.4), 0 12px 24px 2px rgba(0, 0, 0, 0.06), 0 2px 15px 5px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-17: 0 4px 11px -5px rgba(0, 0, 0, 0.4), 0 13px 26px 2px rgba(0, 0, 0, 0.06), 0 2px 16px 5px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-18: 0 5px 11px -5px rgba(0, 0, 0, 0.4), 0 14px 28px 2px rgba(0, 0, 0, 0.06), 0 3px 17px 6px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-19: 0 5px 12px -6px rgba(0, 0, 0, 0.4), 0 15px 29px 2px rgba(0, 0, 0, 0.06), 0 3px 18px 6px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-20: 0 6px 13px -6px rgba(0, 0, 0, 0.4), 0 16px 31px 3px rgba(0, 0, 0, 0.06), 0 4px 19px 7px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-21: 0 6px 13px -6px rgba(0, 0, 0, 0.4), 0 17px 33px 3px rgba(0, 0, 0, 0.06), 0 4px 20px 7px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-22: 0 6px 14px -6px rgba(0, 0, 0, 0.4), 0 18px 35px 3px rgba(0, 0, 0, 0.06), 0 4px 21px 7px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-23: 0 7px 14px -7px rgba(0, 0, 0, 0.4), 0 19px 36px 3px rgba(0, 0, 0, 0.06), 0 5px 22px 8px rgba(0, 0, 0, 0.04);
+    --mdui-shadow-24: 0 7px 15px -7px rgba(0, 0, 0, 0.4), 0 20px 38px 3px rgba(0, 0, 0, 0.06), 0 5px 23px 8px rgba(0, 0, 0, 0.04);
+}
+
+.mdui-appbar {
+    box-shadow: var(--mdui-shadow-0)
+}
+
+.mdui-appbar-lifted {
+    box-shadow: var(--mdui-shadow-4);
+}
+
+.mdui-card {
+    box-shadow: var(--mdui-shadow-2);
+}
+
+.mdui-card-outlined,
+.mdui-panel-gapless .mdui-panel-item {
+    box-shadow: var(--mdui-shadow-0);
+}
+
+/* important */
+.mdui-shadow-0,
+.mdui-hoverable-0:hover {
+    box-shadow: var(--mdui-shadow-0) !important;
+}
+
+.mdui-shadow-1,
+.mdui-hoverable-1:hover {
+    box-shadow: var(--mdui-shadow-1) !important;
+}
+
+.mdui-shadow-2,
+.mdui-btn-raised,
+.mdui-hoverable-2:hover,
+.mdui-panel-gapless,
+.mdui-panel-item {
+    box-shadow: var(--mdui-shadow-2) !important;
+}
+
+.mdui-shadow-3,
+.mdui-hoverable-3:hover {
+    box-shadow: var(--mdui-shadow-3) !important;
+}
+
+.mdui-shadow-4,
+.mdui-btn-raised:hover,
+.mdui-hoverable-4:hover {
+    box-shadow: var(--mdui-shadow-4) !important;
+}
+
+.mdui-shadow-5,
+.mdui-hoverable-5:hover {
+    box-shadow: var(--mdui-shadow-5) !important;
+}
+
+.mdui-shadow-6,
+.mdui-hoverable-6:hover {
+    box-shadow: var(--mdui-shadow-6) !important;
+}
+
+.mdui-shadow-7,
+.mdui-hoverable-7:hover {
+    box-shadow: var(--mdui-shadow-7) !important;
+}
+
+.mdui-shadow-8,
+.mdui-hoverable:hover,
+.mdui-hoverable-8:hover,
+.mdui-btn-raised:active,
+.mdui-menu {
+    box-shadow: var(--mdui-shadow-8) !important;
+}
+
+.mdui-shadow-9,
+.mdui-hoverable-9:hover {
+    box-shadow: var(--mdui-shadow-9) !important;
+}
+
+.mdui-shadow-10,
+.mdui-hoverable-10:hover {
+    box-shadow: var(--mdui-shadow-10) !important;
+}
+
+.mdui-shadow-11,
+.mdui-hoverable-11:hover {
+    box-shadow: var(--mdui-shadow-11) !important;
+}
+
+.mdui-shadow-12,
+.mdui-hoverable-12:hover {
+    box-shadow: var(--mdui-shadow-12) !important;
+}
+
+.mdui-shadow-13,
+.mdui-hoverable-13:hover {
+    box-shadow: var(--mdui-shadow-13) !important;
+}
+
+.mdui-shadow-14,
+.mdui-hoverable-14:hover {
+    box-shadow: var(--mdui-shadow-14) !important;
+}
+
+.mdui-shadow-15,
+.mdui-hoverable-15:hover,
+.mdui-hoverable-15:focus {
+    box-shadow: var(--mdui-shadow-15) !important;
+}
+
+.mdui-shadow-16,
+.mdui-hoverable-16:hover,
+.mdui-hoverable-16:focus {
+    box-shadow: var(--mdui-shadow-16) !important;
+}
+
+.mdui-shadow-17,
+.mdui-hoverable-17:hover,
+.mdui-hoverable-17:focus {
+    box-shadow: var(--mdui-shadow-17) !important;
+}
+
+.mdui-shadow-18,
+.mdui-hoverable-18:hover,
+.mdui-hoverable-18:focus {
+    box-shadow: var(--mdui-shadow-18) !important;
+}
+
+.mdui-shadow-19,
+.mdui-hoverable-19:hover,
+.mdui-hoverable-19:focus {
+    box-shadow: var(--mdui-shadow-19) !important;
+}
+
+.mdui-shadow-20,
+.mdui-hoverable-20:hover,
+.mdui-hoverable-20:focus {
+    box-shadow: var(--mdui-shadow-20) !important;
+}
+
+.mdui-shadow-21,
+.mdui-hoverable-21:hover {
+    box-shadow: var(--mdui-shadow-21) !important;
+}
+
+.mdui-shadow-22,
+.mdui-hoverable-22:hover {
+    box-shadow: var(--mdui-shadow-22) !important;
+}
+
+.mdui-shadow-23,
+.mdui-hoverable-23:hover {
+    box-shadow: var(--mdui-shadow-23) !important;
+}
+
+.mdui-shadow-24,
+.mdui-hoverable-24:hover {
+    box-shadow: var(--mdui-shadow-24) !important;
+}
+
+
+.mdui-shadow-transition,
+.mdui-hoverable,
+.mdui-hoverable-1,
+.mdui-hoverable-2,
+.mdui-hoverable-3,
+.mdui-hoverable-4,
+.mdui-hoverable-5,
+.mdui-hoverable-6,
+.mdui-hoverable-7,
+.mdui-hoverable-8,
+.mdui-hoverable-9,
+.mdui-hoverable-10,
+.mdui-hoverable-11,
+.mdui-hoverable-12,
+.mdui-hoverable-13,
+.mdui-hoverable-14,
+.mdui-hoverable-15,
+.mdui-hoverable-16,
+.mdui-hoverable-17,
+.mdui-hoverable-18,
+.mdui-hoverable-19,
+.mdui-hoverable-20,
+.mdui-hoverable-21,
+.mdui-hoverable-22,
+.mdui-hoverable-23,
+.mdui-appbar {
+    transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow .25s cubic-bezier(.4, .2, 0, 1);
+    will-change: box-shadow;
+}

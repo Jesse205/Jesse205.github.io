@@ -8,7 +8,9 @@
                 "id": "aidelua",
                 "summary": "为更方便的移动开发",
                 "image": "images/graphs/aidelua.png",
-                "src": "/aidelua/"
+                "src": "https://aidelua.netlify.app/",
+                "icon": "home-outline",
+                "url-type": "主页"
             },
             {
                 "name": "Edde Lua",
@@ -22,21 +24,27 @@
                 "id": "androluax",
                 "summary": "添加了 AndroidX 的 AndroLua+",
                 "image": "images/graphs/androluax.png",
-                "src": "https://gitlab.com/Jesse205/androluax"
+                "src": "https://gitlab.com/Jesse205/androluax",
+                "icon": "source-branch",
+                "url-type": "GitLab 仓库"
             },
             {
                 "name": "哈兔Box",
                 "id": "hellotool",
                 "summary": "简洁蓝白风工具箱",
                 "image": "images/graphs/aidelua.png",
-                "src": "/hellotool/"
+                "src": "/hellotool/",
+                "icon": "home-outline",
+                "url-type": "主页"
             },
             {
                 "name": "桌面时钟 Lite",
-                "id": "deskclocklite",
+                "id": "deskclockl_ite",
                 "summary": "占用低、兼容性强的时钟",
                 "image": "images/graphs/deskclocklite.png",
-                "src": "https://gitlab.com/Jesse205/Desk-Clock-Lite"
+                "src": "https://gitlab.com/Jesse205/Desk-Clock-Lite",
+                "icon": "source-branch",
+                "url-type": "GitLab 仓库"
             }
         ]
     },
@@ -59,17 +67,21 @@
         "items": [
             {
                 "name": "百度一下 Lite",
-                "id": "baiduhomelite",
+                "id": "baiduhome_lite",
                 "summary": "特别简洁的浏览器主页",
                 "image": "images/graphs/baidulite.png",
-                "src": "./baiduhomelite/"
+                "src": "./baiduhomelite/",
+                "icon": "open-in-app",
+                "url-type": "应用"
             },
             {
                 "name": "桌面时钟 Lite",
-                "id": "deskclocklite",
+                "id": "deskclock_lite",
                 "summary": "打开就能用的时钟",
                 "image": "images/graphs/deskclocklite.png",
-                "src": "./deskclocklite/"
+                "src": "./deskclocklite/",
+                "icon": "open-in-app",
+                "url-type": "应用"
             }
         ]
     },
@@ -82,7 +94,9 @@
                 "id": "androlua",
                 "summary": "经过精心整理后的文档",
                 "image": "images/graphs/androluadocument.png",
-                "src": "https://jesse205.github.io/AideLua/androluapro/"
+                "src": "https://jesse205.github.io/AideLua/androluapro/",
+                "icon": "file-document-outline",
+                "url-type": "文档"
             },
             {
                 "name": "Magisk 中文文档",
@@ -90,15 +104,19 @@
                 "summary": "精心机翻，仅供参考",
                 "image": "images/graphs/magiskchinesedocument.jpeg",
                 "src": "https://jesse205.github.io/MagiskChineseDocument/",
-                "dark": false
+                "dark": false,
+                "icon": "file-document-outline",
+                "url-type": "文档"
             },
             {
                 "name": "刷机指南",
-                "id": "flashandroiddevicesguidlines",
-                "summary": "万能的指南",
+                "id": "flash_android_devices_guidlines",
+                "summary": "万能的刷机指南",
                 "image": "images/graphs/flashandroiddevicesguidlines.jpeg",
                 "src": "https://efadg.netlify.app/",
-                "dark": false
+                "dark": false,
+                "icon": "file-document-outline",
+                "url-type": "文档"
             }
         ]
     }

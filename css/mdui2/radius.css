@@ -1,0 +1,32 @@
+.mdui-btn,
+.mdui-dialog,
+.mdui-menu,
+.mdui-tooltip {
+    border-radius: 4px;
+}
+
+.mdui-card,
+.mdui-card-outlined,
+.mdui-panel::before,
+.mdui-panel,
+/* .mdui-panel-item, */
+.mdui-panel-item-open {
+    border-radius: 8px;
+}
+
+.mdui-panel-item:first-child,
+.mdui-panel-item-open .mdui-panel-item-header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.mdui-panel-item:last-child,
+:not(.mdui-panel-item-open).mdui-panel-item:last-child .mdui-panel-item-header {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.mdui-panel-gapless .mdui-panel-item,
+.mdui-panel-gapless .mdui-panel-item-header {
+    border-radius: 0;
+}

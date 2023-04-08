@@ -1,4 +1,4 @@
-var cacheName = 'BaiduHomeLite-v9';
+var cacheName = 'BaiduHomeLite-v10';
 const BASE_PATH = "/baiduhomelite"
 var appShellFiles = [
     BASE_PATH + '/',

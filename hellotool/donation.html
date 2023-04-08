@@ -1,10 +1,12 @@
 <!doctype>
-<html lang="zh-CN" class="jesse205-theme-html-auto">
+<html lang="zh-CN" class="mdui-theme-html-auto">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>捐赠 - 哈兔Box</title>
+  <title>捐赠 - 哈兔 Box</title>
+  <link rel="shortcut icon" href="favicon.png">
+
 
   <!-- MDUI -->
   <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
@@ -25,25 +27,14 @@
     })();
   </script> -->
 
-  <style>
-    .item {
-      padding: 8px;
-    }
 
-    .mdui-card img {
-      aspect-ratio: 1;
-    }
-
-    .items {
-      padding: 8px 0;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/donation.css" />
 </head>
 
-<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-theme-layout-auto">
+<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto">
 
-  <nav id="appbar" class="mdui-appbar mdui-appbar-fixed jesse205-shadow-transition mdui-shadow-0">
-    <div class="mdui-toolbar">
+  <nav id="appbar" class="mdui-appbar mdui-appbar-fixed">
+    <div id="toolbar" class="mdui-toolbar">
       <!-- 返回按钮 -->
       <div onclick="history.go(-1)" class="mdui-btn mdui-btn-icon">
         <i class="mdui-icon material-icons">arrow_back</i>
@@ -53,11 +44,11 @@
   </nav>
 
   <div class="mdui-container">
-    <div class="items mdui-row-xs-1 mdui-row-sm-2">
+    <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-p-a-1">
       <div class="item mdui-col">
-        <div class="mdui-card jesse205-card-outlined">
+        <div class="mdui-card mdui-card-outlined">
           <div class="mdui-card-media">
-            <div class="mdui-tab" mdui-tab>
+            <div id="tab-donate-jesse205" class="mdui-tab" mdui-tab>
               <a href="#jesse-tab1" class="mdui-ripple">QQ</a>
               <a href="#jesse-tab2" class="mdui-ripple">微信</a>
             </div>
@@ -67,17 +58,17 @@
             </div>
           </div>
           <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">杰西205</div>
+            <h5 class="mdui-card-primary-title">杰西205</h5>
             <div class="mdui-card-primary-subtitle">哈兔Box软件作者</div>
           </div>
           <div class="mdui-card-content">扫一扫向TA打赏</div>
         </div>
       </div>
-      
+
       <div class="item mdui-col">
-        <div class="mdui-card jesse205-card-outlined">
+        <div class="mdui-card mdui-card-outlined">
           <div class="mdui-card-media">
-            <div class="mdui-tab" mdui-tab>
+            <div id="tab-donate-hsdbql" class="mdui-tab" mdui-tab>
               <a href="#hsdbql-tab1" class="mdui-ripple">微信</a>
               <a href="#hsdbql-tab2" class="mdui-ripple">支付宝</a>
             </div>
@@ -87,8 +78,16 @@
             </div>
           </div>
           <div class="mdui-card-primary" mdui-dialog="{target: '#eggDialog'}">
-            <div class="mdui-card-primary-title">Hsdbql</div>
+            <h5 class="mdui-card-primary-title">Hsdbql</h5>
             <div class="mdui-card-primary-subtitle">WebMaster</div>
+            <div class="mdui-dialog" id="eggDialog">
+              <div class="mdui-dialog-title">QwQ</div>
+              <div class="mdui-dialog-content">你资道吗？站主心情好的时候会帮别人免费做网站呢～(和是否打赏无关)</div>
+              <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>我知道了</button>
+                <a class="mdui-btn mdui-ripple" href="mqqwpa://im/chat?chat_type=wpa&uin=2762585621">快去聊聊</a>
+              </div>
+            </div>
           </div>
           <div class="mdui-card-content">扫一扫向TA打赏</div>
         </div>
@@ -96,14 +95,7 @@
     </div>
   </div>
 
-  <div class="mdui-dialog" id="eggDialog">
-    <div class="mdui-dialog-title">QwQ</div>
-    <div class="mdui-dialog-content">你资道吗？站主心情好的时候会帮别人免费做网站呢～(和是否打赏无关)</div>
-    <div class="mdui-dialog-actions">
-      <button class="mdui-btn mdui-ripple" mdui-dialog-close>我知道了</button>
-      <a class="mdui-btn mdui-ripple" href="mqqwpa://im/chat?chat_type=wpa&uin=2762585621">快去聊聊</a>
-    </div>
-  </div>
+
 
   <script>
     let isTop = getTopState(document.body)
@@ -111,17 +103,49 @@
       if (getTopState(document.body)) {
         if (!isTop) {
           isTop = true
-          $$("#appbar").addClass("mdui-shadow-0")
-          $$("#appbar").removeClass("mdui-shadow-4")
+          $$("#appbar").removeClass("mdui-appbar-lifted")
+          $$("#toolbar").removeClass("mdui-toolbar-lifted")
+          // $$("#appbar").removeClass("mdui-shadow-4")
         }
       } else {
         if (isTop) {
           isTop = false
-          $$("#appbar").addClass("mdui-shadow-4")
-          $$("#appbar").removeClass("mdui-shadow-0")
+          // $$("#appbar").addClass("mdui-shadow-4")
+          $$("#appbar").addClass("mdui-appbar-lifted")
+          $$("#toolbar").addClass("mdui-toolbar-lifted")
         }
       }
     })
+
+
+    let hsdbqlDonateTabSelector = $$('#tab-donate-hsdbql')
+    hsdbqlDonateTabSelector.on('change.mdui.tab', (event) => {
+      hsdbqlDonateTabSelector.removeClass('theme-wechat-donate theme-alipay')
+      switch (event._detail.index) {
+        case 0:
+          hsdbqlDonateTabSelector.addClass('theme-wechat-donate');
+          break;
+        case 1:
+          hsdbqlDonateTabSelector.addClass('theme-alipay');
+          break;
+      }
+
+    });
+
+    let jesse205DonateTabSelector = $$('#tab-donate-jesse205')
+    jesse205DonateTabSelector.on('change.mdui.tab', (event) => {
+      jesse205DonateTabSelector.removeClass('theme-qq-pay theme-wechat-pay')
+      switch (event._detail.index) {
+        case 0:
+        jesse205DonateTabSelector.addClass('theme-qq-pay');
+          break;
+        case 1:
+        jesse205DonateTabSelector.addClass('theme-wechat-pay');
+          break;
+      }
+
+    });
+
   </script>
 </body>
 

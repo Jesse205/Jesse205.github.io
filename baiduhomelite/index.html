@@ -61,54 +61,60 @@
 			margin-left: -107px;
 		}
 
-		.inputSpace {
-			height: 100%;
-			outline: 0;
-			position: absolute;
-			right: 90px;
-			left: 0;
-			margin: 0 8px;
+		.search_input_space {
+			/* height: 2.25em; */
+			/* padding: 0 8px; */
+			margin-right: 90px;
+			box-sizing: border-box;
+			/* line-height: 2.25em; */
+			padding: 8px;
+			display: block;
+			cursor: text;
 		}
 
 		#search_input {
 			/* 不直接设置百分百是为了兼容IE8 */
-			height: 20px;
-			/* height: 100%; */
+			/* height: 2.25em; */
+			/* line-height: 2.25em; */
+			padding: 0;
+			margin: 0;
 			background-color: transparent;
 			border: none;
 			outline: 0;
 			font-size: 16px;
+			font-size: 1rem;
 			color: #000000;
+			/* display: block; */
 			width: 100%;
-			padding: 10px 0;
-			display: block;
 		}
 
 		.search_form {
 			width: 80%;
 			max-width: 400px;
-			height: 40px;
 			margin: 20px auto;
 			background-color: #F4F4F4;
 			border-radius: 8px;
 			display: block;
 			position: relative;
+			/* overflow: hidden; */
 		}
 
 		.search_button {
+			height: 2.25em;
 			width: 90px;
-			height: 40px;
-			padding: 0;
+			/* padding: 8px 0; */
 			color: #FFFFFF;
 			font-size: 16px;
+			font-size: 1rem;
 			font-weight: bold;
 			border: none;
 			border-radius: 8px;
 			background-color: #536DFE;
-			transition: box-shadow .25s cubic-bezier(.4, .2, 0, 1);
+			transition: box-shadow .25s cubic-bezier(.4, .2, 0, 1), background-color .15s cubic-bezier(.4, .2, 0, 1);
 			position: absolute;
 			right: 0;
 			top: 0;
+			display: block;
 		}
 
 		.search_button:hover:active {
@@ -117,11 +123,11 @@
 
 		.search_button:hover {
 			background-color: #3D5AFE;
-			box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+			box-shadow: 0 0px 4px -1.5px rgba(0, 0, 0, 0.4), 0 0px 5px 0 rgba(0, 0, 0, 0.06), 0 0px 5px 0 rgba(0, 0, 0, 0.04);
 		}
 
 		.footer {
-			position: fixed;
+			position: absolute;
 			bottom: 0;
 			left: 0;
 			right: 0;
@@ -157,10 +163,10 @@
 	</div>
 	<form action="https://www.baidu.com/s" onsubmit="return document.getElementById('search_input').value!=''"
 		class="search_form">
-		<div class="inputSpace">
-			<input type="text" name="word" value="" id="search_input" aria-label="搜索框">
-		</div>
-		<input type="submit" class="search_button" value="百度一下">
+		<label class="search_input_space" for="search_input">
+			<input type="text" name="word" id="search_input" aria-label="搜索框" autocomplete="on">
+		</label>
+		<button class="search_button">百度一下</button>
 	</form>
 	<div class="footer">
 		本站是一个简洁的浏览器首页，与百度无关。

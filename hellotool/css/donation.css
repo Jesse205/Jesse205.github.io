@@ -1,0 +1,33 @@
+:root {
+    --color-amber-500: #FFC107;
+    --color-blue-500: #2196F3;
+    --color-green-500: #4CAF50;
+}
+
+.item {
+    padding: 8px;
+}
+
+.mdui-card img {
+    aspect-ratio: 1;
+}
+
+.items {
+    padding: 8px 0;
+}
+
+.theme-wechat-donate {
+    --mdui-color-primary: var(--color-amber-500);
+}
+
+.theme-alipay {
+    --mdui-color-primary: var(--color-blue-500);
+}
+
+.theme-qq-pay {
+    --mdui-color-primary: var(--color-blue-500);
+}
+
+.theme-wechat-pay {
+    --mdui-color-primary: var(--color-green-500);
+}
