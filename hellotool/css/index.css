@@ -7,10 +7,6 @@ body {
     scroll-behavior: smooth;
 }
 
-.toolbar {
-    transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
-}
-
 .toolbar-top {
     background-color: transparent !important;
 }
@@ -18,19 +14,23 @@ body {
 .downloadBtn {
     margin: 8px;
     height: 40px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    float: left;
 }
 
-.downloadBtn>* {
-    vertical-align: middle;
+.downloadBtn span {
+    margin-left: 8px;
 }
 
 .downloadBtn img {
-    vertical-align: inherit;
+    vertical-align: middle;
 }
 
 
 .hero {
-    background: url(../img/banner-4.png) no-repeat;
+    background: url(../img/background/banner-4.png) no-repeat;
     background-size: 100% 80%
 }
 
@@ -39,7 +39,11 @@ body {
 }
 
 .hero>div {
-    padding: 100px 56px;
+    padding: 16px 16px;
+}
+
+.app-title{
+    font-weight: bold;
 }
 
 .device-wrapper {
@@ -56,6 +60,8 @@ body {
     background-size: cover;
     height: 100%;
     padding-bottom: 202.898072%;
+    max-width: 300px;
+    width: 100%;
 }
 
 .device .screen {
@@ -69,13 +75,12 @@ body {
     overflow: hidden;
 }
 
-.uiImg {
-    width: 100%;
+.title {
+    color: var(--mdui-color-primary);
 }
 
-.device {
-    max-width: 300px;
-    width: 100%;
+.subTitle {
+    font-size: 1rem;
 }
 
 .imgIcon {
@@ -87,35 +92,149 @@ body {
     font-size: 56px;
 }
 
-.about .mdui-card {
+.featureContent {
+    font-size: medium;
+}
+
+/* 插画 */
+.illustration {
+    width: 100%;
+    max-width: 400px;
+    padding: 16px;
+}
+
+#features .mdui-card {
     min-height: 280px;
 }
 
+
 #introduce {
-    background: url(../img/service-bg.png) no-repeat;
+    background: url(../img/background/service-bg.png) no-repeat;
     background-size: cover;
 }
 
 #testimonials {
-    background: url(../img/testimonials-bg.png) no-repeat;
+    background: url(../img/background/testimonials-bg.png) no-repeat;
     background-size: 40% 100%;
     background-position: left center;
+    /* text-align: center; */
+}
+
+.user-comments {
+    columns: 1;
+    column-gap: 32px;
+    margin: 16px;
 }
 
 .user-card {
-    max-width: 720px;
+    max-width: 640px;
     margin: 16px auto;
+    padding-top: 40px;
+    text-align: center;
+    break-inside: avoid;
+    /* float: left; */
+}
+
+.user-card .mdui-card {
+    overflow: visible;
     padding: 24px;
+    padding-top: 32px;
 }
 
 .user-avatar {
+    /* width: 72px; */
+    /* height: 72px; */
+    position: absolute;
+    top: 0;
+    margin-left: -36px;
+    margin-top: -36px;
+    display: inline-block;
+}
+
+.user-avatar img {
     width: 72px;
     height: 72px;
     border-radius: 50%;
+    box-shadow: var(--mdui-shadow-4);
+    background-color: var(--mdui-color-background);
 }
 
-.user-name {}
+/* 用户头像右下角图标 */
+.user-avatar::after {
+    content: '\e253';
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #4477e0;
+    border: 3px solid white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: 'Material Icons';
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    line-height: 27px;
+    font-size: .5rem;
+    box-shadow: var(--mdui-shadow-4);
+}
+
+.user-name {
+    margin: 8px 0;
+    font-size: 1rem;
+}
 
 .user-message {
     display: block;
+    margin: 16px 0;
 }
+
+.user-description {
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+footer {
+    background: url(../img/background/pattern.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.footer-title {
+    margin: 0 !important;
+    display: block;
+    margin-bottom: 16px !important;
+    font-size: 1.25rem;
+}
+
+img.footer-title {
+    height: 32px;
+}
+
+footer ul {
+    padding-left: 0 !important;
+    list-style: none !important;
+}
+
+@media screen and (min-width:600px) {
+    .hero>div {
+        padding: 56px 56px;
+    }
+    .user-comments {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .user-comments {
+        columns: 3;
+    }
+}
+
+/* @media screen and (min-width:1920px) {
+    .user-comments {
+        columns: 4;
+    }
+} */

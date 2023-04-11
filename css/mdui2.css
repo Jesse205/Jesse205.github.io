@@ -218,6 +218,14 @@ body {
     color: var(--mdui-color-accent);
 }
 
+.mdui-typo a::before {
+    background-color: var(--mdui-color-accent);
+}
+
+.mdui-typo a {
+    color: var(--mdui-color-accent);
+}
+
 @media (prefers-color-scheme: dark) {
     .mdui-theme-html-auto:root {
         --mdui-color-primary: var(--mdui-color-google-blue-300);

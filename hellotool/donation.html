@@ -5,8 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>捐赠 - 哈兔 Box</title>
-  <link rel="shortcut icon" href="favicon.png">
-
+  <link rel="shortcut icon" href="./favicon.ico">
 
   <!-- MDUI -->
   <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
@@ -17,7 +16,7 @@
   <script src="/js/jesse205.js"></script>
 
   <!-- 统计 -->
-  <!-- <script>
+  <script>
     var _hmt = _hmt || [];
     (function () {
       var hm = document.createElement("script");
@@ -25,9 +24,7 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-  </script> -->
-
-
+  </script>
   <link rel="stylesheet" href="./css/donation.css" />
 </head>
 
@@ -52,16 +49,16 @@
               <a href="#jesse-tab1" class="mdui-ripple">QQ</a>
               <a href="#jesse-tab2" class="mdui-ripple">微信</a>
             </div>
-            <div style="filter: blur(10px);">
-              <img id="jesse-tab1" src="img/js205-qq.jpg" />
-              <img id="jesse-tab2" src="img/js205-wx.jpg" />
+            <div style="overflow: hidden;">
+              <img id="jesse-tab1" src="./img/donate/jesse205-qq.jpg" style="filter: blur(20px);" />
+              <img id="jesse-tab2" src="./img/donate/jesse205-wechat.jpg" style="filter: blur(20px);" />
             </div>
           </div>
           <div class="mdui-card-primary">
             <h5 class="mdui-card-primary-title">杰西205</h5>
             <div class="mdui-card-primary-subtitle">哈兔Box软件作者</div>
           </div>
-          <div class="mdui-card-content">扫一扫向TA打赏</div>
+          <div class="mdui-card-content">扫一扫向 TA 打赏</div>
         </div>
       </div>
 
@@ -73,8 +70,8 @@
               <a href="#hsdbql-tab2" class="mdui-ripple">支付宝</a>
             </div>
             <div>
-              <img id="hsdbql-tab1" src="https://i.postimg.cc/LsYyM5vb/hsdbql-wx.jpg" />
-              <img id="hsdbql-tab2" src="https://i.postimg.cc/bYkwwRsz/hsdbql-zfb.jpg" />
+              <img id="hsdbql-tab1" src="./img/donate/hsdbql-wechat.jpg" />
+              <img id="hsdbql-tab2" src="./img/donate/hsdbql-alipay.jpg" />
             </div>
           </div>
           <div class="mdui-card-primary" mdui-dialog="{target: '#eggDialog'}">
@@ -89,13 +86,11 @@
               </div>
             </div>
           </div>
-          <div class="mdui-card-content">扫一扫向TA打赏</div>
+          <div class="mdui-card-content">扫一扫向 TA 打赏</div>
         </div>
       </div>
     </div>
   </div>
-
-
 
   <script>
     let isTop = getTopState(document.body)
@@ -137,10 +132,10 @@
       jesse205DonateTabSelector.removeClass('theme-qq-pay theme-wechat-pay')
       switch (event._detail.index) {
         case 0:
-        jesse205DonateTabSelector.addClass('theme-qq-pay');
+          jesse205DonateTabSelector.addClass('theme-qq-pay');
           break;
         case 1:
-        jesse205DonateTabSelector.addClass('theme-wechat-pay');
+          jesse205DonateTabSelector.addClass('theme-wechat-pay');
           break;
       }
 

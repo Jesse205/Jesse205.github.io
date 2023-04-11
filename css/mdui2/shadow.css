@@ -43,6 +43,11 @@
     box-shadow: var(--mdui-shadow-2);
 }
 
+.mdui-panel-gapless,
+.mdui-panel-item {
+    box-shadow: var(--mdui-shadow-2)
+}
+
 .mdui-card-outlined,
 .mdui-panel-gapless .mdui-panel-item {
     box-shadow: var(--mdui-shadow-0);
@@ -61,9 +66,7 @@
 
 .mdui-shadow-2,
 .mdui-btn-raised,
-.mdui-hoverable-2:hover,
-.mdui-panel-gapless,
-.mdui-panel-item {
+.mdui-hoverable-2:hover {
     box-shadow: var(--mdui-shadow-2) !important;
 }
 

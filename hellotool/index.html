@@ -8,7 +8,7 @@
   <meta name="description" content="哈兔Box，一个简洁的蓝白风工具箱">
   <meta name="keywords" content="HelloTool,蓝白工具箱,Android工具,哈喽兔,实用小工具,多功能工具箱,工具箱,工具,效率,高效,tools,哈兔Box">
   <meta name="robots" content="all,follow">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="./favicon.ico">
 
   <!-- Vue -->
   <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
@@ -67,24 +67,24 @@
     <section class="mdui-appbar-with-toolbar hero" id="hero">
       <div class="mdui-container">
         <div class="mdui-row-xs-1 mdui-row-sm-2">
-          <div class="mdui-col">
-            <h1 class="mdui-typo-display-1" style="font-weight:bold;">Hello, Tool!</h1>
+          <div class="mdui-col mdui-p-y-5">
+            <h1 class="app-title mdui-typo-display-1">Hello, Tool!</h1>
             <p class="mdui-typo-subheading mdui-m-a-1">发现更多有趣的小工具</p>
-            <div>
+            <div class="mdui-clearfix">
               <!-- 下载按钮 -->
               <a class="mdui-btn mdui-color-theme mdui-btn-raised mdui-ripple downloadBtn"
                 href="https://gitee.com/Jesse205/hellotool/releases/latest" target="_blank">
-                <img src="img/gitee-fill-round.svg" class="imgIcon" />
-                <b>Gitee 发行版 (推荐)</b>
+                <img src="./img/third/gitee-fill-round.svg" class="imgIcon" />
+                <span><b>Gitee 发行版 (推荐)</b></span>
               </a>
               <a class="mdui-btn mdui-color-theme mdui-btn-raised mdui-ripple downloadBtn"
                 href="https://www.coolapk.com/apk/com.Jesse205.hellotool" target="_blank">
-                <img src="img/coolapk.svg" class="imgIcon" />
+                <img src="./img/third/coolapk.svg" class="imgIcon" />
                 <span>酷安</span>
               </a>
               <a class="mdui-btn mdui-color-theme mdui-btn-raised mdui-ripple downloadBtn"
-                href="http://m.appchina.com/app/com.Jesse205.hellotool" target="_blank">
-                <img src="img/appchina.png" class="imgIcon" />
+                href="http://www.appchina.com/app/com.Jesse205.hellotool" target="_blank">
+                <img src="./img/third/appchina.png" class="imgIcon" />
                 <span>应用汇</span>
               </a>
             </div>
@@ -93,9 +93,8 @@
             <!-- 手机图 -->
             <div class="device-wrapper">
               <div class="device">
-                <div class="screen">
-                  <img class="uiImg" src="img/screenshot.jpg" alt>
-                </div>
+                <img class="screen" src="img/screenshot.jpg" alt>
+
               </div>
             </div>
           </div>
@@ -105,16 +104,16 @@
 
     <section id="introduce">
       <!-- 特性 -->
-      <section class="about">
+      <section id="features" class="mdui-m-y-2">
         <div class="mdui-container">
-          <h2 class="mdui-typo-title mdui-text-color-theme">特性</h2>
-          <h3>Why HelloTool ?</h3>
-          <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4 mdui-p-b-5">
-            <div v-for="item in introduce" class="mdui-col mdui-p-a-1">
-              <div class="mdui-card mdui-shadow-4 mdui-hoverable mdui-p-a-3 mdui-typo-body-1">
-                <span class="bigIcon mdi" :class="['mdui-text-color-'+item.iconColor, 'mdi-'+item.icon]"></span>
+          <h2 class="title">特性</h2>
+          <p class="subTitle">Why HelloTool ?</p>
+          <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-4">
+            <div v-for="item in introduce" class="mdui-col mdui-p-a-2">
+              <div class="mdui-card mdui-hoverable mdui-p-a-3">
+                <i class="bigIcon mdi" :class="['mdui-text-color-'+item.iconColor, 'mdi-'+item.icon]"></i>
                 <h3 class="mdui-typo-title mdui-m-y-2">{{item.title}}</h3>
-                <p style="font-size: medium;" v-html="item.message.replace(/\n/g, '<br>')"></p>
+                <p class="featureContent mdui-typo-body-1" v-html="item.message.replace(/\n/g, '<br>')"></p>
               </div>
             </div>
           </div>
@@ -122,42 +121,42 @@
 
       <section id="services">
         <div class="mdui-container">
-          <div class="jesse205-row-xs-1 jesse205-row-sm-2 mdui-m-b-5 mdui-valign">
+          <!-- 配图介绍 -->
+          <div class="jesse205-row-xs-1 jesse205-row-sm-2 mdui-valign mdui-m-y-2">
+            <!-- 插画 -->
             <div class="jesse205-col">
               <div class="mdui-p-x-5 mdui-text-center">
-                <img src="img/objects.svg" style="width: 100%; max-width: 400px;" alt>
+                <img class="illustration" src="./img/illustrations/objects.svg" alt>
               </div>
             </div>
-            <div class="jesse205-col">
+            <!-- 文字 -->
+            <div class="jesse205-col mdui-typo">
               <h3>实用小工具应用的不二之选</h3>
-              <p class="text-muted">我们始终在追求简洁高效的使用体验，对浪费性能的过分美化说NO!<br>
+              <p class="description">我们始终在追求简洁高效的使用体验，对浪费性能的过分美化说 <del>NO</del> YSE!<small>（我改主意了）</small><br>
                 遇到问题？Take it easy！我们提供长期技术支持服务，欢迎加入我们的官方服务群聊，各种问题轻松反馈!</p>
+              <!-- 加入群聊按钮 -->
               <a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme mdui-m-a-0"
                 mdui-dialog="{target: '#joinGroupDialog'}">
-                <i class="mdui-icon material-icons">&#xE7F0;</i> 加入群聊
+                <i class="mdui-icon material-icons">&#xE7F0;</i>
+                <span>加入群聊</span>
               </a>
               <div class="mdui-dialog" id="joinGroupDialog">
                 <div class="mdui-dialog-title">交流反馈</div>
-                <div class="mdui-dialog-content">您想要加入我们的哪一个群聊
+                <div class="mdui-dialog-content">您想要加入我们的哪一个群聊？
                   <div>
-                    <a class="mdui-btn mdui-text-color-theme mdui-ripple"
-                      href="https://jq.qq.com/?_wv=1027&k=bBMp43GE">综合服务</a>
-                    <a class="mdui-btn mdui-text-color-theme mdui-ripple"
-                      href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U">软件内测</a>
-                    <a class="mdui-btn mdui-text-color-theme mdui-ripple"
-                      href="https://jq.qq.com/?_wv=1027&k=QJH2H9Ox">技术交流</a>
+                    <a v-for="item in groups" class="mdui-btn mdui-text-color-theme mdui-ripple"
+                      :href="item.href">{{item.name}}</a>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
 
-          <div class="jesse205-row-xs-1 jesse205-row-md-2 mdui-valign">
-            <div class="jesse205-col">
+          <div class="jesse205-row-xs-1 jesse205-row-md-2 mdui-valign mdui-m-y-2">
+            <div class="jesse205-col mdui-typo">
               <h3>这是一个简单而强大的原创APP</h3>
-              <p class="mdui-typo-title">在这里，您将体会到我们独到的匠心。</p>
-              <ul class="mdui-typo">
+              <p>在这里，您将体会到我们独到的匠心。</p>
+              <ul>
                 <li>触手可及：可将常用的工具添加到首页或桌面</li>
                 <li>极致灵活：使用 AndroLua+ 开发，拥有非常大的灵活性</li>
                 <li>绿色轻量：零后台，无权限滥用</li>
@@ -168,18 +167,20 @@
             <div class="jesse205-col">
               <div class="jesse205-row-xs-1 jesse205-row-sm-2">
                 <div class="jesse205-col">
-                  <div class="mdui-card mdui-shadow-4 mdui-hoverable mdui-p-a-3 mdui-m-a-1">
-                    <span class="bigIcon mdui-text-color-red mdi mdi-account-multiple-outline"></span>
+                  <div class="mdui-card mdui-hoverable mdui-p-a-3 mdui-m-a-2 mdui-typo"
+                    mdui-tooltip="{content:'是不是觉得很少？对于一款从不砸钱做宣传的独立软件，这个数据已经挺难得了。😂'}">
+                    <i class="bigIcon mdui-text-color-red mdi mdi-account-multiple-outline"></i>
                     <h3 class="mdui-typo-title">1200+用户的选择</h3>
-                    累计使用人次10000+<br>单日IP访问量50+
+                    <span>累计使用人次10000+<br>
+                      单日IP访问量50+</span>
                   </div>
                 </div>
                 <div class="jesse205-col">
-                  <a class="mdui-card mdui-shadow-4 mdui-hoverable mdui-p-a-3 mdui-m-a-1 mdui-ripple"
-                    href="donation.html" style="display: block; text-decoration: none;">
-                    <span class="bigIcon mdui-text-color-purple mdi mdi-credit-card-outline"></span>
+                  <a class="mdui-card mdui-hoverable mdui-p-a-3 mdui-m-a-2 mdui-ripple mdui-typo" href="donation.html"
+                    style="display: block; text-decoration: none;">
+                    <i class="bigIcon mdui-text-color-purple mdi mdi-credit-card-outline"></i>
                     <h3 class="mdui-typo-title">支持我们</h3>
-                    您可以点击此处捐赠来赞助我们的开发，让HelloTool变得更好!
+                    <span>您可以点击此处捐赠来赞助我们的开发，让 哈兔 Box 变得更好!</span>
                   </a>
                 </div>
               </div>
@@ -189,416 +190,68 @@
       </section>
     </section>
 
-    <section id="testimonials">
+    <!-- 用户评价 -->
+    <section id="testimonials" class="mdui-m-y-2">
       <div class="mdui-container">
-        <h2 class="mdui-typo-title mdui-text-color-theme">评价</h2>
-        <h3>看看用户们怎么说?</h3>
-        <div class="user-card mdui-card">
-          <div class="">
-            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=2762585621&spec=640" />
-            <b class="user-message">
-              <mark>软件做得很用心。</mark>
-              <br>
-              这个MD简约风格的界面我很喜欢，不像隔壁某木头盒子那样虽然功能多一点但是排版混乱看起来头大。<br>
-              除了有点小bug之外一切都好。<br>开发者人也挺Nice的，还提供了些源码。
-            </b>
-            <h5 class="user-name">The Gluten Eater</h5>
-            <p class="">Web Designer</p>
-          </div>
-        </div>
-
-        <div class="user-card mdui-card">
-          <div class="">
-            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=2375428376&spec=640" />
-            <b class="user-message">
-              <mark>真是一个不错的软件,</mark>
-              <br>开发者辛苦了,<br>希望能继续坚持下去。
-            </b>
-            <h5 class="user-name">像雾像雨又像风</h5>
-            <div class="">Geek</div>
-          </div>
-        </div>
-
-        <div class="user-card mdui-card">
-          <div class="">
-            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=1985386335&spec=640" />
-            <b class="user-message">
-              <mark>完美的MaterialDesign风格</mark>
-            </b>
-            <h5 class="user-name">RiverTwilight</h5>
-            <div class="">Web Designer</div>
-          </div>
-        </div>
-
-        <div class="user-card mdui-card">
-          <div class="">
-            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=3025385472&spec=640" />
-            <b class="user-message">
-              希望以后功能再多一些,<br><mark>目前挺好看的</mark>
-          </div>
-          <h5 class="user-name">183600</h5>
-          <div class="">Geek</div>
-        </div>
-
-
-        <div class="user-card mdui-card">
-          <div class="">
-            <img class="user-avatar" src="http://q4.qlogo.cn/headimg_dl?dst_uin=1114547837&spec=640" />
-            <b class="user-message">
-              <mark>一个＊函不好用</mark>？
-            </b>
-            <h5 class="user-name">柒白『滑稽』</h5>
-            <div class="">Duck~</div>
-          </div>
-        </div>
-
-        <div class="user-card mdui-card">
-          <div class="">
-            <img class="user-avatar" src="https://i.postimg.cc/mDbnM31C/avatar-4.png" />
-            <b class="user-message">
-              3020年，我独自打扫着祠堂。<br>
-              老家的祠堂依旧是老样子，尽管翻新了无数遍。<br>
-              那一千年前的样式依旧透出一丝古朴，典雅。<br>
-              爷爷说，老家的祠堂叫“宅”，是1000年前的那位祖宗居住一生的地方，那里的每一块瓷砖，每一本漫画，每一个手办，都是有千年历史的古董。<br>
-              在祠堂的最中间，存放着一个最古老的东西——一部智能手机。<br>村里面的最老的老人也不知道该如何使用它。<br>
-              那天，我照常独自打扫着祠堂。<br>
-              突然听到身后似乎有什么异样，虽然已经预料到今天会发生一些特别的事情，但我还是吓了一跳。<br>
-              我猛地转过身，<br>
-              <mark>只见手机黯淡的屏幕上出现了一行字——<br>
-                [有新文件]HelloTool最新版</mark>
-            </b>
-            <h5 class="user-name">OutlinedArc217</h5>
-            <div class="">RuntimeError Developer</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </div>
-
-  <!-- <section id="introduce" style="background: url(img/service-bg.svg) no-repeat; background-size: cover"> -->
-  <!-- <section class="about py-0">
-      <div class="container">
-        <p class="h6 text-uppercase text-primary" style="font-family: 'Noto Sans SC', sans-serif;">特性</p>
-        <h2 class="mb-5">Why HelloTool ?</h2>
-        <div class="row pb-5">
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="card border-0 shadow rounded-lg py-4 text-left">
-              <div class="card-body p-5">
-                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#5954cb">
-                  <use xlink:href="#arrow-target-1"> </use>
-                </svg>
-                <h3 class="font-weight-normal h4 my-4">精心优化每个小工具</h3>
-                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;">
-                  <big>取色神器，更简单更高效<br>图片拼接，拼截图一键搞定<br>短链生成，多种链接任你选<br>电量伪装，想怎么改就怎么改<br> ……</big>
-                </p>
+        <h2 class="title">评价</h2>
+        <p class="subTitle">看看用户们怎么说?</p>
+        <div class="user-comments">
+          <div v-for="item in comments" class="user-card">
+            <div class="mdui-card mdui-hoverable">
+              <div class="user-avatar">
+                <img :src="item.avatarUrl" />
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="card border-0 shadow rounded-lg py-4 text-left">
-              <div class="card-body p-5">
-                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#429244">
-                  <use xlink:href="#map-marker-1"> </use>
-                </svg>
-                <h3 class="font-weight-normal h4 my-4">随时随地想用就用</h3>
-                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;"><big>大部分工具支持离线使用<br>网络不通?
-                    不是问题!</big></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="card border-0 shadow rounded-lg py-4 text-left">
-              <div class="card-body p-5">
-                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#ef5285">
-                  <use xlink:href="#sorting-1"> </use>
-                </svg>
-                <h3 class="font-weight-normal h4 my-4">丰富的个性化设置</h3>
-                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;">
-                  <big>多种皮肤任你选择<br>支持多种功能拓展<br>自定义首页工具</big>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card border-0 shadow rounded-lg py-4 text-left">
-              <div class="card-body p-5">
-                <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#379392">
-                  <use xlink:href="#document-saved-1"> </use>
-                </svg>
-                <h3 class="font-weight-normal h4 my-4">安全 免费 无广告</h3>
-                <p class="text-small mb-0" style="font-family: 'ZCOOL XiaoWei', serif;">
-                  <big>受够了讨厌的流氓广告?<br>氪金软件不给钱不让用?<br>担心工具软件会损害设备?<br>为何不试试HelloTool,<br>让您忘掉这些烦恼!</big>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!--<section class="with-pattern-1" id="services">
-      <div class="container">
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-6 mb-5 mb-lg-0"><img class="img-fluid w-100 px-lg-5" src="img/objects.svg" alt=""></div>
-          <div class="col-lg-6">
-            <h2>实用小工具应用的不二之选</h2>
-            <p class="text-muted">我们始终在追求简洁高效的使用体验，对浪费性能的过分美化说NO!<br>遇到问题？Take it
-              easy！我们提供长期技术支持服务，欢迎加入我们的官方服务群聊，各种问题轻松反馈!</p>
-            <button class="btn btn-primary" onclick="x0p({
-    title: '交流反馈',
-    text: '您想要加入我们的哪一个群聊?',
-    animationType: 'slideUp',
-    buttons: [
-        {
-            type: 'error',
-            text: '综合服务'
-        },
-        {
-            type: 'warning',
-            text: '软件内测'
-        },
-        {
-            type: 'info',
-            text: '技术交流'
-        },
-        {
-            type: 'cancel',
-            text: '取消'
-        }
-    ]
-}, function(button) {
-    if(button == 'info') {
-            window.location.href='https://jq.qq.com/?_wv=1027&k=bBMp43GE'
-        }
-        if(button == 'error') {
-            window.location.href='https://jq.qq.com/?_wv=1027&k=B9ozUt4U'
-        }
-        if(button == 'warning') {
-            window.location.href='https://jq.qq.com/?_wv=1027&k=QJH2H9Ox'
-        }
-});">
-              <i class="material-icons">&#xE7F0;</i> &nbsp; 加入群聊</button>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <h2>这是一个简单而强大的原创APP</h2>
-            <p class="text-muted">在这里，您将体会到我们独到的匠心。</p>
-            <ul class="list-check">
-              <li class="text-muted mb-2">触手可及：可将常用的工具添加到首页或桌面</li>
-              <li class="text-muted mb-2">极致精简：超小软件体积</li>
-              <li class="text-muted mb-2">绿色轻量：零后台，无权限滥用</li>
-              <li class="text-muted mb-2">无障碍设计：为无障碍专门设置ContentDescription</li>
-              <li class="text-muted mb-2">开源版代码：可供借鉴学习</li>
-            </ul>
-            <!~~button class="btn btn-primary js-modal-btn" data-video-id="B6uuIHpFkuo"><i class="material-icons">&#xE039;</i>播放视频</button~~>
-          </div>
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-lg-6 col-sm-6 mb-4">
-                <!~~ Services Item~~>
-                <div class="card border-0 shadow rounded-lg text-left px-2"
-                  onclick="x0p('是不是觉得很少？', '对于一款从不砸钱做宣传的独立软件，这个数据已经挺难得了。  😂  ');">
-                  <div class="card-body px py-5">
-                    <svg class="svg-icon" style="width:40px;height:40px;color:#ff3f3f">
-                      <use xlink:href="#woman-1"> </use>
-                    </svg>
-                    <h3 class="h5 font-weight-normal h4 my-3">1200+用户的选择</h3>
-                    <p class="text-small mb-0 text-muted" style="font-family: 'ZCOOL KuaiLe', cursive">
-                      累计使用人次10000+<br>单日IP访问量50+</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-sm-6 mb-4">
-                <!~~ Services Item~~>
-                <div class="card border-0 shadow rounded-lg text-left px-2"
-                  onclick="window.location.href='donation.html'">
-                  <div class="card-body px py-5">
-                    <svg class="svg-icon" style="width:40px;height:40px;color:#9055A2">
-                      <use xlink:href="#money-box-1"> </use>
-                    </svg>
-                    <h3 class="h5 font-weight-normal h4 my-3">支持我们</h3>
-                    <p class="text-small mb-0 text-muted" style="font-family: 'ZCOOL KuaiLe', cursive">
-                      您可以点击此处捐赠来赞助我们的开发,<br>让HelloTool变得更好!</p>
-                  </div>
-                </div>
-              </div>
+              <p class="user-message mdui-typo" v-html="item.content"></p>
+              <h4 class="user-name">{{item.name}}</h4>
+              <p class="user-description">{{item.description}}</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </section>-->
-  <section class="p-0" id="testimonials"
-    style="background: url(img/testimonials-bg.png) no-repeat; background-size: 40% 100%; background-position: left center">
-    <div class="container text-center">
-      <p class="h6 text-uppercase text-primary" style="font-family: 'Noto Sans SC', sans-serif;">评价</p>
-      <h2 class="mb-5">看看用户们怎么说?</h2>
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="owl-carousel owl-theme testimonials-slider">
-            <div class="mx-3 mx-lg-5 my-5 pt-3">
-              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                <div class="card-body index-forward pt-5 rounded-lg">
-                  <div class="testimonial-img"><img class="rounded-circle"
-                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=2762585621&spec=640" alt="" /></div>
-                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                    <b><mark>软件做得很用心。</mark></b><br>这个MD简约风格的界面我很喜欢，不像隔壁某木头盒子那样虽然功能多一点但是排版混乱看起来头大。<br>除了有点小bug之外一切都好。<br>开发者人也挺Nice的，还提供了些源码。
-                  </p>
-                  <h5 class="font-weight-bold mb-0">The Gluten Eater</h5>
-                  <p class="text-primary mb-0 text-small">Web Designer</p>
-                </div>
-              </div>
-            </div>
-            <div class="mx-3 mx-lg-5 my-5 pt-3">
-              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                <div class="card-body index-forward pt-5 rounded-lg">
-                  <div class="testimonial-img"><img class="rounded-circle"
-                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=2375428376&spec=640" alt="" /></div>
-                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                    <b><mark>真是一个不错的软件,</mark></b><br>开发者辛苦了,<br>希望能继续坚持下去。
-                  </p>
-                  <h5 class="font-weight-bold mb-0">像雾像雨又像风</h5>
-                  <p class="text-primary mb-0 text-small">Geek</p>
-                </div>
-              </div>
-            </div>
-            <div class="mx-3 mx-lg-5 my-5 pt-3">
-              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                <div class="card-body index-forward pt-5 rounded-lg">
-                  <div class="testimonial-img"><img class="rounded-circle"
-                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=1985386335&spec=640" alt="" /></div>
-                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                    <b><mark>完美的MaterialDesign风格</mark></b>
-                  </p>
-                  <h5 class="font-weight-bold mb-0">RiverTwilight</h5>
-                  <p class="text-primary mb-0 text-small">Web Designer</p>
-                </div>
-              </div>
-            </div>
-            <div class="mx-3 mx-lg-5 my-5 pt-3">
-              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                <div class="card-body index-forward pt-5 rounded-lg">
-                  <div class="testimonial-img"><img class="rounded-circle"
-                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=3025385472&spec=640" alt="" /></div>
-                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;">
-                    <b>希望以后功能再多一些,<br><mark>目前挺好看的</mark></b>
-                  </p>
-                  <h5 class="font-weight-bold mb-0">183600</h5>
-                  <p class="text-primary mb-0 text-small">Geek</p>
-                </div>
-              </div>
-            </div>
-            <div class="mx-3 mx-lg-5 my-5 pt-3">
-              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                <div class="card-body index-forward pt-5 rounded-lg">
-                  <div class="testimonial-img"><img class="rounded-circle"
-                      src="http://q4.qlogo.cn/headimg_dl?dst_uin=1114547837&spec=640" alt="" /></div>
-                  <p class="lead text-muted mb-5" style="font-family: 'ZCOOL XiaoWei', serif;"><b><mark>一个＊函不好用</mark>
-                      ？</b></p>
-                  <h5 class="font-weight-bold mb-0">柒白『滑稽』</h5>
-                  <p class="text-primary mb-0 text-small">Duck~</p>
-                </div>
-              </div>
-            </div>
-            <div class="mx-3 mx-lg-5 my-5 pt-3">
-              <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                <div class="card-body index-forward pt-5 rounded-lg">
-                  <div class="testimonial-img"><img class="rounded-circle"
-                      src="https://i.postimg.cc/mDbnM31C/avatar-4.png" alt="" /></div>
-                  <p class="lead text-muted mb-5" style="line-height:0.8;font-family: 'ZCOOL XiaoWei', serif;">
-                    <small><small>3020年，我独自打扫着祠堂。<br>老家的祠堂依旧是老样子，尽管翻新了无数遍。<br>那一千年前的样式依旧透出一丝古朴，典雅。<br>爷爷说，老家的祠堂叫“宅”，是1000年前的那位祖宗居住一生的地方，那里的每一块瓷砖，每一本漫画，每一个手办，都是有千年历史的古董。<br>在祠堂的最中间，存放着一个最古老的东西——一部智能手机。<br>村里面的最老的老人也不知道该如何使用它。<br>那天，我照常独自打扫着祠堂。<br>突然听到身后似乎有什么异样，虽然已经预料到今天会发生一些特别的事情，但我还是吓了一跳。<br>我猛地转过身，<br><b><mark>只见手机黯淡的屏幕上出现了一行字——<br>[有新文件]HelloTool最新版</mark></b></small></small>
-                  </p>
-                  <h5 class="font-weight-bold mb-0">OutlinedArc217</h5>
-                  <p class="text-primary mb-0 text-small">RuntimeError Developer</p>
-                </div>
-              </div>
-            </div>
+
+    <footer id="about" class="mdui-m-y-2">
+      <div class="mdui-container">
+        <div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo mdui-m-a-2">
+          <div class="mdui-col">
+            <img class="footer-title" src="./img/logo/logo.png" alt="LOGO">
+            <p>
+              A toolkit application for Android developed by Jesse205.<br>
+              This site was produced by hsdbql.
+            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <a class="scropll-top-btn" id="scrollTop" href="#"><i class="material-icons">&#xE5CE;</i></a>
-  <footer class="with-pattern-1 position-relative" id="about">
-    <div class="container section-padding-y">
-      <div class="row">
-        <div class="col-lg-3 mb-4 mb-lg-0"><img class="mb-4" src="img/logo.png" alt="" width="110">
-          <p class="text-muted">A toolkit application for Android developed by Jesse205.<br>This site was produced by
-            hsdbql.</p>
-        </div>
-        <div class="col-lg-2 mb-4 mb-lg-0">
-          <h2 class="h5 mb-4" style="font-family: 'Noto Sans SC', sans-serif;">浏览</h2>
-          <div class="d-flex">
-            <ul class="list-unstyled d-inline-block mr-4 mb-0">
-              <li class="mb-2"><a class="footer-link" href="#hero">下载</a></li>
-              <li class="mb-2"><a class="footer-link" href="#introduce"> 特性</a></li>
-              <li class="mb-2"><a class="footer-link" href="#services"> 支持</a></li>
-              <li class="mb-2"><a class="footer-link" href="#testimonials"> 评论</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 mb-4 mb-lg-0">
-          <h2 class="h5 mb-4" style="font-family: 'Noto Sans SC', sans-serif;">交流</h2>
-          <div class="d-flex">
-            <ul class="list-unstyled mr-4 mb-0">
-              <li class="mb-2"><a class="footer-link" href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U">官方综合服务QQ群</a></li>
-              <li class="mb-2"><a class="footer-link" href="https://jq.qq.com/?_wv=1027&k=bBMp43GE">官方技术交流QQ群</a></li>
-              <li class="mb-2"><a class="footer-link" href="https://jq.qq.com/?_wv=1027&k=QJH2H9Ox">官方软件内测QQ群</a></li>
-              <li class="mb-2"><a class="footer-link" href="mqqwpa://im/chat?chat_type=wpa&uin=2140125724"> 联系作者QQ</a>
+          <div class="mdui-col">
+            <h2 class="footer-title">交流</h2>
+            <ul>
+              <li><a href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U">综合服务QQ群</a></li>
+              <li><a href="https://jq.qq.com/?_wv=1027&k=bBMp43GE">技术交流QQ群</a></li>
+              <li><a href="https://jq.qq.com/?_wv=1027&k=QJH2H9Ox">软件内测QQ群</a></li>
+              <li><a href="mqqwpa://im/chat?chat_type=wpa&uin=2140125724"> 联系作者QQ</a>
               </li>
-              <li class="mb-2"><a class="footer-link" href="http://www.coolapk.com/u/1432137"> 作者酷安主页</a></li>
-              <li class="mb-2"><a class="footer-link" href="https://wj.qq.com/s2/4296578/e2cd/"> 报告软件BUG</a></li>
-              <li class="mb-2"><a class="footer-link" href="mailto:zhangya@mail.ru"> 联系WebMaster</a></li>
+              <li><a href="http://www.coolapk.com/u/1432137"> 作者酷安主页</a></li>
+              <li><a href="https://wj.qq.com/s2/4296578/e2cd/"> 报告软件BUG</a></li>
+              <li><a href="mailto:zhangya@mail.ru"> 联系WebMaster</a></li>
+            </ul>
+          </div>
+          <div class="mdui-col">
+            <h2 class="footer-title">友链</h2>
+            <ul>
+              <li><a href="https://www.ygktool.com">云极客工具</a></li>
+              <li><a href="https://jesse205.github.io">杰西205</a></li>
+              <li><a href="https://www.appchina.com">应用汇</a></li>
+              <li><a href="https://www.coolapk.com">基安网</a></li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-2 mb-4 mb-lg-0">
-          <h2 class="h5 mb-4" style="font-family: 'Noto Sans SC', sans-serif;">友链</h2>
-          <div class="d-flex">
-            <ul class="list-unstyled mr-4 mb-0">
-              <li class="mb-2"><a class="footer-link" href="https://www.ygktool.com">云极客工具</a></li>
-              <li class="mb-2"><a class="footer-link" href="https://jesse205.github.io">杰西205</a></li>
-              <!-- <li class="mb-2"><a class="footer-link" href="http://fapp.htm.kim/">酷软商店</a></li> -->
-              <li class="mb-2"><a class="footer-link" href="https://www.appchina.com">应用汇</a></li>
-              <li class="mb-2"><a class="footer-link" href="https://www.coolapk.com">基安网</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <ul class="list-inline mb-0">
-            <!--li class="list-inline-item"><a class="social-link" href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=851786295&card_type=group&source=qrcode"><i class="fab fa-qq"></i></a></li-->
-          </ul>
+      </div>
+      <div class="copyrights mdui-text-center">
+        <div class="mdui-container">
+          <p>Copyright &copy; 2020. FA Developpers' Association. All rights reserved.</p>
+          <p>Copyright &copy; 2022-2023. Jesse205.</p>
         </div>
       </div>
-    </div>
-    <div class="copyrights">
-      <div class="container text-center py-4">
-        <p class="mb-0 text-muted text-sm">Copyright &copy; 2020. FA Developpers' Association. All rights reserved.
-        </p>
-        <p class="mb-0 text-muted text-sm">Copyright &copy; 2022. Jesse205.</p>
-      </div>
-    </div>
-  </footer>
-  <!-- <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
-  <script src="vendor/modal-video/js/modal-video.min.js"></script>
-  <script src="js/front.js"></script>
-  <script>
-    function injectSvgSprite(path) {
-      var ajax = new XMLHttpRequest();
-      ajax.open("GET", path, true);
-      ajax.send();
-      ajax.onload = function (e) {
-        var div = document.createElement("div");
-        div.className = 'd-none';
-        div.innerHTML = ajax.responseText;
-        document.body.insertBefore(div, document.body.childNodes[0]);
-      }
-    }
-    injectSvgSprite('icons/orion-svg-sprite.svg'); 
-  </script> -->
+    </footer>
+  </div>
 </body>
 
 </html>
