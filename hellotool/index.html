@@ -11,8 +11,8 @@
   <link rel="shortcut icon" href="./favicon.ico">
 
   <!-- Vue -->
-  <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
-  <!-- <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script> -->
+  <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script>
 
   <!-- MDUI -->
   <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
@@ -40,8 +40,7 @@
         <template v-if="menus">
           <!-- 菜单区域 -->
           <template v-for="item in menus">
-            <a v-if="item.type=='menu'" :href="item.href"
-              class="jesse205-btn-icon-text mdui-btn mdui-ripple mdui-hidden-xs-down"
+            <a v-if="item.type=='menu'" :href="item.href" class="mdui-btn mdui-ripple mdui-hidden-xs-down"
               :targrt="item.target">{{item.title}}</a>
           </template>
           <!-- 更多菜单按钮 -->
@@ -70,7 +69,7 @@
           <div class="mdui-col mdui-p-y-5">
             <h1 class="app-title mdui-typo-display-1">Hello, Tool!</h1>
             <p class="mdui-typo-subheading mdui-m-a-1">发现更多有趣的小工具</p>
-            <div class="mdui-clearfix">
+            <div class="downloadBtnsGroup">
               <!-- 下载按钮 -->
               <a class="mdui-btn mdui-color-theme mdui-btn-raised mdui-ripple downloadBtn"
                 href="https://gitee.com/Jesse205/hellotool/releases/latest" target="_blank">
@@ -226,9 +225,8 @@
               <li><a href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U">综合服务QQ群</a></li>
               <li><a href="https://jq.qq.com/?_wv=1027&k=bBMp43GE">技术交流QQ群</a></li>
               <li><a href="https://jq.qq.com/?_wv=1027&k=QJH2H9Ox">软件内测QQ群</a></li>
-              <li><a href="mqqwpa://im/chat?chat_type=wpa&uin=2140125724"> 联系作者QQ</a>
-              </li>
-              <li><a href="http://www.coolapk.com/u/1432137"> 作者酷安主页</a></li>
+              <li><a href="mqqwpa://im/chat?chat_type=wpa&uin=2140125724"> 联系作者QQ</a></li>
+              <li><a href="https://www.coolapk.com/u/1432137"> 作者酷安主页</a></li>
               <li><a href="https://wj.qq.com/s2/4296578/e2cd/"> 报告软件BUG</a></li>
               <li><a href="mailto:zhangya@mail.ru"> 联系WebMaster</a></li>
             </ul>
@@ -237,7 +235,7 @@
             <h2 class="footer-title">友链</h2>
             <ul>
               <li><a href="https://www.ygktool.com">云极客工具</a></li>
-              <li><a href="https://jesse205.github.io">杰西205</a></li>
+              <li><a href="https://jesse205.netlify.app">杰西 205</a></li>
               <li><a href="https://www.appchina.com">应用汇</a></li>
               <li><a href="https://www.coolapk.com">基安网</a></li>
             </ul>

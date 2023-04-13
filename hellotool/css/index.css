@@ -11,23 +11,12 @@ body {
     background-color: transparent !important;
 }
 
-.downloadBtn {
-    margin: 8px;
-    height: 40px;
+.downloadBtnsGroup {
     display: flex;
-    width: fit-content;
+    flex-wrap: wrap;
     align-items: center;
-    float: left;
+    align-content: center;
 }
-
-.downloadBtn span {
-    margin-left: 8px;
-}
-
-.downloadBtn img {
-    vertical-align: middle;
-}
-
 
 .hero {
     background: url(../img/background/banner-4.png) no-repeat;
@@ -42,7 +31,7 @@ body {
     padding: 16px 16px;
 }
 
-.app-title{
+.app-title {
     font-weight: bold;
 }
 
@@ -222,6 +211,7 @@ footer ul {
     .hero>div {
         padding: 56px 56px;
     }
+
     .user-comments {
         columns: 2;
     }

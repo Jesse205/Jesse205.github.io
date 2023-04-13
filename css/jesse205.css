@@ -1,9 +1,5 @@
 @import url(mdui2.css);
 
-/* @import url(jesse205/shadow.css); */
-/* @import url(jesse205/dialog.css); */
-/* @import url(jesse205/panel.css); */
-/* @import url(jesse205/menu.css); */
 *,
 :after,
 :before {
@@ -29,40 +25,6 @@
 .jesse205-card-media-covered-auto {
     color: black;
     text-shadow: 0 0 5px white;
-}
-
-.jesse205-btn-withicon {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: min-content;
-    margin: auto;
-}
-
-
-
-.jesse205-btn-withicon img,
-.jesse205-btn-withicon i {
-    margin-right: 4px;
-}
-
-.jesse205-btn-icon-text {
-    font-size: 14px;
-    min-width: 40px;
-    height: 40px;
-    border-radius: 20px !important;
-    display: flex;
-    align-items: center;
-    text-transform: none;
-}
-
-
-.mdui-btn-icon,
-.mdui-toolbar .mdui-btn-icon {
-    border-radius: 50%;
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
 }
 
 .jesse205-row-xs-1 .jesse205-col,

@@ -1,5 +1,5 @@
 /* 菜单 */
-@keyframes hideOverflowYOnAnimating {
+@keyframes hideOverflowYOnAnimation {
     0% {
         overflow-y: hidden;
     }
@@ -33,7 +33,7 @@
 .mdui-menu-open {
     overflow-y: auto;
     transition-duration: .3s;
-    animation: hideOverflowYOnAnimating .3s;
+    animation: hideOverflowYOnAnimation .3s;
 }
 
 .mdui-menu-closing {
