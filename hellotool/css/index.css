@@ -106,7 +106,6 @@ body {
     background: url(../img/background/testimonials-bg.png) no-repeat;
     background-size: 40% 100%;
     background-position: left center;
-    /* text-align: center; */
 }
 
 .user-comments {
@@ -121,7 +120,6 @@ body {
     padding-top: 40px;
     text-align: center;
     break-inside: avoid;
-    /* float: left; */
 }
 
 .user-card .mdui-card {
@@ -131,8 +129,6 @@ body {
 }
 
 .user-avatar {
-    /* width: 72px; */
-    /* height: 72px; */
     position: absolute;
     top: 0;
     margin-left: -36px;
@@ -189,6 +185,7 @@ footer {
     background: url(../img/background/pattern.png);
     background-repeat: no-repeat;
     background-position: right;
+    padding: 16px 0;
 }
 
 .footer-title {

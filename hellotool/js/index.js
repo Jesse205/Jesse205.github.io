@@ -38,7 +38,7 @@ $$(function () {
             introduce: [
                 {
                     title: '精心优化每个小工具',
-                    message: '取色神器，更简单更高效\n图片拼接，拼截图一键搞定\n短链生成，多种链接任你选\n电量伪装，想怎么改就怎么改\n ……',
+                    message: '取色神器，更简单更高效\n图片拼接，拼截图一键搞定\n短链生成，多种链接任你选\n电量伪装，想咋改就咋改\n ……',
                     icon: 'heart-circle-outline',
                     iconColor: 'indigo'
                 },
