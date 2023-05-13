@@ -39,10 +39,19 @@
             },
             {
                 "name": "桌面时钟 Lite",
-                "id": "deskclockl_ite",
+                "id": "deskclock_lite",
                 "summary": "占用低、兼容性强的时钟",
-                "image": "images/graphs/deskclocklite.png",
+                "image": "images/graphs/deskclock_lite.png",
                 "src": "https://gitlab.com/Jesse205/Desk-Clock-Lite",
+                "icon": "source-branch",
+                "url-type": "GitLab 仓库"
+            },
+            {
+                "name": "拖放中转站",
+                "id": "drag_and_drop_transfer_station",
+                "summary": "中转任何拖放文本与文件",
+                "image": "images/graphs/drag_and_drop_transfer_station.png",
+                "src": "https://gitee.com/Jesse205/DragAndDropTransferStationLite",
                 "icon": "source-branch",
                 "url-type": "GitLab 仓库"
             }
@@ -69,7 +78,7 @@
                 "name": "百度一下 Lite",
                 "id": "baiduhome_lite",
                 "summary": "特别简洁的浏览器主页",
-                "image": "images/graphs/baidulite.png",
+                "image": "images/graphs/baidu_lite.png",
                 "src": "./baiduhomelite/",
                 "icon": "open-in-app",
                 "url-type": "应用"
@@ -78,7 +87,7 @@
                 "name": "桌面时钟 Lite",
                 "id": "deskclock_lite",
                 "summary": "打开就能用的时钟",
-                "image": "images/graphs/deskclocklite.png",
+                "image": "images/graphs/deskclock_lite.png",
                 "src": "./deskclocklite/",
                 "icon": "open-in-app",
                 "url-type": "应用"
@@ -93,7 +102,7 @@
                 "name": "AndroLua+ 文档",
                 "id": "androlua",
                 "summary": "经过精心整理后的文档",
-                "image": "images/graphs/androluadocument.png",
+                "image": "images/graphs/androlua_document.png",
                 "src": "https://jesse205.github.io/AideLua/androluapro/",
                 "icon": "file-document-outline",
                 "url-type": "文档"
@@ -102,7 +111,7 @@
                 "name": "Magisk 中文文档",
                 "id": "magisk",
                 "summary": "精心机翻，仅供参考",
-                "image": "images/graphs/magiskchinesedocument.jpeg",
+                "image": "images/graphs/magisk_chinese_document.jpeg",
                 "src": "https://jesse205.github.io/MagiskChineseDocument/",
                 "dark": false,
                 "icon": "file-document-outline",
@@ -112,7 +121,7 @@
                 "name": "刷机指南",
                 "id": "flash_android_devices_guidlines",
                 "summary": "万能的刷机指南",
-                "image": "images/graphs/flashandroiddevicesguidlines.jpeg",
+                "image": "images/graphs/flash_android_devices_guidlines.jpeg",
                 "src": "https://efadg.netlify.app/",
                 "dark": false,
                 "icon": "file-document-outline",

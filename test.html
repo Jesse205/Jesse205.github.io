@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="mdui-theme-html-auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <title>Edde 系列</title>
+    <meta name="keywords" content="Edde系列,Edde互联,jesse205,aidelua,hellotool">
+    <meta name="author" content="Jesse205" />
+    <meta name="robots" content="all,follow">
+
+    <link rel="icon" sizes="any" href="favicon.png">
+
+    <!-- Vue -->
+    <!-- <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script>
+
+    <!-- MDUI -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@mdi/font@7.2.96/css/materialdesignicons.min.css" />
+
+    <!-- Jesse205Library -->
+    <link rel="stylesheet" href="/css/jesse205.css" />
+    <script src="/js/jesse205.js"></script>
+
+    <style>
+        .group {
+            margin: 16px;
+        }
+    </style>
+</head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto">
+    <!-- 这是Vue的 -->
+    <div id="app" class="mdui-container">
+        <!-- 标题栏 -->
+        <nav class="mdui-appbar mdui-appbar-fixed" :class="{'mdui-appbar-lifted':!isTop}">
+            <div class="mdui-toolbar" :class="{'mdui-toolbar-lifted':!isTop}">
+                <p class="mdui-typo-title">Edde 系列</p>
+                <div class="mdui-toolbar-spacer"></div>
+
+                <!-- 菜单区域 -->
+                <template v-for="item in menus">
+                    <a v-if="item.type=='menu'" :href="item.href" class="mdui-btn mdui-ripple mdui-hidden-xs-down"
+                        :targrt="item.target">{{item.title}}</a>
+                </template>
+                <!-- 更多菜单按钮 -->
+                <div class="mdui-btn mdui-btn-icon mdui-ripple mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+                    mdui-tooltip="{'content':'更多选项'}">
+                    <i class="mdui-icon material-icons">more_vert</i>
+                </div>
+                <!-- 弹出菜单 -->
+                <ul class="mdui-menu" id="menu-more">
+                    <div>
+                        <template v-for="item in menus">
+                            <li v-if="item.type=='menu'" class="mdui-menu-item">
+                                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
+                            </li>
+                            <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+                        </template>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="mdui-card group">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">按钮测试</div>
+            </div>
+            <div class="mdui-card-content">
+                <button class="mdui-btn">按钮</button>
+                <button class="mdui-btn mdui-ripple">波纹按钮</button>
+                <button class="mdui-btn mdui-color-theme-accent mdui-ripple">带强调色的波纹按钮</button>
+                <button class="mdui-btn mdui-btn-raised mdui-ripple">悬浮按钮</button>
+                <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent">带强调色的悬浮按钮</button>
+                <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme">带主题色的悬浮按钮</button>
+                <button class="mdui-btn mdui-btn-icon">
+                    <i class="mdui-icon material-icons">add</i>
+                </button>
+                <button class="mdui-btn mdui-btn-icon mdui-ripple">
+                    <i class="mdui-icon material-icons">add</i>
+                </button>
+                <button class="mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple">
+                    <i class="mdui-icon material-icons">add</i>
+                </button>
+            </div>
+        </div>
+        <div class="mdui-card group">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">卡片测试</div>
+            </div>
+            <div class="mdui-card-content">
+                <div class="mdui-card" style="width: 360px;">
+                    <div class="mdui-card-header">
+                        <img class="mdui-card-header-avatar"
+                            src="https://cdn.w3cbus.com/mdui/docs~1/static/6f40c42e0eceb58345d3.jpg" />
+                        <div class="mdui-card-header-title">Title</div>
+                        <div class="mdui-card-header-subtitle">Subtitle</div>
+                    </div>
+                    <div class="mdui-card-media">
+                        <img src="https://cdn.w3cbus.com/mdui/docs~1/static/1ca4b7b2b4b2f2352aeb.jpg" />
+                        <div class="mdui-card-menu">
+                            <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
+                                <i class="mdui-icon material-icons">share</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">Title</div>
+                        <div class="mdui-card-primary-subtitle">Subtitle</div>
+                    </div>
+                    <div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
+                    <div class="mdui-card-actions">
+                        <button class="mdui-btn mdui-ripple">action 1</button>
+                        <button class="mdui-btn mdui-ripple">action 2</button>
+                        <button class="mdui-btn mdui-btn-icon mdui-float-right">
+                            <i class="mdui-icon material-icons">expand_more</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                isTop: true,
+                menus: [
+                    {
+                        title: 'Gitee 主页',
+                        href: 'https://gitee.com/Jesse205',
+                        target: '_blank',
+                        type: 'menu'
+                    },
+                    {
+                        title: 'GitLab 主页',
+                        href: 'https://gitlab.com/Jesse205',
+                        target: '_blank',
+                        type: 'menu'
+                    },
+                    {
+                        title: 'Github 主页',
+                        href: 'https://github.com/Jesse205',
+                        target: '_blank',
+                        type: 'menu'
+                    },
+                    {
+                        type: 'divider'
+                    },
+                    {
+                        title: '发送邮件',
+                        href: 'mailto:jesse205@qq.com',
+                        target: '_blank',
+                        type: 'menu'
+                    }
+                ]
+            },
+            created() {
+
+            },
+            mounted() {
+                this.isTop = getTopState(window)
+                window.addEventListener('scroll', () => this.isTop = getTopState(window))
+            },
+            updated() {
+            }
+        })
+    </script>
+</body>
+
+</html>

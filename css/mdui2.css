@@ -44,6 +44,7 @@ body {
     font-family: var(--mdui-font);
     background-color: var(--mdui-color-background);
     color: var(--mdui-color-on-background);
+    accent-color: var(--mdui-color-accent);
 }
 
 *::selection {

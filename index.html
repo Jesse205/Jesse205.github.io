@@ -32,14 +32,14 @@
 
   <script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?995dc9c080738b4a91d6211cbd9a1952";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-    </script>
-    
+  </script>
+
 </head>
 
 <body class="mdui-appbar-with-toolbar mdui-theme-layout-auto">
@@ -53,8 +53,7 @@
 
         <!-- 菜单区域 -->
         <template v-for="item in menus">
-          <a v-if="item.type=='menu'" :href="item.href"
-            class="mdui-btn mdui-ripple mdui-hidden-xs-down"
+          <a v-if="item.type=='menu'" :href="item.href" class="mdui-btn mdui-ripple mdui-hidden-xs-down"
             :targrt="item.target">{{item.title}}</a>
         </template>
         <!-- 更多菜单按钮 -->
@@ -94,17 +93,14 @@
                   <div class="mdui-card-outlined mdui-hoverable-2 mdui-shadow-transition mdui-card mdui-ripple">
                     <div class="mdui-card-media">
                       <img class="card-image" :src="content.image" :alt="content.name" draggable="false" />
-                      <div class="mdui-card-media-covered mdui-card-media-covered-transparent"
-                        :class="[content.dark?'jesse205-card-media-covered-dark':'jesse205-card-media-covered-light',]">
-                        <div class="mdui-card-primary">
-                          <div class="mdui-card-primary-title">{{content.name}}</div>
-                          <div class="mdui-card-primary-subtitle">{{content.summary}}</div>
-                        </div>
-                        <i class="card-icon mdui-icon mdi"
-                          :class="[`mdi-${content.icon}`,content.dark&&'card-icon-dark']" :title="content['url-type']"
-                          ></i>
-                      </div>
                     </div>
+                    <div class="mdui-divider"></div>
+                    <div class="mdui-card-primary">
+                      <div class="mdui-card-primary-title">{{content.name}}</div>
+                      <div class="mdui-card-primary-subtitle">{{content.summary}}</div>
+                    </div>
+                    <i class="card-icon mdui-icon mdi" :class="[`mdi-${content.icon}`,content.dark&&'card-icon-dark']"
+                      :title="content['url-type']"></i>
                   </div>
                 </a>
               </div>
