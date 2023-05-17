@@ -53,7 +53,7 @@
                 "image": "images/graphs/drag_and_drop_transfer_station.png",
                 "src": "https://gitee.com/Jesse205/DragAndDropTransferStationLite",
                 "icon": "source-branch",
-                "url-type": "GitLab 仓库"
+                "url-type": "GitHub 仓库"
             }
         ]
     },
