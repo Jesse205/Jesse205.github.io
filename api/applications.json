@@ -66,7 +66,9 @@
                 "id": "honor6xtools",
                 "summary": "不止为畅玩6X开发",
                 "image": "images/graphs/honor6xtools.png",
-                "src": "https://gitee.com/Jesse205/Honor6XTools"
+                "src": "https://gitee.com/Jesse205/Honor6XTools",
+                "icon": "source-branch",
+                "url-type": "Gitee 仓库"
             }
         ]
     },
