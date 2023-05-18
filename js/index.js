@@ -84,8 +84,9 @@ $$(function () {
         })
     },
     mounted() {
-      this.isTop = getTopState(window)
-      window.addEventListener('scroll', () => this.isTop = getTopState(window))
+      this.isTop = document.documentElement.scrollTop <= 0
+      window.addEventListener('scroll', () => this.isTop = document.documentElement.scrollTop <= 0)
+
       $$("#mainlist").mutation()
       $$("#linkslist").mutation()
     },

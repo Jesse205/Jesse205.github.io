@@ -134,6 +134,8 @@ body {
     margin-left: -36px;
     margin-top: -36px;
     display: inline-block;
+    /* 4px */
+    /* filter: drop-shadow(0 0.5px 4px var(--mdui-color-shadow-key-umbra)) drop-shadow(0 1px 5px var(--mdui-color-shadow-key-penumbra)) drop-shadow(0 0.5px 10px var(--mdui-color-shadow-ambient-shadow)); */
 }
 
 .user-avatar img {
