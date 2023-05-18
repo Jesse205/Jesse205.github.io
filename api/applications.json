@@ -65,8 +65,8 @@
                 "name": "畅玩6X工具箱",
                 "id": "honor6xtools",
                 "summary": "不止为畅玩6X开发",
-                "image": "images/graphs/aidelua.png",
-                "src": ""
+                "image": "images/graphs/honor6xtools.png",
+                "src": "https://gitee.com/Jesse205/Honor6XTools"
             }
         ]
     },
