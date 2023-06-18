@@ -97,11 +97,10 @@
           </div>
           <div class="mdui-col">
             <!-- 手机图 -->
-            <div class="device-wrapper">
               <div class="device">
-                <img class="screen" src="img/screenshot.jpg" alt>
+                <!-- <div class="screen"></div> -->
+                <img class="screen" :src="prefersDarkMode?'img/screenshot_night.jpg':'img/screenshot.jpg'" alt>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -130,7 +129,7 @@
           <div class="jesse205-row-xs-1 jesse205-row-sm-2 mdui-valign mdui-m-y-2">
             <!-- 插画 -->
             <div class="jesse205-col">
-              <div class="mdui-p-x-5 mdui-text-center">
+              <div class=" mdui-text-center">
                 <img class="illustration" src="./img/illustrations/undraw_pen_tool_re_s92o.svg" alt>
               </div>
             </div>

@@ -54,7 +54,19 @@
 
 
 .mdui-toolbar,
-.mdui-panel-item {
-    transition: all .2s cubic-bezier(.4, 0, .2, 1), all .2s cubic-bezier(.4, 0, 1, 1), all .2s cubic-bezier(.4, 0, 1, 1);
-    will-change:auto;
+.mdui-panel-item,
+.mdui-theme-html-auto,
+.mdui-theme-layout-auto,
+.mdui-card,
+.mdui-panel-item-arrow,
+.mdui-panel-item-header,
+.mdui-btn,
+.mdui-fab {
+    transition: none;
+    /* transition: all .2s cubic-bezier(.4, 0, .2, 1), all .2s cubic-bezier(.4, 0, 1, 1), all .2s cubic-bezier(.4, 0, 1, 1),color 0s; */
+    transition: background .2s cubic-bezier(.4, 0, .2, 1),
+        transform .2s cubic-bezier(.4, 0, .2, 1),
+        opacity .2s cubic-bezier(.4, 0, .2, 1),
+        box-shadow .2s cubic-bezier(.4, 0, .2, 1);
+    will-change: auto;
 }

@@ -19,8 +19,9 @@ body {
 }
 
 .hero {
-    /* background: url(../img/background/banner-4.png) no-repeat; */
-    background-size: 100% 80%
+    background: url(../img/background/banner-4.svg) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 }
 
 .hero .mdui-col {
@@ -35,33 +36,36 @@ body {
     font-weight: 400;
 }
 
-.device-wrapper {
-    margin: auto;
-    max-width: 300px;
-    width: 100%;
-    z-index: 999;
-    position: relative
-}
 
 .device {
-    background-image: url(../img/device-mockups/iPhoneX/portrait.png) !important;
-    z-index: 1;
-    background-size: cover;
-    height: 100%;
-    padding-bottom: 202.898072%;
-    max-width: 300px;
+    max-width: 290px;
+    margin: auto;
     width: 100%;
+    border: 6px solid #252629;
+    /* border: 6px solid #fff; */
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 0.47;
 }
 
 .device .screen {
+    width: 100%;
+    display: block;
+}
+
+.device::before {
+    content: "";
+    background-color: #252629;
+    height: 16px;
+    width: 16px;
+    display: block;
+    border-radius: 50%;
     position: absolute;
-    top: 15px;
-    left: 5%;
-    width: 90%;
-    height: 93.49030471%;
-    border: 0;
-    z-index: -1;
-    overflow: hidden;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 8px;
 }
 
 .title {
@@ -96,11 +100,13 @@ body {
     min-height: 280px;
 }
 
+/* #introduce {
+    background: url(../img/background/service-bg.svg) no-repeat;
+    background-size: contain;
+} */
+
 /* 
-#introduce {
-    background: url(../img/background/service-bg.png) no-repeat;
-    background-size: cover;
-}
+
 
 #testimonials {
     background: url(../img/background/testimonials-bg.png) no-repeat;
@@ -143,7 +149,7 @@ body {
     height: 72px;
     border-radius: 50%;
     box-shadow: var(--mdui-shadow-4);
-    background-color: var(--mdui-color-background);
+    background-color: white;
 }
 
 /* 用户头像右下角图标 */
@@ -227,3 +233,10 @@ footer ul {
         columns: 4;
     }
 } */
+
+@media (prefers-color-scheme: dark) {
+    .device {
+        border-color: #fefefe;
+    }
+
+}

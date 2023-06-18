@@ -139,15 +139,24 @@ $$(function () {
                     <mark>只见手机黯淡的屏幕上出现了一行字——<br>
                       [有新文件]HelloTool最新版</mark>`
                 }
-            ]
+            ],
+            prefersDarkMode: false
         },
-        created() {
-
+        methods: {
+            prefersColorSchemeMediaCallback: function (e) {
+                this.prefersDarkMode = e.matches
+            }
         },
         mounted() {
             this.isTop = document.documentElement.scrollTop <= 0
             window.addEventListener('scroll', () => this.isTop = document.documentElement.scrollTop <= 0)
-
+            let prefersColorSchemeMedia = window.matchMedia('(prefers-color-scheme: dark)')
+            this.prefersDarkMode = prefersColorSchemeMedia.matches
+            if (typeof prefersColorSchemeMedia.addEventListener === 'function') {
+                prefersColorSchemeMedia.addEventListener('change', this.prefersColorSchemeMediaCallback);
+            } else if (typeof prefersColorSchemeMedia.addListener === 'function') {
+                prefersColorSchemeMedia.addListener(this.prefersColorSchemeMediaCallback)
+            }
         },
         updated() {
         }
