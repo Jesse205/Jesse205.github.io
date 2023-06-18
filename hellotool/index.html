@@ -98,8 +98,8 @@
           <div class="mdui-col">
             <!-- 手机图 -->
               <div class="device">
-                <!-- <div class="screen"></div> -->
-                <img class="screen" :src="prefersDarkMode?'img/screenshot_night.jpg':'img/screenshot.jpg'" alt>
+                <img v-if="!prefersDarkMode" key="light" class="screen" src="img/screenshot.jpg" alt>
+                <img v-else class="screen" key="night" src="img/screenshot_night.jpg" alt>
               </div>
           </div>
         </div>
