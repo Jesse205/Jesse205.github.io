@@ -19,7 +19,7 @@ body {
 }
 
 .hero {
-    background: url(../img/background/banner-4.png) no-repeat;
+    /* background: url(../img/background/banner-4.png) no-repeat; */
     background-size: 100% 80%
 }
 
@@ -96,7 +96,7 @@ body {
     min-height: 280px;
 }
 
-
+/* 
 #introduce {
     background: url(../img/background/service-bg.png) no-repeat;
     background-size: cover;
@@ -106,7 +106,7 @@ body {
     background: url(../img/background/testimonials-bg.png) no-repeat;
     background-size: 40% 100%;
     background-position: left center;
-}
+} */
 
 .user-comments {
     columns: 1;

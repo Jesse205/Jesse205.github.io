@@ -106,10 +106,13 @@ body {
 
 /* #region 卡片 */
 .mdui-card,
-.mdui-card-outlined,
-.mdui-theme-layout-auto .mdui-card,
-.mdui-theme-layout-auto .mdui-card-outlined {
+.mdui-theme-layout-auto .mdui-card {
     background-color: var(--mdui-color-surface);
+}
+
+.mdui-card-outlined,
+.mdui-theme-layout-auto .mdui-card-outlined {
+    background: none;
 }
 
 .mdui-card-primary {
@@ -251,7 +254,7 @@ body {
 
 .mdui-panel-item,
 .mdui-theme-layout-auto .mdui-panel-item {
-    background-color: var(--mdui-color-surface-toolbar);
+    background-color: var(--mdui-color-surface);
 }
 
 .mdui-panel-item,
@@ -284,8 +287,9 @@ body {
 @media (prefers-color-scheme: dark) {
     .mdui-theme-html-auto:root {
         --mdui-color-primary: var(--mdui-color-google-blue-300);
+        --mdui-color-surface: #343536;
         --mdui-color-surface-menu: #38393D;
-        --mdui-color-surface-toolbar: #343536;
+        /* --mdui-color-surface-toolbar: #343536; */
         --mdui-color-background: var(--mdui-color-google-grey-900);
         --mdui-color-on-background: var(--mdui-color-white);
         --mdui-color-line: rgba(255, 255, 255, .12);
