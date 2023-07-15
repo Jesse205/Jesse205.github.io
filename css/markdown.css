@@ -1,0 +1,126 @@
+:root {
+    --markdown-color-border: var(--mdui-color-line);
+    --markdown-color-primary: var(--mdui-color-primary)
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.markdown h1,
+.markdown h2 {
+    padding-bottom: 4.8px;
+    border-bottom: 1.5px solid var(--markdown-color-border);
+}
+
+
+/* # 复制链接样式 */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    /* position: relative; */
+    cursor: pointer;
+}
+
+.markdown h1::before,
+.markdown h2::before,
+.markdown h3::before,
+.markdown h4::before,
+.markdown h5::before,
+.markdown h6::before {
+    content: '#';
+    width: 1rem;
+    display: inline-block;
+    position: absolute;
+    color: var(--markdown-color-primary);
+    /* left: calc(-1rem - 8px); */
+    margin-left: calc(-1rem - 8px);
+    opacity: 0;
+}
+
+.markdown h1:hover::before,
+.markdown h2:hover::before,
+.markdown h3:hover::before,
+.markdown h4:hover::before,
+.markdown h5:hover::before,
+.markdown h6:hover::before {
+    opacity: 1;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    padding-top: 80px;
+    margin-top: calc(-72px);
+}
+
+.markdown img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.markdown code {
+    display: inline-block;
+    background: var(--markdown-color-border);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    max-width: 100%;
+    overflow: auto;
+    vertical-align: top;
+}
+
+/* 引用 */
+.markdown blockquote {
+    padding: 8px 12px;
+    margin: 4px 0;
+}
+
+.markdown blockquote>:first-child {
+    margin-top: 0;
+}
+
+.markdown blockquote>:last-child {
+    margin-bottom: 0;
+}
+
+/* 表格 */
+.markdown table {
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.markdown table th {
+    font-weight: 600;
+}
+
+.markdown table th,
+.markdown table td {
+    padding: 6px 13px;
+    border: 1.5px solid var(--markdown-color-border);
+}
+
+
+/*@media (prefers-color-scheme: dark) {
+    body {
+        color-scheme: dark;
+    }
+}*/
+
+.badge {
+    background-color: var(--markdown-color-primary);
+    color: white;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    padding: 2px 4px;
+    vertical-align: top;
+    display: inline-block;
+}

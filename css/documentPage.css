@@ -1,0 +1,14 @@
+@import url(./markdown.css);
+
+.spinnerParent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.markdown {
+    box-shadow: var(--mdui-shadow-2);
+}

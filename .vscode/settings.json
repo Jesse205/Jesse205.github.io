@@ -3,5 +3,16 @@
         "aidelua",
         "linkslist",
         "mainlist"
-    ]
+    ],
+    "markdownlint.config": {
+        "default": true,
+        "MD033": {
+            "allowed_elements": [
+                "span",
+            ]
+        },
+        "MD025": false,
+        "MD041": false,
+        "MD029": false
+    }
 }

@@ -34,10 +34,22 @@
     margin: 0;
 }
 
-.mdui-panel{
+.mdui-panel {
     --mdui-color-surface: var(--mdui-color-surface-toolbar);
 }
 
 a {
     text-decoration: none;
+}
+
+.footer-title {
+    margin: 0 !important;
+    display: block;
+    margin-bottom: 16px !important;
+    font-size: 1.25rem;
+}
+
+footer ul {
+    padding-left: 0 !important;
+    list-style: none !important;
 }
