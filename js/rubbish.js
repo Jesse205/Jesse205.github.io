@@ -8,7 +8,34 @@ let vm = new Vue({
         title: '杰西垃圾',
     },
     created() {
-        fetch(CONTENT_URL)
+        /*const xhr = new XMLHttpRequest()
+        xhr.open('GET', CONTENT_URL, false)
+        xhr.send();*/
+
+        if (content != null) {
+            let converter = new showdown.Converter()
+            converter.setOption('customizedHeaderId', true)
+            converter.setOption('ghCompatibleHeaderId', true)
+            converter.setOption('simplifiedAutoLink', true)
+            converter.setOption('parseImgDimensions', true)
+            converter.setOption('strikethrough', true)
+            converter.setOption('tables', true)
+            converter.setOption('ghCodeBlocks', true)
+            converter.setOption('tasklists', true)
+            converter.setOption('smoothLivePreview', true)
+            converter.setOption('disableForced4SpacesIndentedSublists', true)
+            converter.setOption('requireSpaceBeforeHeadingText', true)
+            converter.setOption('openLinksInNewWindow', true)
+            converter.setOption('backslashEscapesHTMLTags', true)
+            converter.setOption('emoji', true)
+            converter.setOption('moreStyling', true)
+            converter.setFlavor('github');
+            let contentHTML = converter.makeHtml(content)
+            this.content = contentHTML
+        }
+        this.isLoaded = true
+
+        /*fetch(CONTENT_URL)
             .then(res => res.text())
             .then(text => {
                 let converter = new showdown.Converter()
@@ -41,7 +68,7 @@ let vm = new Vue({
             })
             .finally(() => {
                 this.isLoaded = true
-            })
+            })*/
     },
     methods: {
         /**
@@ -58,7 +85,7 @@ let vm = new Vue({
          * @param {MouseEvent} event 
          */
         handelContentClick(event) {
-            console.log(event);
+            console.log(event.target.tagName);
             switch (event.target.tagName) {
                 case 'H1':
                 case 'H2':

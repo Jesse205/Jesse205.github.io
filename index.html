@@ -5,13 +5,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="manifest" href="/manifest.webmanifest" />
-
+  <link rel="icon" sizes="any" href="./favicon.png">
   <title>Edde 系列</title>
-  <meta name="keywords" content="Edde系列,Edde互联,jesse205,aidelua,hellotool">
+  <meta name="keywords" content="Edde系列,Edde互联,杰西205,jesse205,aidelua,hellotool">
+  <meta name="description" content="Edde 系列应用程序、网站、文档集合。" />
   <meta name="author" content="Jesse205" />
   <meta name="robots" content="all,follow">
 
-  <link rel="icon" sizes="any" href="favicon.png">
+  <!-- https://ogp.me/ -->
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:title" content="Edde 系列" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./favicon.png" />
 
   <!-- Vue -->
   <!-- <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script> -->
@@ -27,19 +32,9 @@
   <script src="/js/jesse205.js"></script>
 
   <!-- 当前页面 -->
-  <link rel="stylesheet" href="css/index.css" />
-  <script src="js/index.js"></script>
-
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?995dc9c080738b4a91d6211cbd9a1952";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="./api/applications.json.js"></script>
+  <script src="./js/index.js"></script>
 </head>
 
 <body class="mdui-appbar-with-toolbar mdui-theme-layout-auto">
@@ -48,7 +43,7 @@
     <!-- 标题栏 -->
     <nav class="mdui-appbar mdui-appbar-fixed" :class="{'mdui-appbar-lifted':!isTop}">
       <div class="mdui-toolbar" :class="{'mdui-toolbar-lifted':!isTop}">
-        <p class="mdui-typo-title">Edde 系列</p>
+        <h1 class="mdui-typo-title">Edde 系列</h1>
         <div class="mdui-toolbar-spacer"></div>
 
         <!-- 菜单区域 -->
@@ -57,7 +52,7 @@
             :targrt="item.target">{{item.title}}</a>
         </template>
         <!-- 更多菜单按钮 -->
-        <div class="mdui-btn mdui-btn-icon mdui-ripple mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+        <div class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#menu-more'}"
           mdui-tooltip="{'content':'更多选项'}">
           <i class="mdui-icon material-icons">more_vert</i>
         </div>
@@ -65,11 +60,15 @@
         <ul class="mdui-menu" id="menu-more">
           <div>
             <template v-for="item in menus">
-              <li v-if="item.type=='menu'" class="mdui-menu-item">
+              <li v-if="item.type=='menu'" class="mdui-menu-item mdui-hidden-sm-up">
                 <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
               </li>
-              <li v-else-if="item.type=='divider'" class="mdui-divider"></li>
+              <li v-else-if="item.type=='divider'" class="mdui-divider mdui-hidden-sm-up"></li>
             </template>
+            <li class="mdui-divider mdui-hidden-sm-up"></li>
+            <li class="mdui-menu-item">
+              <a href="/rubbish.html" class="mdui-ripple" targrt="_blank">杰西垃圾</a>
+            </li>
           </div>
         </ul>
       </div>
@@ -127,7 +126,39 @@
       </section>
     </section>
 
+    <footer>
+      <div class="mdui-container">
+        <div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo">
+          <div class="mdui-col mdui-m-y-2">
+            <h5 class="footer-title">开源许可</h5>
+            <ul>
+              <li v-for="item in licenses">
+                <component :is="item.url ? 'a' : 'span'" :href="item.url" target="_blank" v-text="item.projectName">
+                </component>:
+                <component :is="item.licenseUrl ? 'a' : 'span'" :href="item.licenseUrl" target="_blank"
+                  v-text="item.licenseName">
+                </component>
+              </li>
+            </ul>
+          </div>
+          <div class="mdui-col mdui-m-y-2">
+            <h5 class="footer-title">与我联系</h5>
+            <ul>
+              <li><a href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U" target="_blank">综合服务 QQ 群</a></li>
+              <li><a href="mailto:jesse205@qq.com" target="_blank">电子邮件</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights mdui-text-center">
+        <p>Copyright &copy; 2022-2023. Jesse205.</p>
+      </div>
+    </footer>
+
   </div>
+  <script>
+    vm.$mount('#app')
+  </script>
 </body>
 
 </html>

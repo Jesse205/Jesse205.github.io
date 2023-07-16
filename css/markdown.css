@@ -14,53 +14,6 @@ body {
     border-bottom: 1.5px solid var(--markdown-color-border);
 }
 
-
-/* # 复制链接样式 */
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-    /* position: relative; */
-    cursor: pointer;
-}
-
-.markdown h1::before,
-.markdown h2::before,
-.markdown h3::before,
-.markdown h4::before,
-.markdown h5::before,
-.markdown h6::before {
-    content: '#';
-    width: 1rem;
-    display: inline-block;
-    position: absolute;
-    color: var(--markdown-color-primary);
-    /* left: calc(-1rem - 8px); */
-    margin-left: calc(-1rem - 8px);
-    opacity: 0;
-}
-
-.markdown h1:hover::before,
-.markdown h2:hover::before,
-.markdown h3:hover::before,
-.markdown h4:hover::before,
-.markdown h5:hover::before,
-.markdown h6:hover::before {
-    opacity: 1;
-}
-
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-    padding-top: 80px;
-    margin-top: calc(-72px);
-}
-
 .markdown img {
     max-width: 100%;
     border-radius: 4px;
@@ -79,7 +32,7 @@ body {
 
 /* 引用 */
 .markdown blockquote {
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
     margin: 4px 0;
 }
 
@@ -116,11 +69,12 @@ body {
 }*/
 
 .badge {
-    background-color: var(--markdown-color-primary);
-    color: white;
+    background-color: #1A73E822;
+    color: #1A73E8;
     font-size: 0.875rem;
     border-radius: 4px;
     padding: 2px 4px;
     vertical-align: top;
     display: inline-block;
+    margin: 2px;
 }

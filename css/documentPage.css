@@ -1,5 +1,18 @@
 @import url(./markdown.css);
 
+.toolbar,
+.toolbar .mdui-typo-title {
+    transition: all .2s cubic-bezier(.4, 0, .2, 1), box-shadow .2s cubic-bezier(.4, 0, 1, 1), -webkit-box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+}
+
+.toolbar-unfloat {
+    background-color: transparent !important;
+}
+
+.toolbar-unfloat .mdui-typo-title {
+    opacity: 0;
+}
+
 .spinnerParent {
     display: flex;
     width: 100%;
@@ -9,6 +22,66 @@
     position: fixed;
 }
 
+
+/* # 复制链接样式 */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    /* position: relative; */
+    pointer-events: none;
+}
+
+.markdown h1::before,
+.markdown h2::before,
+.markdown h3::before,
+.markdown h4::before,
+.markdown h5::before,
+.markdown h6::before {
+    content: '#';
+    width: 1rem;
+    display: inline-block;
+    position: absolute;
+    color: var(--markdown-color-primary);
+    /* left: calc(-1rem - 8px); */
+    margin-left: calc(-1rem - 8px);
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: all;
+    transition: opacity .1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.markdown h1:hover::before,
+.markdown h2:hover::before,
+.markdown h3:hover::before,
+.markdown h4:hover::before,
+.markdown h5:hover::before,
+.markdown h6:hover::before {
+    opacity: 1;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    padding-top: 80px;
+    margin-top: calc(-72px);
+}
+
 .markdown {
-    box-shadow: var(--mdui-shadow-2);
+    padding: 16px;
+}
+
+@media screen and (min-width:600px) {
+    .markdown {
+        padding: 24px 32px;
+        margin: 16px 0;
+        box-shadow: var(--mdui-shadow-2);
+        background-color: var(--mdui-color-surface);
+        border-radius: 4px;
+    }
 }

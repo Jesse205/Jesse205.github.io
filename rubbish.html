@@ -5,13 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="manifest" href="/manifest.webmanifest" />
-
+    <link rel="icon" sizes="any" href="favicon.png">
     <title>杰西垃圾</title>
-    <meta name="keywords" content="Edde系列,Edde互联,jesse205,杰西垃圾">
+    <meta name="keywords" content="Edde系列,Edde互联,jesse205,杰西205,杰西垃圾">
     <meta name="author" content="Jesse205" />
     <meta name="robots" content="all,follow">
-
-    <link rel="icon" sizes="any" href="favicon.png">
 
     <!-- Vue -->
     <!-- <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script> -->
@@ -29,6 +27,7 @@
 
     <!-- 当前页面 -->
     <link rel="stylesheet" href="/css/documentPage.css" />
+    <script src="./rubbish.md.js"></script>
     <script src="./js/rubbish.js"></script>
 </head>
 
@@ -37,7 +36,7 @@
     <div id="app" class="mdui-container">
         <!-- 标题栏 -->
         <nav class="mdui-appbar mdui-appbar-fixed" :class="{'mdui-appbar-lifted':!isTop}">
-            <div class="mdui-toolbar" :class="{'mdui-toolbar-lifted':!isTop}">
+            <div class="mdui-toolbar" :class="{'toolbar-unfloat':isTop,'mdui-toolbar-lifted':!isTop}">
                 <!-- 返回按钮 -->
                 <div onclick="history.go(-1)" class="mdui-btn mdui-btn-icon">
                     <i class="mdui-icon material-icons">arrow_back</i>
@@ -45,10 +44,10 @@
                 <p class="mdui-typo-title">{{title}}</p>
             </div>
         </nav>
-        <div class="mdui-typo markdown" @click="handelContentClick" v-html="content"></div>
-        <div v-if="!isLoaded" class="spinnerParent">
+        <div v-if="isLoaded" class="mdui-typo markdown" @click="handelContentClick" v-html="content"></div>
+        <!-- <div v-else class="spinnerParent">
             <div class="mdui-spinner"></div>
-        </div>
+        </div> -->
     </div>
     <script>
         vm.$mount('#app')
