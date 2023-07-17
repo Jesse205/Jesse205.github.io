@@ -6,6 +6,14 @@ let vm = new Vue({
         content: null,
         isLoaded: false,
         title: '杰西垃圾',
+        menus: [
+            {
+                title: 'Edde 互联',
+                href: '/',
+                target: '_blank',
+                type: 'menu'
+            },
+        ],
     },
     created() {
         /*const xhr = new XMLHttpRequest()

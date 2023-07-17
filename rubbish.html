@@ -10,6 +10,8 @@
     <meta name="keywords" content="Edde系列,Edde互联,jesse205,杰西205,杰西垃圾">
     <meta name="author" content="Jesse205" />
     <meta name="robots" content="all,follow">
+    <meta name="description" content="杰西垃圾是杰西 205 制作的非常多神似垃圾或者垃圾改动的小工具。有质感 HAP 查看器，桌面时钟 Lite 等等等等。" />
+
 
     <!-- Vue -->
     <!-- <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script> -->
@@ -36,12 +38,34 @@
     <div id="app" class="mdui-container">
         <!-- 标题栏 -->
         <nav class="mdui-appbar mdui-appbar-fixed" :class="{'mdui-appbar-lifted':!isTop}">
-            <div class="mdui-toolbar" :class="{'toolbar-unfloat':isTop,'mdui-toolbar-lifted':!isTop}">
+            <div class="toolbar mdui-toolbar" :class="{'toolbar-unfloat':isTop,'mdui-toolbar-lifted':!isTop}">
                 <!-- 返回按钮 -->
                 <div onclick="history.go(-1)" class="mdui-btn mdui-btn-icon">
                     <i class="mdui-icon material-icons">arrow_back</i>
                 </div>
                 <p class="mdui-typo-title">{{title}}</p>
+                <div class="mdui-toolbar-spacer"></div>
+                <!-- 菜单区域 -->
+                <template v-for="item in menus">
+                    <a v-if="item.type=='menu'" :href="item.href" class="mdui-btn mdui-ripple mdui-hidden-xs-down"
+                        :targrt="item.target">{{item.title}}</a>
+                </template>
+                <!-- 更多菜单按钮 -->
+                <div class="mdui-btn mdui-btn-icon mdui-ripple mdui-hidden-sm-up" mdui-menu="{target: '#menu-more'}"
+                    mdui-tooltip="{'content':'更多选项'}">
+                    <i class="mdui-icon material-icons">more_vert</i>
+                </div>
+                <!-- 弹出菜单 -->
+                <ul class="mdui-menu" id="menu-more">
+                    <div>
+                        <template v-for="item in menus">
+                            <li v-if="item.type=='menu'" class="mdui-menu-item mdui-hidden-sm-up">
+                                <a :href="item.href" class="mdui-ripple" :targrt="item.target">{{item.title}}</a>
+                            </li>
+                            <li v-else-if="item.type=='divider'" class="mdui-divider mdui-hidden-sm-up"></li>
+                        </template>
+                    </div>
+                </ul>
             </div>
         </nav>
         <div v-if="isLoaded" class="mdui-typo markdown" @click="handelContentClick" v-html="content"></div>
