@@ -89,3 +89,24 @@
         border-radius: 4px;
     }
 }
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+    z-index: 9999;
+}
+
+.medium-zoom-image--opened {
+    background-color: var(--mdui-color-background);
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* 填加阴影 */
+.medium-zoom-image--opened[style*="transform"] {
+  box-shadow: var(--mdui-shadow-4);
+}
+
+/* 选择器强度不够，标签名来凑 */
+img.medium-zoom-image {
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.2, 0, 0.2, 1) !important;
+}

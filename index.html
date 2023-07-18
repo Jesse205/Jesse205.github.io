@@ -128,29 +128,30 @@
     </section>
 
     <footer>
-      <div class="mdui-container">
-        <div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo">
-          <div class="mdui-col mdui-m-y-2">
-            <h5 class="footer-title">开源许可</h5>
-            <ul>
-              <li v-for="item in licenses">
-                <component :is="item.url ? 'a' : 'span'" :href="item.url" target="_blank" v-text="item.projectName">
-                </component>:
-                <component :is="item.licenseUrl ? 'a' : 'span'" :href="item.licenseUrl" target="_blank"
-                  v-text="item.licenseName">
-                </component>
-              </li>
-            </ul>
-          </div>
-          <div class="mdui-col mdui-m-y-2">
-            <h5 class="footer-title">与我联系</h5>
-            <ul>
-              <li><a href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U" target="_blank">综合服务 QQ 群</a></li>
-              <li><a href="mailto:jesse205@qq.com" target="_blank">电子邮件</a></li>
-            </ul>
-          </div>
+      <img width="100%" src="./images/squiggle.svg" />
+
+      <div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo">
+        <div class="mdui-col mdui-m-y-2">
+          <h5 class="footer-title">开源许可</h5>
+          <ul>
+            <li v-for="item in licenses">
+              <component :is="item.url ? 'a' : 'span'" :href="item.url" target="_blank" v-text="item.projectName">
+              </component>:
+              <component :is="item.licenseUrl ? 'a' : 'span'" :href="item.licenseUrl" target="_blank"
+                v-text="item.licenseName">
+              </component>
+            </li>
+          </ul>
+        </div>
+        <div class="mdui-col mdui-m-y-2">
+          <h5 class="footer-title">与我联系</h5>
+          <ul>
+            <li><a href="https://jq.qq.com/?_wv=1027&k=B9ozUt4U" target="_blank">综合服务 QQ 群</a></li>
+            <li><a href="mailto:jesse205@qq.com" target="_blank">电子邮件</a></li>
+          </ul>
         </div>
       </div>
+
       <div class="copyrights mdui-text-center">
         <p>Copyright &copy; 2022-2023. Jesse205.</p>
       </div>

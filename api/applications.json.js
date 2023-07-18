@@ -41,7 +41,7 @@ let content = [
                 "name": "桌面时钟 Lite",
                 "id": "deskclock_lite",
                 "summary": "占用低、兼容性强的时钟",
-                "image": "/images/graphs/deskclock_lite.png",
+                "image": "/images/graphs/deskclock_lite.webp",
                 "src": "https://gitlab.com/Jesse205/Desk-Clock-Lite",
                 "icon": "source-branch",
                 "url-type": "GitLab 仓库"
@@ -80,7 +80,7 @@ let content = [
                 "name": "百度一下 Lite",
                 "id": "baiduhome_lite",
                 "summary": "特别简洁的浏览器主页",
-                "image": "/images/graphs/baidu_lite.png",
+                "image": "/images/graphs/baidu_lite.webp",
                 "src": "/baiduhomelite/",
                 "icon": "open-in-app",
                 "url-type": "应用"
@@ -89,7 +89,7 @@ let content = [
                 "name": "桌面时钟 Lite",
                 "id": "deskclock_lite",
                 "summary": "打开就能用的时钟",
-                "image": "/images/graphs/deskclock_lite.png",
+                "image": "/images/graphs/deskclock_lite.webp",
                 "src": "/deskclocklite/",
                 "icon": "open-in-app",
                 "url-type": "应用"

@@ -4,7 +4,7 @@ let content =
 编辑器语言切换为 Markdown -->
 # 杰西垃圾
 
-> 更新日期：2023.07.16
+> 更新日期：2023.07.19
 
 杰西垃圾是杰西 205 制作的非常多神似垃圾或者垃圾改动的小工具
 
@@ -15,6 +15,8 @@ let content =
 
 ### 拖放中转站测试软件
 
+![拖放中转站测试软件封面](/images/graphs43/dragdrop_test.webp =300x*)
+
 - 框架：AndroLua+
 - 平台：Android
 - 开源：仅开放源代码查看
@@ -23,7 +25,9 @@ let content =
 
 ### Alua 转 AideLua
 
-一键将 AndroLua+ 工程转换为 AideLua 工程
+![Alua转AideLua封面](/images/graphs43/alua2aidelua.webp =300x*)
+
+一键将 AndroLua+ 工程转换为 AideLua 工程。
 
 - 框架：AndroLua+
 - 平台：Android
@@ -33,15 +37,19 @@ let content =
 
 ### 垃圾分类查询
 
-不联网的垃圾分类查询，几万年以后依旧可以
+![垃圾分类查询封面](/images/graphs43/rubbish_search.webp =300x*)
+
+不联网的垃圾分类查询，几万年以后依旧可以使用。
 
 - 框架：AndroLua+
 - 平台：Android
-- 开源：开放 ALP 文件
-- 发布渠道：QQ、酷安
-- 下载渠道：QQ、百度网盘、[123云盘](https://www.123pan.com/s/G7a9-Hwtk.html)
+- 开源：以 MIT 许可开放 ALP 文件
+- 发布渠道：QQ、酷安、奇妙应用
+- 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1S8wZ-YcMKtKOowBxyPIsIA?pwd=999j)（提取码: 999j）、[123云盘](https://www.123pan.com/s/G7a9-Hwtk.html)
 
 ### Github 链接转换器
+
+![Github链接转换器封面](/images/graphs43/github_url_converter.webp =300x*)
 
 用于一键转换 github 链接到镜像
 
@@ -49,9 +57,11 @@ let content =
 - 平台：Android
 - 开源：以 [MIT 许可](https://opensource.org/license/MIT/)开放 AideLua 工程压缩文件
 - 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1oN411U7B6/)
-- 下载渠道：QQ、百度网盘、[123云盘](https://www.123pan.com/s/G7a9-4xtk.html)
+- 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1DUh2ecgyxTRNoJ5bm30fdg?pwd=qqi7)（提取码: qqi7）、[123云盘](https://www.123pan.com/s/G7a9-4xtk.html)
 
 ### 桌面时钟 Lite
+
+![桌面时钟Lite封面](/images/graphs/deskclock_lite.webp =300x*)
 
 把废旧手机和水墨屏做成桌面时钟
 
@@ -60,9 +70,11 @@ let content =
 - 开源：[以 MIT 许可](https://gitlab.com/Jesse205/Desk-Clock-Lite/-/blob/master/LICENSE)开源到 GitLab
 - 开源地址：<https://gitlab.com/Jesse205/Desk-Clock-Lite>
 - 发布渠道：酷安、QQ、[GitLab](https://gitlab.com/Jesse205/Desk-Clock-Lite/-/releases)、[GitHub](https://github.com/Jesse205/Desk-Clock-Lite/releases)
-- 下载渠道：QQ、GitHub、123云盘
+- 下载渠道：QQ、[GitHub](https://github.com/Jesse205/Desk-Clock-Lite/releases)、[123云盘](https://www.123pan.com/s/G7a9-IWtk.html)
 
 ### 多开 MT 管理器
+
+![多开MT管理器封面](/images/graphs43/mulit_mt.webp =300x*)
 
 - 框架：AndroLua+
 - 平台：Android
@@ -81,6 +93,8 @@ let content =
 - 下载渠道：无
 
 ### VCF 生成器 Lite
+
+![LuaAE作业封面](/images/graphs43/vcf_generator.webp =300x*)
 
 用于将表格里面的电话一键导入通讯录
 
@@ -144,7 +158,7 @@ let content =
 - 平台：Android
 - 开源：否，但哈兔 Box 开源
 - 发布渠道：~~酷市场~~（已手动下架）
-- 下载渠道：~~酷市场~~（已手动下架）
+- 下载渠道：~~酷市场~~（已手动下架）、百度网盘
 
 ### 一键锁屏
 
@@ -178,6 +192,18 @@ let content =
 - 发布渠道：~~酷市场~~（已手动下架）
 - 下载渠道：~~酷市场~~（已手动下架）
 
+### 吃雪糕？吃米饭
+
+![封面](/images/graphs43/ic2rice.webp =300x*)
+
+一款将雪糕热量计算为米饭碗数的工具。
+
+- 框架：AndroLua+
+- 平台：Android
+- 开源：以 MIT 许可开放 ALP 文件
+- 发布渠道：[哔哩哔哩](https://www.bilibili.com/opus/819424346436009985)、酷安
+- 下载渠道：[123 云盘](https://www.123pan.com/s/G7a9-1stk.html)
+
 ## 实用大工具
 
 ## 微云 Lite
@@ -194,19 +220,47 @@ let content =
 
 ### 测谎仪 UI
 
+![测谎仪UI封面](/images/graphs43/test_speak_ui.webp =300x*)
+
 - 框架：AndroLua+
 - 平台：Android
-- 开源：开放 ALP 文件
+- 开源：以 MIT 许可开放 ALP 文件
 - 发布渠道：[哔哩哔哩](https://www.bilibili.com/video/BV1gm4y1J7Lr/)
 - 下载渠道：百度网盘
 
 ### “梆”生成器
 
+![“梆”生成器封面](/images/graphs43/generator_bang.webp =300x*)
+
 - 框架：AndroLua+
 - 平台：Android
 - 开源：开放 ALP 文件
 - 发布渠道：QQ
-- 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1Fcjcocy2J7b-7sCYIWcfnA?pwd=jxnb)（密码：jxnb）
+- 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1Fcjcocy2J7b-7sCYIWcfnA?pwd=jxnb)（提取码: jxnb）
+
+### LuaAE 作业
+
+![LuaAE作业封面](/images/graphs43/luaaebailan.webp =300x*)
+
+仿照[《大二AE结课作业 《过 年》（已摆烂）》](https://www.bilibili.com/video/BV1xL4y1E7nT/)，但是使用 AndroLua+ 制作。
+
+- 框架：AndroLua+
+- 平台：Android
+- 开源：开放 ALP 文件
+- 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1kD4y1L7id/)
+- 下载渠道：QQ、[蓝奏云](https://jesse205.lanzouy.com/b057aoeja)（密码：arsb）
+
+### 多巴胺分泌器
+
+一个始终让你赢的猜拳游戏。
+
+~~成功的人生，从猜拳开始。~~
+
+- 框架：AndroLua+
+- 平台：Android
+- 开源：以 MIT 许可开放 ALP 文件
+- 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/47765045?shareKey=M2FkNzAyZWJjOTVlNjRiNmYwNzQ~&shareUid=1432137)
+- 下载渠道：QQ、[蓝奏云](https://jesse205.lanzouk.com/b0580nrva)（密码: cvbw）、[百度网盘](https://pan.baidu.com/s/1WAUY-XU1PRrR76qFwJyqpQ?pwd=px5r)（提取码: px5r）
 
 ## 软件增强工具
 

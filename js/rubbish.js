@@ -14,6 +14,7 @@ let vm = new Vue({
                 type: 'menu'
             },
         ],
+        zoom: null
     },
     created() {
         /*const xhr = new XMLHttpRequest()
@@ -42,41 +43,6 @@ let vm = new Vue({
             this.content = contentHTML
         }
         this.isLoaded = true
-
-        /*fetch(CONTENT_URL)
-            .then(res => res.text())
-            .then(text => {
-                let converter = new showdown.Converter()
-                converter.setOption('customizedHeaderId', true)
-                converter.setOption('ghCompatibleHeaderId', true)
-                converter.setOption('simplifiedAutoLink', true)
-                converter.setOption('parseImgDimensions', true)
-                converter.setOption('strikethrough', true)
-                converter.setOption('tables', true)
-                converter.setOption('ghCodeBlocks', true)
-                converter.setOption('tasklists', true)
-                converter.setOption('smoothLivePreview', true)
-                converter.setOption('disableForced4SpacesIndentedSublists', true)
-                converter.setOption('requireSpaceBeforeHeadingText', true)
-                converter.setOption('openLinksInNewWindow', true)
-                converter.setOption('backslashEscapesHTMLTags', true)
-                converter.setOption('emoji', true)
-                converter.setOption('moreStyling', true)
-                converter.setFlavor('github');
-                let contentHTML = converter.makeHtml(text)
-                this.content = contentHTML
-                // document.querySelector('.markdown').innerHTML = contentHTML
-                // let h1Element = document.querySelector('.markdown h1')
-                // document.querySelector('.markdown').removeChild(h1Element)
-                // this.title = h1Element.innerHTML
-
-            })
-            .catch(error => {
-                console.error(error)
-            })
-            .finally(() => {
-                this.isLoaded = true
-            })*/
     },
     methods: {
         /**
@@ -110,12 +76,18 @@ let vm = new Vue({
     mounted() {
         this.isTop = document.documentElement.scrollTop <= 0
         window.addEventListener('scroll', () => this.isTop = document.documentElement.scrollTop <= 0)
-
+        // mediumZoom('.markdown img')
         $$("#mainlist").mutation()
         $$("#linkslist").mutation()
     },
     updated() {
+        this.zoom = mediumZoom('.markdown img', {
+            background: 'rgba(0,0,0,.3)'
+        })
         $$("#mainlist").mutation()
         $$("#linkslist").mutation()
-    }
+    },
+    beforeUpdate() {
+        this.zoom.detach()
+    },
 })

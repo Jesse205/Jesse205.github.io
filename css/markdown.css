@@ -71,7 +71,7 @@ body {
 .badge {
     background-color: #1A73E822;
     color: #1A73E8;
-    font-size: 0.875rem;
+    font-size: .75rem;
     border-radius: 4px;
     padding: 2px 4px;
     vertical-align: top;
