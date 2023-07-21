@@ -11,6 +11,8 @@ let content =
 - [123 云盘](https://www.123pan.com/s/G7a9-dxtk.html)
 - 百度网盘
 
+注：如无特别说明，源码均以 [MIT 许可](https://opensource.org/license/MIT/)开源。
+
 ## 实用小工具
 
 ### 拖放中转站测试软件
@@ -20,8 +22,8 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：仅开放源代码查看
-- 发布渠道：QQ、酷安论坛
-- 下载渠道：QQ
+- 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/45725622?shareKey=NmE2YjEyYWE4NTE0NjRiYWU4YzY~&shareUid=1432137)
+- 下载渠道：QQ、[蓝奏云](https://jesse205.lanzouy.com/iW9NA0un8fre)
 
 ### Alua 转 AideLua
 
@@ -44,7 +46,7 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
-- 发布渠道：QQ、酷安、奇妙应用
+- 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/47354575?shareKey=NzE2NWFkMjIzZmNlNjRiYWU4N2E~&shareUid=1432137)、奇妙应用
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1S8wZ-YcMKtKOowBxyPIsIA?pwd=999j)（提取码: 999j）、[123云盘](https://www.123pan.com/s/G7a9-Hwtk.html)
 
 ### Github 链接转换器
@@ -55,7 +57,7 @@ let content =
 
 - 框架：AndroLua+
 - 平台：Android
-- 开源：以 [MIT 许可](https://opensource.org/license/MIT/)开放 AideLua 工程压缩文件
+- 开源：以 MIT 许可开放 AideLua 工程压缩文件
 - 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1oN411U7B6/)
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1DUh2ecgyxTRNoJ5bm30fdg?pwd=qqi7)（提取码: qqi7）、[123云盘](https://www.123pan.com/s/G7a9-4xtk.html)
 
@@ -69,7 +71,7 @@ let content =
 - 平台：Android
 - 开源：[以 MIT 许可](https://gitlab.com/Jesse205/Desk-Clock-Lite/-/blob/master/LICENSE)开源到 GitLab
 - 开源地址：<https://gitlab.com/Jesse205/Desk-Clock-Lite>
-- 发布渠道：酷安、QQ、[GitLab](https://gitlab.com/Jesse205/Desk-Clock-Lite/-/releases)、[GitHub](https://github.com/Jesse205/Desk-Clock-Lite/releases)
+- 发布渠道：[酷安论坛](https://www.coolapk.com/feed/41274636?shareKey=MDNkMDBmN2ZlMjYwNjRiYWU5Yjc~&shareUid=1432137、)、QQ、[GitLab](https://gitlab.com/Jesse205/Desk-Clock-Lite/-/releases)、[GitHub](https://github.com/Jesse205/Desk-Clock-Lite/releases)
 - 下载渠道：QQ、[GitHub](https://github.com/Jesse205/Desk-Clock-Lite/releases)、[123云盘](https://www.123pan.com/s/G7a9-IWtk.html)
 
 ### 多开 MT 管理器
@@ -118,6 +120,8 @@ let content =
 
 ### Hello 取色器
 
+![Hello取色器封面](/images/graphs43/colorpicker.webp =300x*)
+
 快速提取图片内颜色，支持图片双指缩放
 
 - 框架：AndroLua+
@@ -136,9 +140,13 @@ let content =
 - 发布渠道：未知
 - 下载渠道：未知
 
-### Magisk 机型模块生成器
+### Magisk 机型修改模块生成器
+
+![Magisk机型修改模块生成器封面](/images/graphs43/magisk_module_generator.webp =300x*)
 
 用于一键生成用于修改机型的模块
+
+注意：**此应用所用的 Mgaisk 模板已过时。**
 
 - 框架：AndroLua+
 - 平台：Android
@@ -162,6 +170,8 @@ let content =
 
 ### 一键锁屏
 
+![一键锁屏封面](/images/graphs43/onekeylock.webp =300x*)
+
 使用 Root 模拟按键锁屏，不存在掉辅助与无法使用指纹解锁
 
 - 框架：纯原生编写
@@ -172,9 +182,11 @@ let content =
 
 ### EMUI 水印工具
 
+![EMUI水印工具封面](/images/graphs43/emui_watermark_tool.webp =300x*)
+
 快速更换水印和预览水印
 
-> 当时技术太菜，没有使用 Root，只能预览水印。现在已经完全不可以
+> 当时技术太菜，没有使用 Root，只能预览水印。现在已经完全不可以使用。
 
 - 框架：FusionApp 1.x（AndroLua+）
 - 平台：Android
@@ -201,12 +213,12 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
-- 发布渠道：[哔哩哔哩](https://www.bilibili.com/opus/819424346436009985)、酷安
+- 发布渠道：[哔哩哔哩](https://www.bilibili.com/opus/819424346436009985)、[酷安论坛](https://www.coolapk.com/feed/47740797?shareKey=OTkzZGE4OTIyYTY1NjRiYWU3M2U~&shareUid=1432137)
 - 下载渠道：[123 云盘](https://www.123pan.com/s/G7a9-1stk.html)
 
 ## 实用大工具
 
-## 微云 Lite
+### 微云 Lite
 
 微云原版占用空间太大了，打开太慢了，操作太卡了，所以我制作了这款软件，主要用于上传和分享文件
 
@@ -252,9 +264,11 @@ let content =
 
 ### 多巴胺分泌器
 
+![多巴胺分泌器封面](/images/graphs43/dopamine_ecretor.webp =300x*)
+
 一个始终让你赢的猜拳游戏。
 
-~~成功的人生，从猜拳开始。~~
+~~成功的人生，从赢猜拳开始。~~
 
 - 框架：AndroLua+
 - 平台：Android
@@ -272,7 +286,7 @@ let content =
 - 平台：Android
 - 开源：[以 MIT 许可](https://gitee.com/Jesse205/GalleryDrag/blob/master/LICENSE)开源到 Gitee、GitHub
 - 开源地址：<https://gitee.com/Jesse205/GalleryDrag>
-- 发布渠道：QQ、酷安论坛、[Gitee](https://gitee.com/Jesse205/GalleryDrag/releases)
+- 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/46329645?shareKey=MGVlNmI1MDllNjI3NjRiYWVhMzA~&shareUid=1432137)、[Gitee](https://gitee.com/Jesse205/GalleryDrag/releases)
 - 下载渠道：[Gitee](https://gitee.com/Jesse205/GalleryDrag/releases/latest)、QQ
 
 ### 隐藏哔哩哔哩更多信息 <span class="badge">Xposed</span>
@@ -292,12 +306,15 @@ let content =
 
 ### 质感 HAP 查看器
 
+![质感HAP查看器封面](/images/graphs43/hapviewer.webp =300x*)
+
 原版 HAP 查看器不太质感，并且不是 Material 3 风格，所以我给 HAP 查看器加入了 MD3 风格。
 
 - 框架：纯原生编写
 - 平台：Android
 - 开源：[以 Apache 2.0 许可](https://gitee.com/Jesse205/hap-viewer-android/blob/master/LICENSE)开源到 Gitee
 - 开源地址：<https://gitee.com/Jesse205/hap-viewer-android/tree/multi_theme/>
+- 原版开源地址：<https://gitee.com/ohos-dev/hap-viewer-android>
 - 发布渠道：QQ、[Gitee](https://gitee.com/Jesse205/hap-viewer-android/releases)
 - 下载渠道：QQ、[Gitee](https://gitee.com/Jesse205/hap-viewer-android/releases/latest)
 

@@ -82,8 +82,8 @@
 
 @media screen and (min-width:600px) {
     .markdown {
-        padding: 24px 32px;
-        margin: 16px 0;
+        /* padding: 24px 32px;
+        margin: 16px 0; */
         box-shadow: var(--mdui-shadow-2);
         background-color: var(--mdui-color-surface);
         border-radius: 4px;

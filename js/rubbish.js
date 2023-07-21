@@ -14,7 +14,9 @@ let vm = new Vue({
                 type: 'menu'
             },
         ],
-        zoom: null
+        zoom: null,
+        h3List: null,
+        hash: null,
     },
     created() {
         /*const xhr = new XMLHttpRequest()
@@ -59,7 +61,6 @@ let vm = new Vue({
          * @param {MouseEvent} event 
          */
         handelContentClick(event) {
-            console.log(event.target.tagName);
             switch (event.target.tagName) {
                 case 'H1':
                 case 'H2':
@@ -71,12 +72,35 @@ let vm = new Vue({
                     break
                 }
             }
+        },
+        onDocumwntScroll() {
+            this.isTop = document.documentElement.scrollTop <= 0
+            if (this.h3List) {
+                for (let index = this.h3List.length - 1; index >= 0; index--) {
+                    const element = this.h3List[index];
+                    if (this.h3List[index].offsetTop <= document.documentElement.scrollTop + 1) {
+                        if (this.hash !== '#' + element.id) {
+                            history.replaceState({}, document.title, '#' + element.id)
+                            this.hash = '#' + element.id
+                        }
+                        return
+                    }
+                }
+                /*history.replaceState({}, document.title, '#')
+                this.hash = '#'*/
+            }
+        },
+        onHashChange() {
+            this.hash = decodeURI(location.hash)
         }
     },
     mounted() {
         this.isTop = document.documentElement.scrollTop <= 0
-        window.addEventListener('scroll', () => this.isTop = document.documentElement.scrollTop <= 0)
+        window.addEventListener('scroll', this.onDocumwntScroll)
+        window.addEventListener('hashchange', this.onHashChange, false)
+        this.onHashChange()
         // mediumZoom('.markdown img')
+        this.h3List = document.querySelectorAll('.markdown h3')
         $$("#mainlist").mutation()
         $$("#linkslist").mutation()
     },
@@ -88,6 +112,7 @@ let vm = new Vue({
         $$("#linkslist").mutation()
     },
     beforeUpdate() {
-        this.zoom.detach()
+        if (this.zoom)
+            this.zoom.detach()
     },
 })

@@ -36,7 +36,7 @@
     <script src="./js/rubbish.js"></script>
 </head>
 
-<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto">
+<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-drawer-body-left ">
     <!-- 这是Vue的 -->
     <div id="app" class="mdui-container">
         <!-- 标题栏 -->
@@ -71,7 +71,17 @@
                 </ul>
             </div>
         </nav>
-        <div v-if="isLoaded" class="mdui-typo markdown" @click="handelContentClick" v-html="content"></div>
+        <div class="mdui-drawer">
+            <ul class="mdui-list">
+                <li v-if="h3List" v-for="item in h3List" class="mdui-list-item mdui-ripple"
+                    :class="{'mdui-list-item-active': hash==='#'+item.id}" @click="location.replace('#'+item.id)">
+                    {{item.innerText}}
+                </li>
+            </ul>
+        </div>
+        <div v-if="isLoaded" class="mdui-container mdui-typo markdown" @click="handelContentClick" v-html="content">
+        </div>
+
         <!-- <div v-else class="spinnerParent">
             <div class="mdui-spinner"></div>
         </div> -->
