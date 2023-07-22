@@ -102,11 +102,42 @@
 
 /* 填加阴影 */
 .medium-zoom-image--opened[style*="transform"] {
-  box-shadow: var(--mdui-shadow-4);
+    box-shadow: var(--mdui-shadow-4);
 }
 
 /* 选择器强度不够，标签名来凑 */
 img.medium-zoom-image {
-  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1),
-    box-shadow 0.3s cubic-bezier(0.2, 0, 0.2, 1) !important;
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
+body {
+    transition: padding .3s cubic-bezier(0, 0, .2, 1),
+        background .2s cubic-bezier(.4, 0, .2, 1),
+        transform .2s cubic-bezier(.4, 0, .2, 1),
+        opacity .2s cubic-bezier(.4, 0, .2, 1),
+        box-shadow .2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.mdui-drawer .mdui-list-dense .mdui-list-item {
+    min-height: 32px;
+}
+
+.mdui-drawer .mdui-list-dense .mdui-list-item::after {
+    height: 32px;
+}
+
+.mdui-drawer .mdui-list .mdui-list-item {
+    margin: 8px;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-weight: normal;
+    transition: color 0.3s cubic-bezier(0.2, 0, 0.2, 1),
+        background-color 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.mdui-drawer .mdui-list .mdui-list-item-active {
+    background-color: #1A73E822;
+    color: #1A73E8;
+    font-weight: normal;
 }

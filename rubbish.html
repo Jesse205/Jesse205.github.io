@@ -43,8 +43,8 @@
         <nav class="mdui-appbar mdui-appbar-fixed" :class="{'mdui-appbar-lifted':!isTop}">
             <div class="toolbar mdui-toolbar" :class="{'toolbar-unfloat':isTop,'mdui-toolbar-lifted':!isTop}">
                 <!-- 返回按钮 -->
-                <div onclick="history.go(-1)" class="mdui-btn mdui-btn-icon">
-                    <i class="mdui-icon material-icons">arrow_back</i>
+                <div class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                    <i class="mdui-icon material-icons">menu</i>
                 </div>
                 <p class="mdui-typo-title">{{title}}</p>
                 <div class="mdui-toolbar-spacer"></div>
@@ -71,15 +71,23 @@
                 </ul>
             </div>
         </nav>
-        <div class="mdui-drawer">
-            <ul class="mdui-list">
+        <div class="mdui-drawer" id="left-drawer">
+            <ul class="mdui-list mdui-list-dense">
+                <template v-if="overview" v-for="item in overview">
+                    <li v-if="item.tag==='h2'" class="mdui-subheader" v-html="item.name"></li>
+                    <li v-else class="mdui-list-item mdui-ripple" :class="{'mdui-list-item-active': hash==='#'+item.id}"
+                        @click="goto(item.id)" v-html="item.name"></li>
+                </template>
+            </ul>
+            <!-- <ul class="mdui-list mdui-list-dense">
                 <li v-if="h3List" v-for="item in h3List" class="mdui-list-item mdui-ripple"
-                    :class="{'mdui-list-item-active': hash==='#'+item.id}" @click="location.replace('#'+item.id)">
+                    :class="{'mdui-list-item-active': hash==='#'+item.id}" @click="goto(item.id)">
                     {{item.innerText}}
                 </li>
-            </ul>
+            </ul> -->
         </div>
-        <div v-if="isLoaded" class="mdui-container mdui-typo markdown" @click="handelContentClick" v-html="content">
+        <div v-if="isLoaded" class="mdui-container mdui-typo markdown" @click="handelContentClick" v-html="content"
+            ref="markdownElement">
         </div>
 
         <!-- <div v-else class="spinnerParent">

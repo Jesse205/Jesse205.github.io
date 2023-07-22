@@ -17,12 +17,9 @@ let vm = new Vue({
         zoom: null,
         h3List: null,
         hash: null,
+        overview: []
     },
     created() {
-        /*const xhr = new XMLHttpRequest()
-        xhr.open('GET', CONTENT_URL, false)
-        xhr.send();*/
-
         if (content != null) {
             let converter = new showdown.Converter()
             converter.setOption('customizedHeaderId', true)
@@ -41,8 +38,21 @@ let vm = new Vue({
             converter.setOption('emoji', true)
             converter.setOption('moreStyling', true)
             converter.setFlavor('github');
+            /**
+             * @type String
+             */
             let contentHTML = converter.makeHtml(content)
             this.content = contentHTML
+            this.overview = []
+
+            for (const iterator of contentHTML.matchAll(/\<(h2|h3).*id="(.+?)"\>(.*)\<\/(h2|h3)(?:\b.*)?\>/g)) {
+                // console.log(iterator);
+                this.overview.push({
+                    tag: iterator[1],
+                    id: iterator[2],
+                    name: iterator[3],
+                })
+            }
         }
         this.isLoaded = true
     },
@@ -80,14 +90,12 @@ let vm = new Vue({
                     const element = this.h3List[index];
                     if (this.h3List[index].offsetTop <= document.documentElement.scrollTop + 1) {
                         if (this.hash !== '#' + element.id) {
-                            history.replaceState({}, document.title, '#' + element.id)
+                            history.replaceState({}, document.title, '#' + encodeURI(element.id))
                             this.hash = '#' + element.id
                         }
-                        return
+                        break
                     }
                 }
-                /*history.replaceState({}, document.title, '#')
-                this.hash = '#'*/
             }
         },
         onHashChange() {
@@ -108,6 +116,7 @@ let vm = new Vue({
         this.zoom = mediumZoom('.markdown img', {
             background: 'rgba(0,0,0,.3)'
         })
+
         $$("#mainlist").mutation()
         $$("#linkslist").mutation()
     },
