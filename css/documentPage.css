@@ -116,7 +116,7 @@ body {
         background .2s cubic-bezier(.4, 0, .2, 1),
         transform .2s cubic-bezier(.4, 0, .2, 1),
         opacity .2s cubic-bezier(.4, 0, .2, 1),
-        box-shadow .2s cubic-bezier(.4, 0, .2, 1);
+        box-shadow .2s cubic-bezier(.4, 0, .2, 1) !important;
 }
 
 .mdui-drawer .mdui-list-dense .mdui-list-item {
