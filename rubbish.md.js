@@ -310,6 +310,8 @@ let content =
 
 原版 HAP 查看器不太质感，并且不是 Material 3 风格，所以我给 HAP 查看器加入了 MD3 风格。
 
+注：mulit_theme 分支已合并到 master，并已创建pr，此仓库不再发行有关多主题的发行版。
+
 - 框架：纯原生编写
 - 平台：Android
 - 开源：[以 Apache 2.0 许可](https://gitee.com/Jesse205/hap-viewer-android/blob/master/LICENSE)开源到 Gitee
