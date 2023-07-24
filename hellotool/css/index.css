@@ -100,6 +100,11 @@ body {
     min-height: 280px;
 }
 
+.features-items {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
 /* #introduce {
     background: url(../img/background/service-bg.svg) no-repeat;
     background-size: contain;
@@ -117,8 +122,13 @@ body {
 .user-comments {
     columns: 1;
     column-gap: 32px;
-    /* margin: 16px 8px; */
 }
+
+.services-cards {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
 
 .user-card {
     max-width: 640px;
@@ -215,9 +225,10 @@ footer ul {
         padding: 56px 56px;
     }
 
-    .user-comments {
+    .user-comments{
         columns: 2;
     }
+
 }
 
 @media screen and (min-width:1024px) {
