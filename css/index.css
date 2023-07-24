@@ -53,3 +53,8 @@ footer ul {
     padding-left: 0 !important;
     list-style: none !important;
 }
+
+.copyrights {
+    text-align: center;
+    padding: 16px;
+}
