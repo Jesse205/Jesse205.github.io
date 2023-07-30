@@ -141,3 +141,7 @@ body {
     color: #1A73E8;
     font-weight: normal;
 }
+
+.mdui-typo code {
+    color: var(--mdui-color-primary)
+}

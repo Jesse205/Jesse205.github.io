@@ -3,11 +3,6 @@
     --markdown-color-primary: var(--mdui-color-primary)
 }
 
-html,
-body {
-    scroll-behavior: smooth;
-}
-
 .markdown h1,
 .markdown h2 {
     padding-bottom: 4.8px;

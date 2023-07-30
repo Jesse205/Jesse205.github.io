@@ -172,7 +172,9 @@ let content =
 
 ![一键锁屏封面](/images/graphs43/onekeylock.webp =300x*)
 
-使用 Root 模拟按键锁屏，不存在掉辅助与无法使用指纹解锁
+使用 Root 模拟按键锁屏，不存在掉辅助与无法使用指纹解锁。
+
+注：因速度问题，建议使用通过无障碍达到锁屏效果的 APP。
 
 - 框架：纯原生编写
 - 平台：Android
@@ -213,6 +215,10 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
+- 测试系统：VMOS Android 5.1 多开版、VMOS Android 7.1、HarmonyOS 2.0 (Android 10.0)
+- 测试结果：
+  - VMOS Android 5.1 多开版报错 \`android.R$attr.colorBackgroundFloating is not a field or mothod\`
+  - 其他系统运行正常
 - 发布渠道：[哔哩哔哩](https://www.bilibili.com/opus/819424346436009985)、[酷安论坛](https://www.coolapk.com/feed/47740797?shareKey=OTkzZGE4OTIyYTY1NjRiYWU3M2U~&shareUid=1432137)
 - 下载渠道：[123 云盘](https://www.123pan.com/s/G7a9-1stk.html)
 
@@ -225,6 +231,8 @@ let content =
 - 框架：FusionApp 1.x（AndroLua+）
 - 平台：Android
 - 开源：我还想知道源码在哪里呢
+- 测试系统：EMUI 4.0 (Android 6.0)、HarmonyOS 2.0 (Android 10.0)
+- 测试结果：运行正常
 - 发布渠道：QQ、~~FA第三方商店~~（已关闭）
 - 下载渠道：QQ、百度网盘
 
@@ -237,6 +245,8 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
+- 测试系统：HarmonyOS 2.0 (Android 10.0)
+- 测试结果：运行正常
 - 发布渠道：[哔哩哔哩](https://www.bilibili.com/video/BV1gm4y1J7Lr/)
 - 下载渠道：百度网盘
 
@@ -247,6 +257,8 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：开放 ALP 文件
+- 测试系统：HarmonyOS 2.0 (Android 10.0)、HarmonyOS 3.0 (Android 12.0)
+- 测试结果：运行正常
 - 发布渠道：QQ
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1Fcjcocy2J7b-7sCYIWcfnA?pwd=jxnb)（提取码: jxnb）
 
@@ -259,6 +271,10 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：开放 ALP 文件
+- 测试系统：EMUI 8.0 (Android 8.0)、HarmonyOS 2.0 (Android 10.0)
+- 测试结果：
+  - EMUI 8.0 (Android 8.0) 阴影显示异常，圆角数值过大
+  - 其余系统运行正常
 - 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1kD4y1L7id/)
 - 下载渠道：QQ、[蓝奏云](https://jesse205.lanzouy.com/b057aoeja)（密码：arsb）
 
@@ -273,8 +289,29 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
+- 测试系统：HarmonyOS 2.0 (Android 10.0)、MIUI 14 (Android 13)
+- 测试结果：
+  - MIUI 14 (Android 13) 波纹无法保持
+  - 其余系统运行正常
 - 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/47765045?shareKey=M2FkNzAyZWJjOTVlNjRiNmYwNzQ~&shareUid=1432137)
 - 下载渠道：QQ、[蓝奏云](https://jesse205.lanzouk.com/b0580nrva)（密码: cvbw）、[百度网盘](https://pan.baidu.com/s/1WAUY-XU1PRrR76qFwJyqpQ?pwd=px5r)（提取码: px5r）
+
+### FA 破解工具
+
+当年 FA 圈子格机源码猖狂，使多数人的源码丢失。我制作了此工具，帮助他人从发行版中找回源码。
+
+此工具原理特别简单，就是 \`dump(loadfile("/path/to/config.lua"))\`，外加删除无用垃圾，还原最存粹的工程。
+
+此工具前期已做授权验证，仅我信任的人可以使用此工具。
+
+注：冷月 FA 破解工具就是我这款 FA 破解工具修改而来的
+
+- 框架：FusionApp (AndroLua+)
+- 平台：Android
+- 开源：否
+- 测试系统：EMUI 4.0 (Android 6.0)
+- 测试结果：运行正常
+- 发布渠道：暂未正式发布
 
 ## 软件增强工具
 
@@ -286,6 +323,8 @@ let content =
 - 平台：Android
 - 开源：[以 MIT 许可](https://gitee.com/Jesse205/GalleryDrag/blob/master/LICENSE)开源到 Gitee、GitHub
 - 开源地址：<https://gitee.com/Jesse205/GalleryDrag>
+- 测试框架：EMUI 8.0 (Android 8.0) (EdXposed)、HarmonyOS 2.0 (Android 10.0) (LSPath)
+- 测试结果：运行正常
 - 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/46329645?shareKey=MGVlNmI1MDllNjI3NjRiYWVhMzA~&shareUid=1432137)、[Gitee](https://gitee.com/Jesse205/GalleryDrag/releases)
 - 下载渠道：[Gitee](https://gitee.com/Jesse205/GalleryDrag/releases/latest)、QQ
 
@@ -310,13 +349,15 @@ let content =
 
 原版 HAP 查看器不太质感，并且不是 Material 3 风格，所以我给 HAP 查看器加入了 MD3 风格。
 
-注：mulit_theme 分支已合并到 master，并已创建pr，此仓库不再发行有关多主题的发行版。
+注：mulit_theme 分支已合并到 master，并已合并pr，**此仓库不再发行有关多主题的发行版**，请[下载官方版](https://gitee.com/ohos-dev/hap-viewer-android/releases/latest)。
 
 - 框架：纯原生编写
 - 平台：Android
 - 开源：[以 Apache 2.0 许可](https://gitee.com/Jesse205/hap-viewer-android/blob/master/LICENSE)开源到 Gitee
 - 开源地址：<https://gitee.com/Jesse205/hap-viewer-android/tree/multi_theme/>
 - 原版开源地址：<https://gitee.com/ohos-dev/hap-viewer-android>
+- 测试框架：EMUI 8.0 (Android 8.0)、HarmonyOS 2.0 (Android 10.0)、MIUI 14 (Android 13)
+- 测试结果：运行正常，但应用栏阴影与颜色有瑕疵，不会解决。
 - 发布渠道：QQ、[Gitee](https://gitee.com/Jesse205/hap-viewer-android/releases)
 - 下载渠道：QQ、[Gitee](https://gitee.com/Jesse205/hap-viewer-android/releases/latest)
 
@@ -327,7 +368,8 @@ let content =
 - 框架：MUI、...
 - 平台：Chromium 浏览器
 - 开源：[以 CC-BY-4.0 许可](https://github.com/Jesse205/YgkTool/blob/dev/LICENSE.txt)开源到 GitHub
-- 开源地址：<https://github.com/Jesse205/YgkTool>
+- 开源地址：已删除
+- 原版开源地址：<https://github.com/rivertwilight/ygktool>
 - 发布渠道：无
 - 下载渠道：无
 
@@ -348,13 +390,21 @@ let content =
 
 - 框架：AndroLua+
 - 平台：Android
+- 开源：否？
 - 发布渠道：QQ
 - 下载渠道：QQ、~~百度网盘~~
 
 ### FusionApp NewLuaJava
 
-- 框架：AndroLua+
+为了应付当年 FusionApp 作品盗版猖狂，源码倒卖，特别制作此 APP 遏制这种现象。
+
+此版本使用 AppLua 的 Lua dex，替换 FA 老旧的 Lua 依赖，实现新加密。并且抽离代码到文件，实现二次加密。
+
+**此版本极不稳定**，如需使用，请使用难忘的旋律的 **FA 重制版**。
+
+- 框架：FusionApp (AndroLua+)
 - 平台：Android
+- 开源：改动开源
 - 发布渠道：QQ、酷安论坛、~~FA第三方商店~~（已关闭）
 - 下载渠道：QQ、~~百度网盘~~、蓝奏云
 

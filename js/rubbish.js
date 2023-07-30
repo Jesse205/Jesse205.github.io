@@ -124,4 +124,15 @@ let vm = new Vue({
         if (this.zoom)
             this.zoom.detach()
     },
+    watch: {
+        hash() {
+            this.$nextTick(() => {
+                const activeElement = document.querySelector(".mdui-drawer .mdui-list-item-active")
+                console.log(activeElement)
+                if (activeElement)
+                    activeElement.scrollIntoView({ block: "nearest", inline: "nearest" })
+            })
+
+        }
+    }
 })
