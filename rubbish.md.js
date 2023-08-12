@@ -53,12 +53,13 @@ let content =
 
 ![Github链接转换器封面](/images/graphs43/github_url_converter.webp =300x*)
 
-用于一键转换 github 链接到镜像
+用于一键转换 GitHub 链接到镜像。
 
 - 框架：AndroLua+
 - 平台：Android
-- 开源：以 MIT 许可开放 AideLua 工程压缩文件
-- 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1oN411U7B6/)
+- 开源：[以 MIT 许可](https://gitee.com/AideLua/AndroLuaLayoutCompiler/blob/master/LICENSE)开源到 Gitee 与 GitHub
+- 开源地址：<https://gitee.com/Jesse205/GitHubUrlConverter>
+- 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1oN411U7B6/)、酷安、Gitee
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1DUh2ecgyxTRNoJ5bm30fdg?pwd=qqi7)（提取码: qqi7）、[123云盘](https://www.123pan.com/s/G7a9-4xtk.html)
 
 ### 桌面时钟 Lite
@@ -91,8 +92,8 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：未知
-- 发布渠道：无（暂未发布）
-- 下载渠道：无
+- 发布渠道：QQ
+- 下载渠道：QQ
 
 ### VCF 生成器 Lite
 
@@ -136,7 +137,7 @@ let content =
 
 - 框架：AndroLua+
 - 平台：Android
-- 开源：否，自己做一个也不难
+- 开源：否，自己做一个也不难。可以参考 [GitHub 转换器](#github-链接转换器)的源码。
 - 发布渠道：未知
 - 下载渠道：未知
 
@@ -146,7 +147,7 @@ let content =
 
 用于一键生成用于修改机型的模块
 
-注意：**此应用所用的 Mgaisk 模板已过时。**
+注意：**此应用所用的 Magisk 模板已过时。**
 
 - 框架：AndroLua+
 - 平台：Android
