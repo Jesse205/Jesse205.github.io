@@ -57,7 +57,7 @@ let content =
 
 - 框架：AndroLua+
 - 平台：Android
-- 开源：[以 MIT 许可](https://gitee.com/AideLua/AndroLuaLayoutCompiler/blob/master/LICENSE)开源到 Gitee 与 GitHub
+- 开源：[以 MIT 许可](https://gitee.com/AideLua/GitHubUrlConverter/blob/master/LICENSE)开源到 Gitee 与 GitHub
 - 开源地址：<https://gitee.com/Jesse205/GitHubUrlConverter>
 - 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1oN411U7B6/)、酷安、Gitee
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1DUh2ecgyxTRNoJ5bm30fdg?pwd=qqi7)（提取码: qqi7）、[123云盘](https://www.123pan.com/s/G7a9-4xtk.html)
@@ -91,7 +91,8 @@ let content =
 
 - 框架：AndroLua+
 - 平台：Android
-- 开源：未知
+- 开源：[以 MIT 许可](https://gitee.com/AideLua/AndroLuaLayoutCompiler/blob/master/LICENSE)开源到 Gitee 与 GitHub
+- 开源地址：<https://gitee.com/Jesse205/AndroLuaLayoutCompiler>
 - 发布渠道：QQ
 - 下载渠道：QQ
 
