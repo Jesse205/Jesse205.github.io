@@ -4,7 +4,7 @@ let content =
 编辑器语言切换为 Markdown -->
 # 杰西垃圾
 
-> 更新日期：2023.07.19
+> 更新日期：2023.10.15
 
 杰西垃圾是杰西 205 制作的非常多神似垃圾或者垃圾改动的小工具
 
@@ -17,7 +17,7 @@ let content =
 
 ### 拖放中转站测试软件
 
-![拖放中转站测试软件封面](/images/graphs43/dragdrop_test.webp =300x*)
+![拖放中转站测试软件封面](/images/graphs43/dragdrop_test.webp =360x*)
 
 - 框架：AndroLua+
 - 平台：Android
@@ -27,7 +27,7 @@ let content =
 
 ### Alua 转 AideLua
 
-![Alua转AideLua封面](/images/graphs43/alua2aidelua.webp =300x*)
+![Alua转AideLua封面](/images/graphs43/alua2aidelua.webp =360x*)
 
 一键将 AndroLua+ 工程转换为 AideLua 工程。
 
@@ -39,7 +39,7 @@ let content =
 
 ### 垃圾分类查询
 
-![垃圾分类查询封面](/images/graphs43/rubbish_search.webp =300x*)
+![垃圾分类查询封面](/images/graphs43/rubbish_search.webp =360x*)
 
 不联网的垃圾分类查询，几万年以后依旧可以使用。
 
@@ -49,9 +49,9 @@ let content =
 - 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/47354575?shareKey=NzE2NWFkMjIzZmNlNjRiYWU4N2E~&shareUid=1432137)、奇妙应用
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1S8wZ-YcMKtKOowBxyPIsIA?pwd=999j)（提取码: 999j）、[123云盘](https://www.123pan.com/s/G7a9-Hwtk.html)
 
-### Github 链接转换器
+### Github 链接转换器 <span class="mdi mdi-star mdui-text-color-amber"></span>
 
-![Github链接转换器封面](/images/graphs43/github_url_converter.webp =300x*)
+![Github链接转换器封面](/images/graphs43/github_url_converter.webp =360x*)
 
 用于一键转换 GitHub 链接到镜像。
 
@@ -62,9 +62,9 @@ let content =
 - 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1oN411U7B6/)、酷安、Gitee
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1DUh2ecgyxTRNoJ5bm30fdg?pwd=qqi7)（提取码: qqi7）、[123云盘](https://www.123pan.com/s/G7a9-4xtk.html)
 
-### 桌面时钟 Lite
+### 桌面时钟 Lite <span class="mdi mdi-star mdui-text-color-amber"></span>
 
-![桌面时钟Lite封面](/images/graphs/deskclock_lite.webp =300x*)
+![桌面时钟Lite封面](/images/graphs/deskclock_lite.webp =360x*)
 
 把废旧手机和水墨屏做成桌面时钟
 
@@ -77,7 +77,9 @@ let content =
 
 ### 多开 MT 管理器
 
-![多开MT管理器封面](/images/graphs43/mulit_mt.webp =300x*)
+![多开MT管理器封面](/images/graphs43/mulit_mt.webp =360x*)
+
+注意：多开之后可能会有一些bug，这是正常现象。
 
 - 框架：AndroLua+
 - 平台：Android
@@ -85,20 +87,20 @@ let content =
 - 发布渠道：酷安、QQ
 - 下载渠道：我也不知道
 
-### ALY 布局编译器
+### ALY 布局编译器 <span class="mdi mdi-star mdui-text-color-amber"></span>
 
 将 ALY 布局编译为代码
 
 - 框架：AndroLua+
 - 平台：Android
 - 开源：[以 MIT 许可](https://gitee.com/AideLua/AndroLuaLayoutCompiler/blob/master/LICENSE)开源到 Gitee 与 GitHub
-- 开源地址：<https://gitee.com/Jesse205/AndroLuaLayoutCompiler>
+    - 地址：<https://gitee.com/Jesse205/AndroLuaLayoutCompiler>
 - 发布渠道：QQ
 - 下载渠道：QQ
 
-### VCF 生成器 Lite
+### VCF 生成器 Lite <span class="mdi mdi-star mdui-text-color-amber"></span>
 
-![LuaAE作业封面](/images/graphs43/vcf_generator.webp =300x*)
+![LuaAE作业封面](/images/graphs43/vcf_generator.webp =360x*)
 
 用于将表格里面的电话一键导入通讯录
 
@@ -106,7 +108,7 @@ let content =
 - 平台：Windows
 - 跨平台，但只发布了 Windows 端
 - 开源：[以 MIT 许可](https://gitee.com/Jesse205/VCFGeneratorLite/blob/master/LICENSE)开源到 Gitee
-- 开源地址：<https://gitee.com/Jesse205/VCFGeneratorLite>
+    - 地址：<https://gitee.com/Jesse205/VCFGeneratorLite>
 - 发布渠道：[Gitee](https://gitee.com/Jesse205/VCFGeneratorLite/releases/)
 - 下载渠道：[Gitee](https://gitee.com/Jesse205/VCFGeneratorLite/releases/latest)
 
@@ -122,7 +124,7 @@ let content =
 
 ### Hello 取色器
 
-![Hello取色器封面](/images/graphs43/colorpicker.webp =300x*)
+![Hello取色器封面](/images/graphs43/colorpicker.webp =360x*)
 
 快速提取图片内颜色，支持图片双指缩放
 
@@ -144,14 +146,14 @@ let content =
 
 ### Magisk 机型修改模块生成器
 
-![Magisk机型修改模块生成器封面](/images/graphs43/magisk_module_generator.webp =300x*)
+![Magisk机型修改模块生成器封面](/images/graphs43/magisk_module_generator.webp =360x*)
 
 用于一键生成用于修改机型的模块
 
 注意：**此应用所用的 Magisk 模板已过时。**
 
 - 框架：AndroLua+
-- 平台：Android
+- 平台：Magisk
 - 开源：否
 - 发布渠道：QQ
 - 下载渠道：QQ
@@ -167,12 +169,15 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：否，但哈兔 Box 开源
+- 测试：
+    - 系统：LineageOS Android 10
+    - 结果：运行正常
 - 发布渠道：~~酷市场~~（已手动下架）
 - 下载渠道：~~酷市场~~（已手动下架）、百度网盘
 
 ### 一键锁屏
 
-![一键锁屏封面](/images/graphs43/onekeylock.webp =300x*)
+![一键锁屏封面](/images/graphs43/onekeylock.webp =360x*)
 
 使用 Root 模拟按键锁屏，不存在掉辅助与无法使用指纹解锁。
 
@@ -181,12 +186,15 @@ let content =
 - 框架：纯原生编写
 - 平台：Android
 - 开源：否，一行代码而已，不难
+- 测试：
+    - 系统：LineageOS Android 10
+    - 结果：运行正常
 - 发布渠道：[酷市场](https://www.coolapk.com/apk/com.Jesse205.OneKeyLockScreen)
 - 下载渠道：[酷市场](https://www.coolapk.com/apk/com.Jesse205.OneKeyLockScreen)
 
 ### EMUI 水印工具
 
-![EMUI水印工具封面](/images/graphs43/emui_watermark_tool.webp =300x*)
+![EMUI水印工具封面](/images/graphs43/emui_watermark_tool.webp =360x*)
 
 快速更换水印和预览水印
 
@@ -195,6 +203,11 @@ let content =
 - 框架：FusionApp 1.x（AndroLua+）
 - 平台：Android
 - 开源：否
+- 测试：
+    - 系统：HarmonyOS 2.0 (Android 10.0)、EMUI 8.0 (Android 8.0)
+    - 结果：
+        - HarmonyOS 2.0 (Android 10.0) 无法显示水印
+        - 其他系统运行正常
 - 发布渠道：QQ、~~酷市场~~（已手动下架）
 - 下载渠道：~~酷市场~~（已手动下架）、QQ
 
@@ -210,19 +223,36 @@ let content =
 
 ### 吃雪糕？吃米饭
 
-![封面](/images/graphs43/ic2rice.webp =300x*)
+![封面](/images/graphs43/ic2rice.webp =360x*)
 
 一款将雪糕热量计算为米饭碗数的工具。
 
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
-- 测试系统：VMOS Android 5.1 多开版、VMOS Android 7.1、HarmonyOS 2.0 (Android 10.0)
-- 测试结果：
-  - VMOS Android 5.1 多开版报错 \`android.R$attr.colorBackgroundFloating is not a field or mothod\`
-  - 其他系统运行正常
+- 测试：
+    - 系统：VMOS Android 5.1 多开版、VMOS Android 7.1、HarmonyOS 2.0 (Android 10.0)
+    - 结果：
+        - VMOS Android 5.1 多开版报错 \`android.R$attr.colorBackgroundFloating is not a field or mothod\`
+        - 其他系统运行正常
 - 发布渠道：[哔哩哔哩](https://www.bilibili.com/opus/819424346436009985)、[酷安论坛](https://www.coolapk.com/feed/47740797?shareKey=OTkzZGE4OTIyYTY1NjRiYWU3M2U~&shareUid=1432137)
 - 下载渠道：[123 云盘](https://www.123pan.com/s/G7a9-1stk.html)
+
+### 许可证画廊 <span class="mdi mdi-star mdui-text-color-amber"></span>
+
+![封面](/images/graphs43/licensegallery.webp =360x*)
+
+使用 GitHub License API 获取许可证数据的，并有序地展示出来，供用户快速选择的 Android 客户端。
+
+- 框架：AndroLua+
+- 平台：Android
+- 开源：[以 MIT 许可](https://gitee.com/AideLua/LicenseGallery/blob/master/LICENSE)开源到 Gitee
+- 开源地址：<https://gitee.com/Jesse205/VCFGeneratorLite>
+- 测试：
+    - 系统：HarmonyOS 2.0 (Android 10.0)
+    - 结果：运行正常
+- 发布渠道：[Gitee](https://gitee.com/AideLua/LicenseGallery/releases/)
+- 下载渠道：[Gitee](https://gitee.com/AideLua/LicenseGallery/releases/latest)
 
 ## 实用大工具
 
@@ -233,8 +263,9 @@ let content =
 - 框架：FusionApp 1.x（AndroLua+）
 - 平台：Android
 - 开源：我还想知道源码在哪里呢
-- 测试系统：EMUI 4.0 (Android 6.0)、HarmonyOS 2.0 (Android 10.0)
-- 测试结果：运行正常
+- 测试：
+    - 系统：EMUI 4.0 (Android 6.0)、HarmonyOS 2.0 (Android 10.0)
+    - 结果：运行正常
 - 发布渠道：QQ、~~FA第三方商店~~（已关闭）
 - 下载渠道：QQ、百度网盘
 
@@ -242,47 +273,50 @@ let content =
 
 ### 测谎仪 UI
 
-![测谎仪UI封面](/images/graphs43/test_speak_ui.webp =300x*)
+![测谎仪UI封面](/images/graphs43/test_speak_ui.webp =360x*)
 
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
-- 测试系统：HarmonyOS 2.0 (Android 10.0)
-- 测试结果：运行正常
+- 测试：
+    - 系统：HarmonyOS 2.0 (Android 10.0)
+    - 结果：运行正常
 - 发布渠道：[哔哩哔哩](https://www.bilibili.com/video/BV1gm4y1J7Lr/)
 - 下载渠道：百度网盘
 
 ### “梆”生成器
 
-![“梆”生成器封面](/images/graphs43/generator_bang.webp =300x*)
+![“梆”生成器封面](/images/graphs43/generator_bang.webp =360x*)
 
 - 框架：AndroLua+
 - 平台：Android
 - 开源：开放 ALP 文件
-- 测试系统：HarmonyOS 2.0 (Android 10.0)、HarmonyOS 3.0 (Android 12.0)
-- 测试结果：运行正常
+- 测试：
+    - 系统：HarmonyOS 2.0 (Android 10.0)、HarmonyOS 3.0 (Android 12.0)
+    - 结果：运行正常
 - 发布渠道：QQ
 - 下载渠道：QQ、[百度网盘](https://pan.baidu.com/s/1Fcjcocy2J7b-7sCYIWcfnA?pwd=jxnb)（提取码: jxnb）
 
 ### LuaAE 作业
 
-![LuaAE作业封面](/images/graphs43/luaaebailan.webp =300x*)
+![LuaAE作业封面](/images/graphs43/luaaebailan.webp =360x*)
 
 仿照[《大二AE结课作业 《过 年》（已摆烂）》](https://www.bilibili.com/video/BV1xL4y1E7nT/)，但是使用 AndroLua+ 制作。
 
 - 框架：AndroLua+
 - 平台：Android
 - 开源：开放 ALP 文件
-- 测试系统：EMUI 8.0 (Android 8.0)、HarmonyOS 2.0 (Android 10.0)
-- 测试结果：
-  - EMUI 8.0 (Android 8.0) 阴影显示异常，圆角数值过大
-  - 其余系统运行正常
+- 测试：
+    - 系统：EMUI 8.0 (Android 8.0)、HarmonyOS 2.0 (Android 10.0)
+    - 结果：
+        - EMUI 8.0 (Android 8.0) 阴影显示异常，圆角数值过大
+        - 其余系统运行正常
 - 发布渠道：QQ、[哔哩哔哩](https://www.bilibili.com/video/BV1kD4y1L7id/)
 - 下载渠道：QQ、[蓝奏云](https://jesse205.lanzouy.com/b057aoeja)（密码：arsb）
 
 ### 多巴胺分泌器
 
-![多巴胺分泌器封面](/images/graphs43/dopamine_ecretor.webp =300x*)
+![多巴胺分泌器封面](/images/graphs43/dopamine_ecretor.webp =360x*)
 
 一个始终让你赢的猜拳游戏。
 
@@ -291,10 +325,11 @@ let content =
 - 框架：AndroLua+
 - 平台：Android
 - 开源：以 MIT 许可开放 ALP 文件
-- 测试系统：HarmonyOS 2.0 (Android 10.0)、MIUI 14 (Android 13)
-- 测试结果：
-  - MIUI 14 (Android 13) 波纹无法保持
-  - 其余系统运行正常
+- 测试：
+    - 系统：HarmonyOS 2.0 (Android 10.0)、MIUI 14 (Android 13)
+    - 结果：
+        - MIUI 14 (Android 13) 波纹无法保持
+        - 其余系统运行正常
 - 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/47765045?shareKey=M2FkNzAyZWJjOTVlNjRiNmYwNzQ~&shareUid=1432137)
 - 下载渠道：QQ、[蓝奏云](https://jesse205.lanzouk.com/b0580nrva)（密码: cvbw）、[百度网盘](https://pan.baidu.com/s/1WAUY-XU1PRrR76qFwJyqpQ?pwd=px5r)（提取码: px5r）
 
@@ -311,8 +346,9 @@ let content =
 - 框架：FusionApp (AndroLua+)
 - 平台：Android
 - 开源：否
-- 测试系统：EMUI 4.0 (Android 6.0)
-- 测试结果：运行正常
+- 测试：
+    - 系统：EMUI 4.0 (Android 6.0)
+    - 结果：运行正常
 - 发布渠道：暂未正式发布
 
 ## 软件增强工具
@@ -324,9 +360,10 @@ let content =
 - 框架：纯原生编写
 - 平台：Android
 - 开源：[以 MIT 许可](https://gitee.com/Jesse205/GalleryDrag/blob/master/LICENSE)开源到 Gitee、GitHub
-- 开源地址：<https://gitee.com/Jesse205/GalleryDrag>
-- 测试框架：EMUI 8.0 (Android 8.0) (EdXposed)、HarmonyOS 2.0 (Android 10.0) (LSPath)
-- 测试结果：运行正常
+    - 地址：<https://gitee.com/Jesse205/GalleryDrag>
+- 测试：
+    - 框架：EMUI 8.0 (Android 8.0) (EdXposed)、HarmonyOS 2.0 (Android 10.0) (LSPath)
+    - 结果：运行正常
 - 发布渠道：QQ、[酷安论坛](https://www.coolapk.com/feed/46329645?shareKey=MGVlNmI1MDllNjI3NjRiYWVhMzA~&shareUid=1432137)、[Gitee](https://gitee.com/Jesse205/GalleryDrag/releases)
 - 下载渠道：[Gitee](https://gitee.com/Jesse205/GalleryDrag/releases/latest)、QQ
 
@@ -347,7 +384,7 @@ let content =
 
 ### 质感 HAP 查看器
 
-![质感HAP查看器封面](/images/graphs43/hapviewer.webp =300x*)
+![质感HAP查看器封面](/images/graphs43/hapviewer.webp =360x*)
 
 原版 HAP 查看器不太质感，并且不是 Material 3 风格，所以我给 HAP 查看器加入了 MD3 风格。
 
@@ -356,10 +393,11 @@ let content =
 - 框架：纯原生编写
 - 平台：Android
 - 开源：[以 Apache 2.0 许可](https://gitee.com/Jesse205/hap-viewer-android/blob/master/LICENSE)开源到 Gitee
-- 开源地址：<https://gitee.com/Jesse205/hap-viewer-android/tree/multi_theme/>
-- 原版开源地址：<https://gitee.com/ohos-dev/hap-viewer-android>
-- 测试框架：EMUI 8.0 (Android 8.0)、HarmonyOS 2.0 (Android 10.0)、MIUI 14 (Android 13)
-- 测试结果：运行正常，但应用栏阴影与颜色有瑕疵，不会解决。
+    - 地址：<https://gitee.com/Jesse205/hap-viewer-android/tree/multi_theme/>
+    - 原版开源地址：<https://gitee.com/ohos-dev/hap-viewer-android>
+- 测试：
+    - 框架：EMUI 8.0 (Android 8.0)、HarmonyOS 2.0 (Android 10.0)、MIUI 14 (Android 13)
+    - 结果：运行正常，但应用栏阴影与颜色有瑕疵，不会解决。
 - 发布渠道：QQ、[Gitee](https://gitee.com/Jesse205/hap-viewer-android/releases)
 - 下载渠道：QQ、[Gitee](https://gitee.com/Jesse205/hap-viewer-android/releases/latest)
 
@@ -370,12 +408,14 @@ let content =
 - 框架：MUI、...
 - 平台：Chromium 浏览器
 - 开源：[以 CC-BY-4.0 许可](https://github.com/Jesse205/YgkTool/blob/dev/LICENSE.txt)开源到 GitHub
-- 开源地址：已删除
-- 原版开源地址：<https://github.com/rivertwilight/ygktool>
+    - 地址：已删除
+    - 原版地址：<https://github.com/rivertwilight/ygktool>
 - 发布渠道：无
 - 下载渠道：无
 
 ### 用户统计
+
+![AndroLua+拖放版封面](/images/graphs43/howmanyusers.webp =360x*)
 
 使用 [6 度短链接](http://6du.in/)来统计使用量
 
@@ -406,9 +446,26 @@ let content =
 
 - 框架：FusionApp (AndroLua+)
 - 平台：Android
-- 开源：改动开源
+- 开源：改动开源内嵌到软件内
 - 发布渠道：QQ、酷安论坛、~~FA第三方商店~~（已关闭）
 - 下载渠道：QQ、~~百度网盘~~、蓝奏云
+
+### AndroLua+ 拖放版
+
+![AndroLua+拖放版封面](/images/graphs43/androlua_plus_dragdrop.webp =360x*)
+
+加入了拖放功能的 AndroLua+
+
+- 框架：AndroLua+
+- 平台：Android
+- 开源：lua 源代码内嵌在软件内
+- 测试：
+    - 系统：HarmonyOS 2.0 (Android 10.0)
+    - 结果：运行正常
+- 发布渠道：QQ
+- 下载渠道：QQ
+
+---
 
 ### 补华为主题的软件
 

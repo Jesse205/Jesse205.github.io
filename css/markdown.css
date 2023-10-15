@@ -56,6 +56,11 @@
     border: 1.5px solid var(--markdown-color-border);
 }
 
+.markdown.mdui-typo li ol,
+.markdown.mdui-typo li ul {
+    margin: 0;
+}
+
 
 /*@media (prefers-color-scheme: dark) {
     body {

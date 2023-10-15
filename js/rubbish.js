@@ -128,7 +128,6 @@ let vm = new Vue({
         hash() {
             this.$nextTick(() => {
                 const activeElement = document.querySelector(".mdui-drawer .mdui-list-item-active")
-                console.log(activeElement)
                 if (activeElement)
                     activeElement.scrollIntoView({ block: "nearest", inline: "nearest" })
             })

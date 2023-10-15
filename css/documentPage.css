@@ -80,6 +80,10 @@
     transition: all .2s cubic-bezier(.4, 0, .2, 1), color 0s;
 }
 
+.markdown a {
+    word-break: break-all;
+}
+
 @media screen and (min-width:600px) {
     .markdown {
         /* padding: 24px 32px;
@@ -142,6 +146,7 @@ body {
     font-weight: normal;
 }
 
-.mdui-typo code {
-    color: var(--mdui-color-primary)
+.mdui-typo code,
+.mdui-theme-layout-auto .mdui-typo code {
+    color: var(--mdui-color-primary);
 }
