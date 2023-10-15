@@ -220,6 +220,33 @@ footer ul {
     padding: 16px;
 }
 
+.svgi::before {
+	width: 24px;
+	content: '';
+	background-color: currentColor;
+    vertical-align: middle;
+}
+
+.svgi.svgi-gitee::before {
+	height: 24px;
+	-webkit-mask-image: url(../img/third/gitee-fill-round.svg);
+	mask-image: url(../img/third/gitee-fill-round.svg);
+}
+
+.svgi.svgi-coolapk::before {
+	height: 13px;
+	-webkit-mask-image: url(../img/third/coolapk.svg);
+	mask-image: url(../img/third/coolapk.svg);
+	/* margin-bottom: 2px; */
+}
+
+.svgi.svgi-appchina::before {
+	height: 13px;
+	-webkit-mask-image: url(../img/third/appchina.png);
+	mask-image: url(../img/third/appchina.png);
+	/* margin-bottom: 2px; */
+}
+
 @media screen and (min-width:600px) {
     .hero>div {
         padding: 56px 56px;
