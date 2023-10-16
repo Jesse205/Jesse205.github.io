@@ -31,3 +31,40 @@
 .theme-wechat-pay {
     --mdui-color-primary: var(--color-green-500);
 }
+
+@keyframes author-color {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 120% 0;
+    }
+}
+
+.authorName {
+    width: fit-content;
+    animation: author-color 1s linear infinite;
+    background: linear-gradient(-90deg, #F44336, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3, #03A9F4, #00BCD4, #009688, #4CAF50, #8BC34A, #CDDC39, #FFEB3B, #FFC107, #FF9800, #FF5722, #F44336);
+    background-size: 600% 600%;
+    /* background-size: 100% 100%; */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* color: transparent; */
+}
+
+.authorName .tip {
+    display: none;
+    font-weight: normal;
+}
+
+.authorName:active .tip {
+    display: initial;
+    font-size: .75rem;
+    color: transparent;
+    opacity: 0.8;
+}
+
+.authorName:active .tip::selection {
+    color: initial;
+}
