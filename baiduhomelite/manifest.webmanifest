@@ -8,7 +8,6 @@
     "scope": "/baiduhomelite/",
     "lang": "zh-CN",
     "display": "minimal-ui",
-    "orientation": "natural",
     "icons": [
         {
             "src": "/baiduhomelite/icons/android-chrome-192x192.png",

@@ -8,7 +8,6 @@
     "scope": "/deskclocklite/",
     "lang": "zh-CN",
     "display": "standalone",
-    "orientation": "natural",
     "background_color": "#000000",
     "theme_color": "#000000",
     "prefer_related_applications": true,
