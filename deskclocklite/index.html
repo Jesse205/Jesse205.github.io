@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN" style="background-color: black;">
+<html style="background-color: black;">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>桌面时钟 Lite</title>
-  <meta name="keywords" content="时钟,桌面时钟">
+  <meta name="keywords" content="时钟,桌面时钟,Clock,DeskClock">
   <meta property="og:site_name" itemprop="name" content="桌面时钟 Lite">
   <meta name="description" itemprop="description" name="description"
-    content="一款占用低、兼容性强的PWA版本数字时钟。此时钟最低兼容 Internet Explorer 10。“Edde 互联”主页有Android版本，支持 Android2.3 到 Android13。（OLED屏幕慎用，会烧屏）">
+    content="一款占用低、兼容性强的 PWA 版本数字时钟。此时钟最低兼容 IE 8。“Edde 互联”主页有 Android 版本，支持 Android 2.3 到 Android 13。（OLED 屏幕慎用，会烧屏）">
   <meta name="author" content="Jesse205" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -22,33 +22,55 @@
   <meta name="theme-color" content="black">
 
   <script type="text/javascript">
+    console.log("这是 Edde 网站的一部分，开源地址：https://gitee.com/Jesse205/Jesse205/tree/master/deskclocklite");
+    var timeFormatConfig = {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    }
+    var dateFormatConfig = {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    }
+    if ("Intl" in window) {
+      var timeFormat = Intl.DateTimeFormat(undefined, timeFormatConfig)
+      var dateFormat = Intl.DateTimeFormat(undefined, dateFormatConfig)
+    }
     var lastTime;
     var lastDate;
-    weekDayMap = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-    function clock() {
+    var weekDayMap = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    function update() {
       var now = new Date();
-      var month = now.getMonth() + 1; //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
-      var day = now.getDay(); //获取日
-      var date = now.getDate(); //获取日期
-      var hour = now.getHours(); //获取小时
-      var minute = now.getMinutes(); //获取分钟
-      var second = now.getSeconds(); //获取秒
+      var time, date
+      if (timeFormat && dateFormat) {
+        time = timeFormat.format(now);
+        // IE 不支持箭头函数
+        date = dateFormat.formatToParts(now).map(function (item) { return item.value }).join(" ");
+      } else {
+        // 兼容老浏览器
+        var month = now.getMonth() + 1; //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+        var day = now.getDay(); //获取日
+        var date = now.getDate(); //获取日期
+        var hour = now.getHours(); //获取小时
+        var minute = now.getMinutes(); //获取分钟
+        var second = now.getSeconds(); //获取秒
 
-      //补0
-      if (month < 10) month = "0" + month;
-      if (date < 10) date = "0" + date;
-      if (hour < 10) hour = "0" + hour;
-      if (minute < 10) minute = "0" + minute;
-      if (second < 10) second = "0" + second;
+        //补0
+        if (month < 10) month = "0" + month;
+        if (date < 10) date = "0" + date;
+        if (hour < 10) hour = "0" + hour;
+        if (minute < 10) minute = "0" + minute;
+        if (second < 10) second = "0" + second;
 
-      var time = hour + ":" + minute + ":" + second;
-      var date = (month) + "月" + date + "日 " + weekDayMap[now.getDay()];
-
-      if (time != lastTime) {
+        time = hour + ":" + minute + ":" + second;
+        date = (month) + " 月 " + date + " 日 " + weekDayMap[now.getDay()];
+      }
+      if (time !== lastTime) {
         document.getElementById("time").innerText = time;
         lastTime = time;
       }
-      if (date != lastDate) {
+      if (date !== lastDate) {
         document.getElementById("date").innerText = date;
         lastDate = date;
       }
@@ -178,8 +200,15 @@
   <div id="date"></div>
   <div id="time"></div>
   <script type="text/javascript">
-    self.setInterval("clock()", 100);
-    clock();
+    function onTick() {
+      update()
+      var date = new Date();
+      var nextTime = 1000 - date.getMilliseconds();
+      setTimeout(onTick, 0);
+    }
+    onTick();
+
+    // self.setInterval(update, 100);
   </script>
 </body>
 
