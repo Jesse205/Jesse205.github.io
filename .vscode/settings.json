@@ -1,8 +1,21 @@
 {
     "cSpell.words": [
         "aidelua",
+        "Andro",
+        "androlua",
+        "androluax",
+        "baiduhome",
+        "baiduhomelite",
+        "deskclock",
+        "deskclocklite",
+        "Edde",
+        "eddelua",
+        "guidlines",
+        "hellotool",
         "linkslist",
-        "mainlist"
+        "Magisk",
+        "mainlist",
+        "Tauri"
     ],
     "markdownlint.config": {
         "default": true,

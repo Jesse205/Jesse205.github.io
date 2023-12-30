@@ -94,7 +94,7 @@
                 <a :href="content.src " target="_blank">
                   <div class="mdui-card-outlined mdui-hoverable-2 mdui-shadow-transition mdui-card mdui-ripple">
                     <div class="mdui-card-media">
-                      <img class="card-image" :src="content.image" :alt="content.name" draggable="false" />
+                      <img class="card-image" :src="prefersDarkMode && content['dark-image'] || content.image" :alt="content.name" draggable="false" />
                     </div>
                     <div class="mdui-divider"></div>
                     <div class="mdui-card-primary">

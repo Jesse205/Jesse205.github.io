@@ -82,7 +82,8 @@ let vm = new Vue({
         licenseUrl: 'https://github.com/showdownjs/showdown/blob/master/LICENSE',
         url: 'https://github.com/showdownjs/showdown',
       }
-    ]
+    ],
+    prefersDarkMode: false
   },
   created() {
 
@@ -103,9 +104,21 @@ let vm = new Vue({
         console.error(error)
       })*/
   },
+  methods: {
+    prefersColorSchemeMediaCallback: function (e) {
+      this.prefersDarkMode = e.matches
+    }
+  },
   mounted() {
     this.isTop = document.documentElement.scrollTop <= 0
     window.addEventListener('scroll', () => this.isTop = document.documentElement.scrollTop <= 0)
+    let prefersColorSchemeMedia = window.matchMedia('(prefers-color-scheme: dark)')
+    this.prefersDarkMode = prefersColorSchemeMedia.matches
+    if (typeof prefersColorSchemeMedia.addEventListener === 'function') {
+      prefersColorSchemeMedia.addEventListener('change', this.prefersColorSchemeMediaCallback);
+    } else if (typeof prefersColorSchemeMedia.addListener === 'function') {
+      prefersColorSchemeMedia.addListener(this.prefersColorSchemeMediaCallback)
+    }
 
     $$("#mainlist").mutation()
     $$("#linkslist").mutation()
